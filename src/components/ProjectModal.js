@@ -20,12 +20,12 @@ export function renderProjectModal() {
     inner.innerHTML = `
       <!-- Header Banner with Full Visual Preview -->
       <div style="position: relative; background: #09090B; border-bottom: 1px solid #E4E4E7; overflow: hidden;">
-        <div style="height: clamp(180px, 32vh, 280px); width: 100%; position: relative; overflow: hidden;">
+        <div style="height: clamp(140px, 25vh, 260px); width: 100%; position: relative; overflow: hidden;">
           <img src="${project.image}" alt="${project.title} live interface preview" style="width: 100%; height: 100%; object-fit: cover; object-position: top center; filter: brightness(0.9);" />
           <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(9, 9, 11, 0.4) 0%, rgba(9, 9, 11, 0.75) 100%);"></div>
         </div>
 
-        <div style="position: absolute; inset: 0; padding: clamp(1.5rem, 3.5vw, 2.5rem); display: flex; flex-direction: column; justify-content: space-between; z-index: 2;">
+        <div style="position: absolute; inset: 0; padding: clamp(1rem, 3vw, 2.25rem); display: flex; flex-direction: column; justify-content: space-between; z-index: 2;">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-3">
               <span class="status-pill" style="background: rgba(255, 255, 255, 0.95); border-color: rgba(255, 255, 255, 0.9); backdrop-filter: blur(8px);">
@@ -53,7 +53,7 @@ export function renderProjectModal() {
       </div>
 
       <!-- Content Details -->
-      <div style="padding: clamp(1.75rem, 3.5vw, 3rem); display: flex; flex-direction: column; gap: var(--space-8); background: #FFFFFF;">
+      <div style="padding: clamp(1.25rem, 3.5vw, 2.5rem); display: flex; flex-direction: column; gap: clamp(1.25rem, 3vw, 2rem); background: #FFFFFF;">
         <!-- Summary & Challenge -->
         <div>
           <h4 style="font-size: 0.92rem; color: #09090B; margin-bottom: var(--space-3); text-transform: uppercase; font-family: var(--font-mono); letter-spacing: 0.12em; font-weight: 800;">

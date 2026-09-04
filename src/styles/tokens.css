@@ -86,10 +86,18 @@
   --duration-normal: 280ms;
   --duration-slow: 500ms;
 
-  /* Layout Max Widths */
-  --container-max: 1340px;
-  --container-narrow: 1020px;
-  --container-padding: clamp(1rem, 4vw, 3rem);
+  /* Layout Max Widths & Grid Alignment System */
+  --container-max: 1280px;
+  --container-narrow: 1100px;
+  --container-padding: clamp(0.85rem, 3.5vw, 2.5rem);
+  --section-padding-y: clamp(3rem, 6vw, 7.5rem);
+  --card-padding: clamp(0.95rem, 3vw, 2.25rem);
+
+  /* Device Safe Area Insets */
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
 
   /* Unified Accessible Focus Ring */
   --focus-ring: 0 0 0 2px var(--bg-primary), 0 0 0 4px var(--accent-gold);

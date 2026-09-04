@@ -16,7 +16,7 @@ export function renderScopeCalculator() {
         </div>
 
         <!-- Calculator Double-Bezel Card -->
-        <div class="double-bezel" style="max-width: 1140px; margin-inline: auto;">
+        <div class="double-bezel" style="max-width: var(--container-narrow); margin-inline: auto;">
           <div class="double-bezel-inner" style="padding: clamp(1.75rem, 4vw, 3.5rem);">
             <div class="grid-2" style="gap: var(--space-8); align-items: start;">
               <!-- Left: Options Column -->

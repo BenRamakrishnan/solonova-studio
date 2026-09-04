@@ -3,31 +3,31 @@ export function renderHero() {
   if (!container) return;
 
   container.innerHTML = `
-    <div class="section hero-section" style="padding-top: clamp(4rem, 7vw, 7.5rem); padding-bottom: clamp(4rem, 7vw, 7rem);">
+    <div class="section hero-section" style="padding-top: clamp(2.5rem, 5vh + 1.5rem, 6rem); padding-bottom: clamp(2.5rem, 5vh + 1.5rem, 5.5rem);">
       <div class="container flex flex-col items-center text-center">
         <!-- Hero Typographic Readability Sanctuary -->
         <div class="hero-readability-sanctuary flex flex-col items-center text-center">
           <!-- Architectural Masthead: SOLONOVA STUDIO with Gold Rule Accents -->
-          <div class="flex items-center justify-center gap-3" style="margin-bottom: var(--space-4);">
-            <span style="height: 1px; width: 45px; background: var(--accent-gold); opacity: 0.75;" aria-hidden="true"></span>
-            <span style="font-family: var(--font-mono); font-size: 0.98rem; font-weight: 800; letter-spacing: 0.32em; text-transform: uppercase; color: #09090B;">
+          <div class="flex items-center justify-center gap-3" style="margin-bottom: var(--space-4); max-width: 100%;">
+            <span style="height: 1px; width: clamp(16px, 4vw, 45px); background: var(--accent-gold); opacity: 0.75; flex-shrink: 0;" aria-hidden="true"></span>
+            <span style="font-family: var(--font-mono); font-size: clamp(0.76rem, 2vw, 0.98rem); font-weight: 800; letter-spacing: clamp(0.12em, 0.5vw, 0.32em); text-transform: uppercase; color: #09090B;">
               SOLONOVA STUDIO
             </span>
-            <span style="height: 1px; width: 45px; background: var(--accent-gold); opacity: 0.75;" aria-hidden="true"></span>
+            <span style="height: 1px; width: clamp(16px, 4vw, 45px); background: var(--accent-gold); opacity: 0.75; flex-shrink: 0;" aria-hidden="true"></span>
           </div>
 
           <!-- Eyebrow Status Pill with Luminous Live Beacon -->
-          <div class="status-pill hero-status-pill" style="margin-bottom: var(--space-6); padding: 0.5rem 1.25rem; border-color: var(--accent-gold-border); background: #FFFFFF;">
+          <div class="status-pill hero-status-pill" style="margin-bottom: var(--space-6); padding: 0.5rem 1.25rem; border-color: var(--accent-gold-border); background: #FFFFFF; max-width: 100%;">
             <span class="radar-ping">
               <span class="radar-ping-core" style="background-color: var(--status-live);"></span>
             </span>
-            <span class="hero-status-pill-text" style="font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; color: #09090B; letter-spacing: 0.08em; overflow-wrap: break-word;">
+            <span class="hero-status-pill-text" style="font-family: var(--font-mono); font-size: clamp(0.74rem, 1.4vw, 0.85rem); font-weight: 700; color: #09090B; letter-spacing: 0.08em; overflow-wrap: break-word;">
               SOLO VIBE ATELIER // INDIA & GLOBAL // <span style="color: var(--accent-amber);">10X SHIP VELOCITY</span>
             </span>
           </div>
 
           <!-- Grand Hero Headline -->
-          <h1 style="max-width: 1140px; margin-bottom: var(--space-6); line-height: 1.05; color: #09090B;">
+          <h1 style="max-width: var(--container-narrow); margin-bottom: var(--space-6); line-height: 1.05; color: #09090B;">
             Websites Handcrafted at <br />
             <span class="text-italic" style="font-style: italic; color: #09090B; text-decoration: underline; text-decoration-color: var(--accent-gold); text-underline-offset: 8px;">Lightning Velocity.</span>
           </h1>
@@ -75,10 +75,10 @@ export function renderHero() {
         </div>
 
         <!-- Interactive Benchmark & Live Telemetry Card -->
-        <div class="double-bezel" style="width: 100%; max-width: 1060px; text-align: left;">
+        <div class="double-bezel" style="width: 100%; max-width: var(--container-narrow); margin-inline: auto; text-align: left;">
           <div class="double-bezel-inner" style="padding: clamp(1.5rem, 3.5vw, 2.5rem);">
             <!-- Switcher Header -->
-            <div class="flex flex-wrap items-center justify-between gap-4" style="border-bottom: 1px solid #E4E4E7; padding-bottom: var(--space-5); margin-bottom: var(--space-5);">
+            <div class="flex flex-wrap items-center justify-between gap-4" style="border-bottom: 1px solid #E4E4E7; padding-bottom: var(--space-5); margin-bottom: var(--space-5); min-width: 0; max-width: 100%;">
               <div class="flex items-center gap-3">
                 <span class="status-dot-gold"></span>
                 <span style="font-family: var(--font-mono); font-size: 0.9rem; font-weight: 800; color: #09090B; letter-spacing: 0.12em; text-transform: uppercase;">

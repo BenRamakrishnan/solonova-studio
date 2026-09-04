@@ -67,11 +67,9 @@ export function renderFooter() {
           <div style="overflow-wrap: break-word;">
             © ${new Date().getFullYear()} Solonova Studio. All Rights Reserved. UPI, Razorpay & IMPS Enabled.
           </div>
-          <div class="flex flex-wrap gap-4">
+          <div class="footer-bottom-links" style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.25rem;">
             <a href="#comparison" class="nav-link" style="color: #71717A;">Sprint Guarantee</a>
-            <span>•</span>
             <a href="#calculator" class="nav-link" style="color: #71717A;">Scope & Pricing</a>
-            <span>•</span>
             <a href="#contact" class="nav-link" style="color: #71717A;">Book Sprint</a>
           </div>
         </div>

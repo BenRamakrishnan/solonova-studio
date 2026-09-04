@@ -15,7 +15,7 @@ export function renderContactSection() {
           <p>Skip the agency runaround. Reach out directly on WhatsApp or submit your project scope below to review wireframes and lock in your kickoff date.</p>
         </div>
 
-        <div class="grid-2" style="max-width: 1140px; margin-inline: auto; gap: var(--space-8); align-items: start;">
+        <div class="grid-2" style="max-width: var(--container-narrow); margin-inline: auto; gap: var(--space-8); align-items: start;">
           <!-- Left: Direct Channels & Guarantee -->
           <div>
             <div class="double-bezel" style="margin-bottom: var(--space-8);">

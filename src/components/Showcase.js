@@ -71,15 +71,15 @@ export function renderShowcase(activeCategory = 'all') {
                 </div>
 
                 <!-- Card Body -->
-                <div style="padding: var(--space-8); display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div style="padding: var(--card-padding); display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                   <div>
                     <h3 style="font-size: 1.45rem; font-weight: 700; margin-bottom: var(--space-3); line-height: 1.25; color: #09090B;">${p.title}</h3>
                     <p style="font-size: 1.02rem; margin-bottom: var(--space-6); line-height: 1.65; color: #52525B;">${p.summary}</p>
 
                     <!-- Metrics Badges with Subdued Chromatic Accents -->
-                    <div class="flex flex-wrap gap-2" style="margin-bottom: var(--space-8);">
+                    <div class="flex flex-wrap gap-2" style="margin-bottom: var(--space-8); min-width: 0; max-width: 100%;">
                       ${p.metrics.map(m => `
-                        <span style="font-family: var(--font-mono); font-size: 0.82rem; background: #F4F4F6; border: 1px solid #E4E4E7; padding: 0.35rem 0.75rem; border-radius: var(--radius-sm); color: #09090B;">
+                        <span class="project-metric-badge" style="font-family: var(--font-mono); font-size: clamp(0.74rem, 1.2vw, 0.82rem); background: #F4F4F6; border: 1px solid #E4E4E7; padding: 0.3rem clamp(0.45rem, 1.2vw, 0.75rem); border-radius: var(--radius-sm); color: #09090B; max-width: 100%; overflow-wrap: break-word;">
                           <span style="color: #71717A;">${m.label}:</span> <strong style="color: ${p.accentColor || '#09090B'};">${m.value}</strong>
                         </span>
                       `).join('')}

@@ -8,10 +8,9 @@
 /* Living 3D WebGL Background Canvas (Optimized 60-120 FPS) */
 .bg-canvas-3d {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
   z-index: var(--z-canvas, 0);
   display: block;
@@ -23,24 +22,26 @@
   background: transparent;
 }
 
-/* Layout Containers */
+/* Layout Containers — Perfectly Centered with Notch Safe Areas */
 .container {
   width: 100%;
   max-width: var(--container-max);
   margin-inline: auto;
-  padding-inline: var(--container-padding);
+  padding-left: max(var(--container-padding), var(--safe-left));
+  padding-right: max(var(--container-padding), var(--safe-right));
 }
 
 .container-narrow {
   width: 100%;
   max-width: var(--container-narrow);
   margin-inline: auto;
-  padding-inline: var(--container-padding);
+  padding-left: max(var(--container-padding), var(--safe-left));
+  padding-right: max(var(--container-padding), var(--safe-right));
 }
 
-/* Macro-Whitespace Sections */
+/* Macro-Whitespace Sections — Fluid Proportions across Continuum */
 .section {
-  padding-block: clamp(4.5rem, 8vw, 8rem);
+  padding-block: var(--section-padding-y);
   position: relative;
   z-index: 2;
 }
@@ -49,10 +50,10 @@
 .hero-readability-sanctuary {
   position: relative;
   z-index: 10;
-  max-width: 1100px;
+  max-width: var(--container-narrow);
   width: 100%;
   margin-inline: auto;
-  padding: clamp(1.5rem, 3.5vw, 3rem);
+  padding: clamp(1rem, 3.5vw, 2.75rem);
   border-radius: var(--radius-2xl);
   background: radial-gradient(ellipse 85% 80% at 50% 45%, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.08) 70%, rgba(255, 255, 255, 0) 100%);
 }
@@ -88,6 +89,13 @@
 }
 
 /* Responsive Grid Systems — Perfectly Balanced Columns across Viewports */
+.grid-2 > *,
+.grid-3 > *,
+.grid-4 > *,
+.form-row-2 > * {
+  min-width: 0;
+}
+
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -154,12 +162,13 @@
   position: sticky;
   top: 0;
   z-index: var(--z-sticky-nav, 100);
-  padding-inline: var(--container-padding);
-  padding-top: var(--space-4);
+  padding-left: max(var(--container-padding), var(--safe-left));
+  padding-right: max(var(--container-padding), var(--safe-right));
+  padding-top: max(var(--space-4), var(--safe-top));
 }
 
 .atelier-navbar {
-  max-width: 1260px;
+  max-width: var(--container-max);
   margin-inline: auto;
   background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(20px);
@@ -408,8 +417,11 @@
     flex-direction: column;
     position: absolute;
     top: calc(100% + 8px);
-    left: var(--container-padding);
-    right: var(--container-padding);
+    left: max(var(--container-padding), var(--safe-left));
+    right: max(var(--container-padding), var(--safe-right));
+    max-height: calc(100dvh - 85px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     background: #FFFFFF;
     border: 1px solid var(--border-medium);
     border-radius: 16px;
@@ -438,18 +450,36 @@
     padding: clamp(1.15rem, 3.5vw, 1.75rem) !important;
   }
   #hero-interactive-tabs {
+    display: flex;
+    flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     padding-bottom: 4px;
+    max-width: 100%;
+    min-width: 0;
   }
   #hero-interactive-tabs::-webkit-scrollbar {
     display: none;
   }
   .preview-tab-btn {
     white-space: nowrap;
-    padding: 0.45rem 1rem !important;
-    font-size: 0.85rem !important;
+    padding: 0.45rem 0.85rem !important;
+    font-size: 0.82rem !important;
+  }
+}
+
+@media (max-width: 980px) {
+  .hero-cta-group {
+    flex-direction: column !important;
+    width: 100%;
+    align-items: center;
+    gap: var(--space-3) !important;
+  }
+  .hero-cta-group .hero-cta-btn {
+    width: 100% !important;
+    max-width: 380px;
+    justify-content: center;
   }
 }
 
@@ -467,16 +497,6 @@
   }
   .floating-nav-wrapper {
     padding-top: var(--space-2);
-  }
-  .hero-cta-group {
-    flex-direction: column !important;
-    width: 100%;
-    align-items: center;
-  }
-  .hero-cta-group .hero-cta-btn {
-    width: 100% !important;
-    max-width: 360px;
-    justify-content: center;
   }
   .status-pill {
     white-space: normal;
@@ -507,6 +527,44 @@
     width: 36px;
     height: 36px;
     padding: 6px;
+  }
+}
+
+@media (max-width: 360px) {
+  .floating-nav-wrapper {
+    padding-left: max(0.45rem, var(--safe-left));
+    padding-right: max(0.45rem, var(--safe-right));
+  }
+  .atelier-navbar {
+    padding: 3px;
+  }
+  .atelier-navbar-inner {
+    padding: 0.25rem 0.4rem;
+    gap: 4px;
+  }
+  .brand-logo {
+    gap: 0.4rem;
+  }
+  .brand-name {
+    font-size: 0.92rem;
+    letter-spacing: 0.01em;
+  }
+  .nav-actions-group {
+    gap: 4px;
+  }
+  .nav-book-btn {
+    padding: 0.35rem 0.5rem;
+    font-size: 0.72rem;
+  }
+  .nav-book-btn .nav-book-arrow {
+    display: none;
+  }
+  .mobile-nav-toggle {
+    min-width: 32px;
+    min-height: 32px;
+    width: 32px;
+    height: 32px;
+    padding: 4px;
   }
 }
 

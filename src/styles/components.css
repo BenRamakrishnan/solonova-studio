@@ -18,6 +18,7 @@
   cursor: pointer;
   box-sizing: border-box;
   max-width: 100%;
+  min-width: 0;
 }
 
 .btn:focus-visible,
@@ -314,9 +315,10 @@
   border-radius: var(--radius-2xl);
   max-width: 860px;
   width: 100%;
-  max-height: 90vh;
-  max-height: 90dvh;
+  max-height: calc(100dvh - 2rem);
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-block: auto;
   box-shadow: var(--shadow-modal);
   transform: scale(0.96) translateY(10px);
   transition: transform var(--duration-normal) var(--ease-spring);
@@ -398,7 +400,7 @@
 /* Project Showcase Card Imagery */
 .project-card-image-box {
   position: relative;
-  height: 230px;
+  aspect-ratio: 16 / 10;
   width: 100%;
   overflow: hidden;
   background: #18181B;
