@@ -1,0 +1,469 @@
+/* Main Stylesheet — Editorial Monochromatic White & Black Luxury System */
+@import './reset.css';
+@import './tokens.css';
+@import './typography.css';
+@import './components.css';
+@import './animations.css';
+
+/* Living 3D WebGL Background Canvas (Optimized 60-120 FPS) */
+.bg-canvas-3d {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: var(--z-canvas, 0);
+  display: block;
+}
+
+#app {
+  position: relative;
+  z-index: var(--z-app, 10);
+  background: transparent;
+}
+
+/* Layout Containers */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: var(--container-narrow);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+/* Macro-Whitespace Sections */
+.section {
+  padding-block: clamp(4.5rem, 8vw, 8rem);
+  position: relative;
+  z-index: 2;
+}
+
+/* Hero Typographic Readability Sanctuary — Subtle Soft Alabaster Vignette */
+.hero-readability-sanctuary {
+  position: relative;
+  z-index: 10;
+  max-width: 1100px;
+  width: 100%;
+  margin-inline: auto;
+  padding: clamp(1.5rem, 3.5vw, 3rem);
+  border-radius: var(--radius-2xl);
+  background: radial-gradient(ellipse 85% 80% at 50% 45%, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.08) 70%, rgba(255, 255, 255, 0) 100%);
+}
+
+.hero-readability-sanctuary h1 {
+  color: #09090B;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+
+.hero-readability-sanctuary p.lead-text {
+  color: #52525B;
+  font-weight: 400;
+}
+
+.section-header {
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.section-header.text-center {
+  align-items: center;
+  text-align: center;
+}
+
+.section-header p {
+  max-width: 720px;
+  font-size: clamp(1.1rem, 0.6vw + 0.95rem, 1.35rem);
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+
+/* Grids with Responsive Auto-Fill & Clean Gaps */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr));
+  gap: var(--space-8);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: var(--space-8);
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: var(--space-6);
+}
+
+/* Utility Flex Classes */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
+.gap-2 { gap: var(--space-2); }
+.gap-3 { gap: var(--space-3); }
+.gap-4 { gap: var(--space-4); }
+.gap-6 { gap: var(--space-6); }
+.gap-8 { gap: var(--space-8); }
+.text-center { text-align: center; }
+
+/* Architectural Atelier Navbar System (White Frosted Glass & Pitch Black Accents) */
+.floating-nav-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky-nav, 100);
+  padding-inline: var(--container-padding);
+  padding-top: var(--space-4);
+}
+
+.atelier-navbar {
+  max-width: 1260px;
+  margin-inline: auto;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  padding: 6px;
+  box-shadow: 0 12px 35px -10px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: all var(--duration-normal) var(--ease-spring);
+}
+
+.atelier-navbar-inner {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--space-5);
+  padding: 0.45rem 1.15rem;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-radius: 15px;
+}
+
+/* Left: Brand + Real-Time Telemetry */
+.nav-brand-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.brand-logo-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-name {
+  font-family: var(--font-display);
+  font-size: 1.28rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #09090B;
+}
+
+.brand-dot {
+  color: #09090B;
+}
+
+/* Atelier Telemetry Badge */
+.atelier-telemetry-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0.35rem 0.8rem;
+  background: #F4F4F6;
+  border: 1px solid #E4E4E7;
+  border-radius: 9px;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #09090B;
+  letter-spacing: 0.05em;
+  user-select: none;
+}
+
+.telemetry-beacon {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #10B981;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+  animation: beaconPulse 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes beaconPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(0.85); }
+}
+
+.telemetry-divider {
+  color: #D4D4D8;
+}
+
+.telemetry-slots {
+  color: #059669;
+  font-weight: 800;
+}
+
+/* Center: Segmented Editorial Index Track */
+.nav-index-track {
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #F4F4F6;
+  padding: 4px;
+  border-radius: 12px;
+  border: 1px solid #E4E4E7;
+}
+
+.nav-track-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0.45rem 1rem;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all var(--duration-fast) var(--ease-spring);
+  white-space: nowrap;
+}
+
+.nav-track-item .track-idx {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #09090B;
+  opacity: 0.75;
+  letter-spacing: 0.02em;
+}
+
+.nav-track-item:hover {
+  background: #09090B;
+  color: #FFFFFF;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
+}
+
+.nav-track-item:hover .track-idx {
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+/* Right: Tactile Actions Group */
+.nav-actions-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.nav-kbd-hint {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 6px;
+  background: #F4F4F6;
+  border: 1px solid #D4D4D8;
+  border-radius: 5px;
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: #09090B;
+}
+
+/* Book Sprint Pitch Black Button */
+.nav-book-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.6rem 1.35rem;
+  background: #09090B;
+  border: 1px solid #09090B;
+  border-radius: 10px;
+  color: #FFFFFF;
+  font-family: var(--font-body);
+  font-size: 0.94rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--duration-fast) var(--ease-spring);
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.nav-book-btn:hover {
+  background: #27272A;
+  border-color: #27272A;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  color: #FFFFFF;
+}
+
+.nav-book-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--duration-fast) var(--ease-spring);
+}
+
+.nav-book-btn:hover .nav-book-arrow {
+  transform: translate(2px, -2px);
+}
+
+/* Mobile Toggle */
+.mobile-nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 44px;
+  min-height: 44px;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 8px;
+}
+
+.mobile-nav-toggle:focus-visible {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 2px;
+}
+
+.mobile-nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #09090B;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+@media (max-width: 990px) {
+  .atelier-telemetry-badge {
+    display: none;
+  }
+  .nav-index-track {
+    display: none;
+  }
+  .nav-index-track.mobile-open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: var(--container-padding);
+    right: var(--container-padding);
+    background: #FFFFFF;
+    border: 1px solid var(--border-medium);
+    border-radius: 16px;
+    padding: var(--space-5);
+    gap: var(--space-3);
+    box-shadow: var(--shadow-modal);
+    align-items: stretch;
+    z-index: var(--z-sticky-nav, 100);
+  }
+  .nav-index-track.mobile-open .nav-track-item {
+    padding: 0.85rem 1.15rem;
+    font-size: 1.05rem;
+  }
+  .mobile-nav-toggle {
+    display: flex;
+  }
+}
+
+@media (max-width: 640px) {
+  .atelier-navbar-inner {
+    padding: 0.38rem 0.75rem;
+    gap: var(--space-2);
+  }
+  .nav-book-btn {
+    padding: 0.48rem 0.85rem;
+    font-size: 0.86rem;
+  }
+  .brand-name {
+    font-size: 1.15rem;
+  }
+  .floating-nav-wrapper {
+    padding-top: var(--space-2);
+  }
+  .hero-cta-group {
+    flex-direction: column !important;
+    width: 100%;
+    align-items: center;
+  }
+  .hero-cta-group .hero-cta-btn {
+    width: 100% !important;
+    max-width: 360px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .atelier-navbar {
+    padding: 4px;
+  }
+  .atelier-navbar-inner {
+    padding: 0.3rem 0.5rem;
+    gap: 6px;
+  }
+  .brand-name {
+    font-size: 1.02rem;
+    letter-spacing: 0.02em;
+  }
+  .nav-book-btn {
+    padding: 0.4rem 0.65rem;
+    font-size: 0.78rem;
+  }
+  .mobile-nav-toggle {
+    min-width: 38px;
+    min-height: 38px;
+    width: 38px;
+    height: 38px;
+    padding: 6px;
+  }
+}
+
+/* Scroll Reveal System */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.55s var(--ease-spring), transform 0.55s var(--ease-spring);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>SOLONOVA — Luxury Vibe-Coding Studio & Digital Atelier</title>
+  <meta name="title" content="SOLONOVA — Luxury Vibe-Coding Studio & Digital Atelier" />
+  <meta name="description" content="Bespoke, high-conversion digital experiences and web applications handcrafted at 10x agency velocity. A solo luxury studio redefining web craft." />
+  <meta name="keywords" content="luxury web design, vibe coding, bespoke web apps, creative developer, high conversion website, Solonova" />
+  <meta name="author" content="Solonova Studio" />
+  
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://solonova.ai/" />
+  <meta property="og:title" content="SOLONOVA — Luxury Vibe-Coding Studio & Digital Atelier" />
+  <meta property="og:description" content="Bespoke, high-conversion web experiences handcrafted at 10x agency velocity." />
+  <meta property="og:image" content="/og-image.png" />
+  
+  <!-- Google Fonts: Playfair Display (Editorial Serif) + Plus Jakarta Sans (Clean Grotesk) + Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet Hub -->
+  <link rel="stylesheet" href="/src/styles/main.css" />
+</head>
+<body class="bg-primary text-primary antialiased selection:bg-black selection:text-white">
+  <!-- Accessible Skip Navigation Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Living 3D WebGL Canvas Layer -->
+  <canvas id="bg-canvas-3d" class="bg-canvas-3d" aria-hidden="true"></canvas>
+
+  <!-- Main App Shell -->
+  <div id="app" class="flex flex-col relative z-10" style="min-height: 100vh; min-height: 100dvh;">
+    <!-- Floating Island Navbar Container -->
+    <header id="navbar-root" class="floating-nav-wrapper"></header>
+
+    <!-- Main Content Flow -->
+    <main id="main-content" class="flex-grow">
+      <!-- Hero Section -->
+      <section id="hero-root"></section>
+
+      <!-- Proof & Metrics Strip -->
+      <section id="metrics-root"></section>
+
+      <!-- Curated Portfolio Grid -->
+      <section id="showcase-root"></section>
+
+      <!-- The Vibe Coding Delivery Engine -->
+      <section id="process-root"></section>
+
+      <!-- Agency vs. Solonova Comparison Matrix -->
+      <section id="comparison-root"></section>
+
+      <!-- Interactive Scope & Pitch Cost Estimator -->
+      <section id="calculator-root"></section>
+
+      <!-- Direct Booking & Contact Section -->
+      <section id="contact-root"></section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer-root"></footer>
+  </div>
+
+  <!-- Interactive Project Deep-Dive Modal -->
+  <div id="modal-root"></div>
+
+  <!-- Application Entry Point -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+/* Design System Tokens — Editorial Monochromatic Luxury (Pristine White & Deep Black) */
+:root {
+  /* Canvas & Surface Colors — Pure White, Alabaster & Subtle Zinc */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #FAFAFB;
+  --bg-surface: #F4F4F6;
+  --bg-surface-hover: #EBEBEF;
+  --bg-elevated: #FFFFFF;
+  --bg-glass: rgba(255, 255, 255, 0.88);
+  --bg-glass-card: rgba(255, 255, 255, 0.94);
+  --bg-shell: rgba(0, 0, 0, 0.03);
+  --bg-dark: #09090B;
+  --bg-dark-surface: #121215;
+
+  /* Curated Luxury Accents — Sleek Pitch Black with Refined Champagne Gold & Emerald Touches */
+  --accent-black: #09090B;
+  --accent-black-hover: #18181B;
+  --accent-charcoal: #27272A;
+  --accent-gold: #C5A059;              /* Bespoke Atelier Champagne Gold */
+  --accent-gold-hover: #B38E46;
+  --accent-gold-soft: rgba(197, 160, 89, 0.08);
+  --accent-gold-border: rgba(197, 160, 89, 0.28);
+  --accent-bronze: #8C7355;
+  --accent-amber: #D97706;
+  --accent-cyan: #06B6D4;
+  --accent-violet: #8B5CF6;
+
+  /* Status Indicators & Live Telemetry */
+  --status-live: #10B981;
+  --status-live-bg: #F0FDF4;
+  --status-live-border: #BBF7D0;
+  --status-live-text: #065F46;
+
+  /* Hairline Borders & Dividers */
+  --border-hairline: rgba(0, 0, 0, 0.06);
+  --border-subtle: #E4E4E7;
+  --border-medium: #D4D4D8;
+  --border-dark: #09090B;
+  --border-glow: rgba(0, 0, 0, 0.15);
+
+  /* Typography Colors — High-Impact Deep Black & Refined Neutral Charcoal */
+  --text-primary: #09090B;
+  --text-secondary: #52525B;
+  --text-tertiary: #71717A;
+  --text-invert: #FFFFFF;
+
+  /* Typography Fonts */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Space Grotesk', monospace;
+
+  /* Spacing Scale — Grand Proportions & Clean Whitespace */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.75rem;
+  --space-8: 2.5rem;
+  --space-10: 3.25rem;
+  --space-12: 4rem;
+  --space-16: 5.5rem;
+  --space-20: 7rem;
+  --space-24: 8.5rem;
+  --space-32: 11rem;
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-2xl: 34px;
+  --radius-full: 9999px;
+
+  /* Crisp Monochromatic Shadows & Low-GPU Overheads */
+  --shadow-subtle: 0 2px 10px rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 8px 28px -4px rgba(0, 0, 0, 0.05), 0 0 1px rgba(0, 0, 0, 0.08);
+  --shadow-elevated: 0 18px 45px -10px rgba(0, 0, 0, 0.08), 0 0 1px rgba(0, 0, 0, 0.12);
+  --shadow-modal: 0 28px 65px -12px rgba(0, 0, 0, 0.22);
+  --shadow-dark: 0 20px 50px rgba(0, 0, 0, 0.5);
+
+  /* Transitions & Springs */
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-luxury: cubic-bezier(0.25, 1, 0.5, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 280ms;
+  --duration-slow: 500ms;
+
+  /* Layout Max Widths */
+  --container-max: 1340px;
+  --container-narrow: 1020px;
+  --container-padding: clamp(1.5rem, 6vw, 3.5rem);
+
+  /* Unified Accessible Focus Ring */
+  --focus-ring: 0 0 0 2px var(--bg-primary), 0 0 0 4px var(--accent-gold);
+
+  /* Predictable Layering Z-Index System */
+  --z-canvas: 0;
+  --z-base: 1;
+  --z-app: 10;
+  --z-sticky-nav: 100;
+  --z-drawer-backdrop: 400;
+  --z-drawer-panel: 410;
+  --z-modal-backdrop: 500;
+  --z-modal-content: 510;
+  --z-skip-link: 1000;
+}

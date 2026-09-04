@@ -1,0 +1,164 @@
+/* Kinetic & Awwwards-Tier Micro-Interaction Choreography */
+/* Adheres to emilkowalski/skills and high-end-visual-design */
+
+/* Ambient Warm Silk Sheen */
+.ambient-silk {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(140px);
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.silk-warm {
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, rgba(238, 235, 227, 0.8) 0%, rgba(250, 250, 248, 0) 70%);
+  top: -100px;
+  right: -80px;
+  animation: floatWarmSilk 20s ease-in-out infinite alternate;
+}
+
+@keyframes floatWarmSilk {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-60px, 80px) scale(1.08); }
+  100% { transform: translate(-20px, 40px) scale(0.96); }
+}
+
+/* Kinetic Marquee Ticker */
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  user-select: none;
+  display: flex;
+  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+
+.marquee-content {
+  display: flex;
+  gap: var(--space-8);
+  animation: scrollMarquee 30s linear infinite;
+  flex-shrink: 0;
+}
+
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollMarquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Radar Pulse Dot for Live Availability */
+.radar-ping {
+  position: relative;
+  display: inline-flex;
+  width: 9px;
+  height: 9px;
+}
+
+.radar-ping::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: #10B981;
+  opacity: 0.4;
+  animation: radarWave 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.radar-ping-core {
+  position: relative;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #10B981;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.6);
+}
+
+@keyframes radarWave {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+
+/* Card Spring Hover Elevation */
+.double-bezel {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+.double-bezel:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+.double-bezel:hover .double-bezel-inner {
+  box-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.08);
+}
+
+/* Interactive Device Preview Tabs in Hero */
+.preview-tab-btn {
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+.preview-tab-btn:hover {
+  color: var(--text-primary);
+}
+
+.preview-tab-btn.active {
+  background: #111111;
+  color: #FFFFFF;
+  border-color: #111111;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Fluid Number Animation Ticker */
+.price-counter-anim {
+  display: inline-block;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Reduced Motion Overrides — Accessibility & Vestibular Protection */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .marquee-content {
+    animation: none !important;
+  }
+
+  .silk-warm {
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .radar-ping::before,
+  .telemetry-beacon {
+    animation: none !important;
+  }
+
+  .double-bezel:hover {
+    transform: none !important;
+  }
+}
