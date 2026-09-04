@@ -50,20 +50,20 @@ export function renderVibeProcess() {
         <div class="grid-4">
           ${steps.map(s => `
             <div class="double-bezel">
-              <div class="double-bezel-inner" style="padding: var(--space-8); display: flex; flex-direction: column; justify-content: space-between; position: relative;">
-                <div style="font-family: var(--font-display); font-size: 3.4rem; font-weight: 800; color: rgba(197, 160, 89, 0.15); position: absolute; top: var(--space-5); right: var(--space-5); line-height: 1; user-select: none;">
+              <div class="double-bezel-inner" style="padding: clamp(1.25rem, 3vw, 2.25rem); display: flex; flex-direction: column; justify-content: space-between; position: relative;">
+                <div style="font-family: var(--font-display); font-size: clamp(2.4rem, 4vw, 3.4rem); font-weight: 800; color: rgba(197, 160, 89, 0.15); position: absolute; top: clamp(0.75rem, 2vw, 1.25rem); right: clamp(0.75rem, 2vw, 1.25rem); line-height: 1; user-select: none; pointer-events: none;">
                   ${s.num}
                 </div>
 
                 <div>
-                  <span class="status-pill" style="margin-bottom: var(--space-5); font-size: 0.82rem; background: #F4F4F6; color: #09090B; border-color: #D4D4D8;">
+                  <span class="status-pill" style="margin-bottom: var(--space-4); font-size: 0.8rem; background: #F4F4F6; color: #09090B; border-color: #D4D4D8;">
                     ${s.timeline}
                   </span>
-                  <h3 style="font-size: 1.45rem; font-weight: 700; margin-bottom: var(--space-4); line-height: 1.25; color: #09090B;">${s.title}</h3>
-                  <p style="font-size: 1.02rem; line-height: 1.65; margin-bottom: var(--space-6); color: #52525B;">${s.description}</p>
+                  <h3 style="font-size: clamp(1.2rem, 1.8vw, 1.45rem); font-weight: 700; margin-bottom: var(--space-3); line-height: 1.25; color: #09090B; overflow-wrap: break-word;">${s.title}</h3>
+                  <p style="font-size: clamp(0.92rem, 1.2vw, 1.02rem); line-height: 1.6; margin-bottom: var(--space-5); color: #52525B; overflow-wrap: break-word;">${s.description}</p>
                 </div>
 
-                <div style="border-top: 1px solid #E4E4E7; padding-top: var(--space-4); font-size: 0.92rem; font-family: var(--font-mono); color: #09090B;">
+                <div style="border-top: 1px solid #E4E4E7; padding-top: var(--space-4); font-size: clamp(0.84rem, 1.1vw, 0.92rem); font-family: var(--font-mono); color: #09090B; overflow-wrap: break-word;">
                   <strong style="color: var(--accent-amber);">Deliverable:</strong> ${s.deliverable}
                 </div>
               </div>

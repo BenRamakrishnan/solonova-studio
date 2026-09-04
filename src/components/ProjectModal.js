@@ -111,16 +111,16 @@ export function renderProjectModal() {
 
         <!-- Modal Bottom Actions -->
         <div class="flex flex-wrap items-center justify-between gap-4" style="border-top: 1px solid #E4E4E7; padding-top: var(--space-6); margin-top: var(--space-2);">
-          <div style="font-size: 0.98rem; color: #52525B;">
+          <div style="font-size: 0.95rem; color: #52525B;">
             Want an equivalent build for your brand?
           </div>
-          <div class="flex items-center gap-3">
-            <button id="modal-scope-btn" class="btn btn-secondary">
+          <div class="flex flex-wrap items-center gap-3" style="width: 100%; max-width: 440px;">
+            <button id="modal-scope-btn" class="btn btn-secondary" style="flex: 1 1 180px; justify-content: center; padding: 0.75rem 1.25rem;">
               <span>Calculate Scope</span>
             </button>
-            <a href="#contact" id="modal-pitch-btn" class="btn btn-primary">
+            <a href="#contact" id="modal-pitch-btn" class="btn btn-primary" style="flex: 1 1 200px; justify-content: center; padding: 0.75rem 1.25rem;">
               <span>Book Sprint Kickoff</span>
-              <span class="btn-icon-circle">
+              <span class="btn-icon-circle" style="flex-shrink: 0;">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.6">
                   <path d="M7 17l9.2-9.2M17 17V8H8"/>
                 </svg>

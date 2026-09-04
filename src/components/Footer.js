@@ -5,9 +5,9 @@ export function renderFooter() {
   container.innerHTML = `
     <footer style="border-top: 1px solid #27272A; background: #09090B; color: #FFFFFF; padding-block: clamp(4.5rem, 8vw, 7rem); position: relative; z-index: 10;">
       <div class="container">
-        <div class="flex flex-wrap justify-between items-start gap-8" style="margin-bottom: var(--space-10);">
+        <div class="footer-columns-grid" style="margin-bottom: var(--space-10);">
           <!-- Left: Brand Info -->
-          <div style="max-width: 480px;">
+          <div>
             <div class="brand-logo" style="margin-bottom: var(--space-4);">
               <svg class="brand-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 44px; height: 44px;">
                 <rect width="40" height="40" rx="10" fill="#18181B" stroke="#3F3F46"/>
@@ -20,11 +20,11 @@ export function renderFooter() {
               </div>
             </div>
 
-            <p style="font-size: 1.05rem; color: #A1A1AA; line-height: 1.7; margin-bottom: var(--space-6);">
+            <p style="font-size: 1.02rem; color: #A1A1AA; line-height: 1.7; margin-bottom: var(--space-5); overflow-wrap: break-word;">
               The solo digital atelier redefining web craft through high-velocity vibe coding. Bespoke web apps, MVPs, and flagship brand experiences engineered for ambitious Indian and global founders.
             </p>
 
-            <div class="status-pill" style="font-size: 0.84rem; padding: 0.5rem 1.15rem; background: #18181B; border-color: #27272A; color: #FFFFFF;">
+            <div class="status-pill" style="font-size: clamp(0.74rem, 1.4vw, 0.84rem); padding: 0.45rem 1rem; background: #18181B; border-color: #27272A; color: #FFFFFF; overflow-wrap: break-word;">
               <span class="radar-ping">
                 <span class="radar-ping-core"></span>
               </span>
@@ -34,10 +34,10 @@ export function renderFooter() {
 
           <!-- Middle: Navigation Links -->
           <div>
-            <div style="font-family: var(--font-mono); font-size: 0.92rem; color: #FFFFFF; text-transform: uppercase; margin-bottom: var(--space-4); font-weight: 800; letter-spacing: 0.12em;">
+            <div style="font-family: var(--font-mono); font-size: 0.9rem; color: #FFFFFF; text-transform: uppercase; margin-bottom: var(--space-4); font-weight: 800; letter-spacing: 0.12em;">
               <span style="color: var(--accent-gold);">✦</span> NAVIGATION
             </div>
-            <ul style="display: flex; flex-direction: column; gap: var(--space-3); font-size: 1.05rem; color: #D4D4D8;">
+            <ul style="display: flex; flex-direction: column; gap: var(--space-3); font-size: 1.02rem; color: #D4D4D8;">
               <li><a href="#work" class="nav-link" style="transition: color 0.2s; color: #D4D4D8;">Curated Work</a></li>
               <li><a href="#process" class="nav-link" style="transition: color 0.2s; color: #D4D4D8;">Methodology</a></li>
               <li><a href="#comparison" class="nav-link" style="transition: color 0.2s; color: #D4D4D8;">Agency vs. Solonova</a></li>
@@ -48,26 +48,26 @@ export function renderFooter() {
 
           <!-- Right: Atelier Craft & Architectural Standards -->
           <div>
-            <div style="font-family: var(--font-mono); font-size: 0.92rem; color: #FFFFFF; text-transform: uppercase; margin-bottom: var(--space-4); font-weight: 800; letter-spacing: 0.12em;">
-              <span style="color: var(--accent-gold);">✦</span> ATELIER DISCIPLINES & STANDARDS
+            <div style="font-family: var(--font-mono); font-size: 0.9rem; color: #FFFFFF; text-transform: uppercase; margin-bottom: var(--space-4); font-weight: 800; letter-spacing: 0.12em;">
+              <span style="color: var(--accent-gold);">✦</span> ATELIER DISCIPLINES
             </div>
-            <ul style="display: flex; flex-direction: column; gap: var(--space-3); font-size: 0.96rem; color: #A1A1AA; font-family: var(--font-mono);">
-              <li>✦ Editorial Monochromatic Luxury Direction</li>
-              <li>✦ Fluid Bento Grids & Kinetic Micro-Interactions</li>
+            <ul style="display: flex; flex-direction: column; gap: var(--space-3); font-size: 0.94rem; color: #A1A1AA; font-family: var(--font-mono);">
+              <li>✦ Editorial Luxury Direction</li>
+              <li>✦ Fluid Bento Grids & Micro-Interactions</li>
               <li>✦ 100/100 Core Web Vitals & Sub-Second LCP</li>
-              <li>✦ WCAG 2.1 AA Accessible Visual Architecture</li>
+              <li>✦ WCAG 2.1 AA Visual Architecture</li>
               <li>✦ Direct WhatsApp & UPI Sprint Enablement</li>
-              <li>✦ Zero WordPress/Template Bloat Guarantee</li>
+              <li>✦ Zero WordPress/Template Bloat</li>
             </ul>
           </div>
         </div>
 
         <!-- Bottom Copyright -->
-        <div class="flex flex-wrap justify-between items-center gap-4" style="border-top: 1px solid #27272A; padding-top: var(--space-8); font-size: 0.92rem; color: #71717A; font-family: var(--font-mono);">
-          <div>
+        <div class="flex flex-wrap justify-between items-center gap-4" style="border-top: 1px solid #27272A; padding-top: var(--space-6); font-size: 0.88rem; color: #71717A; font-family: var(--font-mono);">
+          <div style="overflow-wrap: break-word;">
             © ${new Date().getFullYear()} Solonova Studio. All Rights Reserved. UPI, Razorpay & IMPS Enabled.
           </div>
-          <div class="flex gap-4">
+          <div class="flex flex-wrap gap-4">
             <a href="#comparison" class="nav-link" style="color: #71717A;">Sprint Guarantee</a>
             <span>•</span>
             <a href="#calculator" class="nav-link" style="color: #71717A;">Scope & Pricing</a>

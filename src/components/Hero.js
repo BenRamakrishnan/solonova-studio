@@ -17,11 +17,11 @@ export function renderHero() {
           </div>
 
           <!-- Eyebrow Status Pill with Luminous Live Beacon -->
-          <div class="status-pill" style="margin-bottom: var(--space-6); padding: 0.5rem 1.25rem; border-color: var(--accent-gold-border); background: #FFFFFF;">
+          <div class="status-pill hero-status-pill" style="margin-bottom: var(--space-6); padding: 0.5rem 1.25rem; border-color: var(--accent-gold-border); background: #FFFFFF;">
             <span class="radar-ping">
               <span class="radar-ping-core" style="background-color: var(--status-live);"></span>
             </span>
-            <span style="font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; color: #09090B; letter-spacing: 0.08em;">
+            <span class="hero-status-pill-text" style="font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; color: #09090B; letter-spacing: 0.08em; overflow-wrap: break-word;">
               SOLO VIBE ATELIER // INDIA & GLOBAL // <span style="color: var(--accent-amber);">10X SHIP VELOCITY</span>
             </span>
           </div>
@@ -96,69 +96,69 @@ export function renderHero() {
 
             <!-- Tab 1: Performance -->
             <div id="tab-content-perf" class="hero-tab-content" role="tabpanel" aria-labelledby="tab-perf">
-              <div class="grid-3" style="gap: var(--space-6);">
-                <div style="padding: var(--space-5); border-left: 3px solid var(--accent-gold); background: #FAFAFB; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
-                  <div style="font-family: var(--font-mono); font-size: 0.8rem; color: #71717A; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Lighthouse Score</div>
-                  <div style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: #09090B; margin-block: 4px;">100 / 100</div>
-                  <div style="font-size: 0.92rem; color: #52525B; line-height: 1.5;">Zero layout shift, instant 4G/5G mobile edge load</div>
+              <div class="grid-3" style="gap: var(--space-5);">
+                <div class="hero-benchmark-bar" style="padding: clamp(0.9rem, 2.5vw, 1.25rem); border-left: 3px solid var(--accent-gold); background: #FAFAFB; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
+                  <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #71717A; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Lighthouse Score</div>
+                  <div style="font-family: var(--font-display); font-size: clamp(1.75rem, 3.5vw, 2.2rem); font-weight: 800; color: #09090B; margin-block: 4px; line-height: 1.1;">100 / 100</div>
+                  <div style="font-size: 0.9rem; color: #52525B; line-height: 1.5; overflow-wrap: break-word;">Zero layout shift, instant 4G/5G mobile edge load</div>
                 </div>
 
-                <div style="padding: var(--space-5); border-left: 3px solid #09090B; background: #FAFAFB; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
-                  <div style="font-family: var(--font-mono); font-size: 0.8rem; color: #71717A; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Average LCP</div>
-                  <div style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: #09090B; margin-block: 4px;">0.38 Seconds</div>
-                  <div style="font-size: 0.92rem; color: #52525B; line-height: 1.5;">Sub-second edge CDN rendering globally</div>
+                <div class="hero-benchmark-bar" style="padding: clamp(0.9rem, 2.5vw, 1.25rem); border-left: 3px solid #09090B; background: #FAFAFB; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
+                  <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #71717A; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Average LCP</div>
+                  <div style="font-family: var(--font-display); font-size: clamp(1.75rem, 3.5vw, 2.2rem); font-weight: 800; color: #09090B; margin-block: 4px; line-height: 1.1;">0.38 Seconds</div>
+                  <div style="font-size: 0.9rem; color: #52525B; line-height: 1.5; overflow-wrap: break-word;">Sub-second edge CDN rendering globally</div>
                 </div>
 
-                <div style="padding: var(--space-5); border-left: 3px solid #059669; background: #F0FDF4; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
-                  <div style="font-family: var(--font-mono); font-size: 0.8rem; color: #059669; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Code Discipline</div>
-                  <div style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: #065F46; margin-block: 4px;">100% Modular</div>
-                  <div style="font-size: 0.92rem; color: #047857; line-height: 1.5;">Pure clean JS & CSS. Zero WP plugin bloat</div>
+                <div class="hero-benchmark-bar" style="padding: clamp(0.9rem, 2.5vw, 1.25rem); border-left: 3px solid #059669; background: #F0FDF4; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
+                  <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #059669; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Code Discipline</div>
+                  <div style="font-family: var(--font-display); font-size: clamp(1.75rem, 3.5vw, 2.2rem); font-weight: 800; color: #065F46; margin-block: 4px; line-height: 1.1;">100% Modular</div>
+                  <div style="font-size: 0.9rem; color: #047857; line-height: 1.5; overflow-wrap: break-word;">Pure clean JS & CSS. Zero WP plugin bloat</div>
                 </div>
               </div>
             </div>
 
             <!-- Tab 2: Ship Speed -->
             <div id="tab-content-speed" class="hero-tab-content" role="tabpanel" aria-labelledby="tab-speed" style="display: none;">
-              <div class="grid-3" style="gap: var(--space-6);">
-                <div style="padding: var(--space-5); border-left: 3px solid var(--accent-gold); background: #FAFAFB; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
-                  <div style="font-family: var(--font-mono); font-size: 0.8rem; color: #71717A; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Rapid Launchpad</div>
-                  <div style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: #09090B; margin-block: 4px;">48 Hours</div>
-                  <div style="font-size: 0.92rem; color: #52525B; line-height: 1.5;">From concept kickoff to production live link</div>
+              <div class="grid-3" style="gap: var(--space-5);">
+                <div class="hero-benchmark-bar" style="padding: clamp(0.9rem, 2.5vw, 1.25rem); border-left: 3px solid var(--accent-gold); background: #FAFAFB; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
+                  <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #71717A; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Rapid Launchpad</div>
+                  <div style="font-family: var(--font-display); font-size: clamp(1.75rem, 3.5vw, 2.2rem); font-weight: 800; color: #09090B; margin-block: 4px; line-height: 1.1;">48 Hours</div>
+                  <div style="font-size: 0.9rem; color: #52525B; line-height: 1.5; overflow-wrap: break-word;">From concept kickoff to production live link</div>
                 </div>
 
-                <div style="padding: var(--space-5); border-left: 3px solid #09090B; background: #FAFAFB; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
-                  <div style="font-family: var(--font-mono); font-size: 0.8rem; color: #71717A; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Full Brand Atelier</div>
-                  <div style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: #09090B; margin-block: 4px;">5 to 7 Days</div>
-                  <div style="font-size: 0.92rem; color: #52525B; line-height: 1.5;">Multi-page custom experience with case studies</div>
+                <div class="hero-benchmark-bar" style="padding: clamp(0.9rem, 2.5vw, 1.25rem); border-left: 3px solid #09090B; background: #FAFAFB; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
+                  <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #71717A; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Full Brand Atelier</div>
+                  <div style="font-family: var(--font-display); font-size: clamp(1.75rem, 3.5vw, 2.2rem); font-weight: 800; color: #09090B; margin-block: 4px; line-height: 1.1;">5 to 7 Days</div>
+                  <div style="font-size: 0.9rem; color: #52525B; line-height: 1.5; overflow-wrap: break-word;">Multi-page custom experience with case studies</div>
                 </div>
 
-                <div style="padding: var(--space-5); border-left: 3px solid #059669; background: #F0FDF4; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
-                  <div style="font-family: var(--font-mono); font-size: 0.8rem; color: #059669; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Sprint Guarantee</div>
-                  <div style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: #065F46; margin-block: 4px;">100% Refundable</div>
-                  <div style="font-size: 0.92rem; color: #047857; line-height: 1.5;">Deposit back if deadline missed. Zero risk.</div>
+                <div class="hero-benchmark-bar" style="padding: clamp(0.9rem, 2.5vw, 1.25rem); border-left: 3px solid #059669; background: #F0FDF4; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
+                  <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #059669; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Sprint Guarantee</div>
+                  <div style="font-family: var(--font-display); font-size: clamp(1.75rem, 3.5vw, 2.2rem); font-weight: 800; color: #065F46; margin-block: 4px; line-height: 1.1;">100% Refundable</div>
+                  <div style="font-size: 0.9rem; color: #047857; line-height: 1.5; overflow-wrap: break-word;">Deposit back if deadline missed. Zero risk.</div>
                 </div>
               </div>
             </div>
 
             <!-- Tab 3: Pricing & UPI -->
             <div id="tab-content-pricing" class="hero-tab-content" role="tabpanel" aria-labelledby="tab-pricing" style="display: none;">
-              <div class="grid-3" style="gap: var(--space-6);">
-                <div style="padding: var(--space-5); border-left: 3px solid var(--accent-gold); background: #FAFAFB; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
-                  <div style="font-family: var(--font-mono); font-size: 0.8rem; color: #71717A; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Entry Sprint</div>
-                  <div style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: #09090B; margin-block: 4px;">₹14,999</div>
-                  <div style="font-size: 0.92rem; color: #52525B; line-height: 1.5;">Complete 48h landing page with WhatsApp capture</div>
+              <div class="grid-3" style="gap: var(--space-5);">
+                <div class="hero-benchmark-bar" style="padding: clamp(0.9rem, 2.5vw, 1.25rem); border-left: 3px solid var(--accent-gold); background: #FAFAFB; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
+                  <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #71717A; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Entry Sprint</div>
+                  <div style="font-family: var(--font-display); font-size: clamp(1.75rem, 3.5vw, 2.2rem); font-weight: 800; color: #09090B; margin-block: 4px; line-height: 1.1;">₹14,999</div>
+                  <div style="font-size: 0.9rem; color: #52525B; line-height: 1.5; overflow-wrap: break-word;">Complete 48h landing page with WhatsApp capture</div>
                 </div>
 
-                <div style="padding: var(--space-5); border-left: 3px solid #09090B; background: #FAFAFB; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
-                  <div style="font-family: var(--font-mono); font-size: 0.8rem; color: #71717A; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Payment Terms</div>
-                  <div style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: #09090B; margin-block: 4px;">50 / 50 Split</div>
-                  <div style="font-size: 0.92rem; color: #52525B; line-height: 1.5;">50% kickoff deposit, 50% post-launch approval</div>
+                <div class="hero-benchmark-bar" style="padding: clamp(0.9rem, 2.5vw, 1.25rem); border-left: 3px solid #09090B; background: #FAFAFB; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
+                  <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #71717A; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Payment Terms</div>
+                  <div style="font-family: var(--font-display); font-size: clamp(1.75rem, 3.5vw, 2.2rem); font-weight: 800; color: #09090B; margin-block: 4px; line-height: 1.1;">50 / 50 Split</div>
+                  <div style="font-size: 0.9rem; color: #52525B; line-height: 1.5; overflow-wrap: break-word;">50% kickoff deposit, 50% post-launch approval</div>
                 </div>
 
-                <div style="padding: var(--space-5); border-left: 3px solid #059669; background: #F0FDF4; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
-                  <div style="font-family: var(--font-mono); font-size: 0.8rem; color: #059669; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Payment Rails</div>
-                  <div style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: #065F46; margin-block: 4px;">UPI & Razorpay</div>
-                  <div style="font-size: 0.92rem; color: #047857; line-height: 1.5;">GPay, PhonePe, Paytm, NEFT & Credit Cards</div>
+                <div class="hero-benchmark-bar" style="padding: clamp(0.9rem, 2.5vw, 1.25rem); border-left: 3px solid #059669; background: #F0FDF4; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
+                  <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #059669; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Payment Rails</div>
+                  <div style="font-family: var(--font-display); font-size: clamp(1.75rem, 3.5vw, 2.2rem); font-weight: 800; color: #065F46; margin-block: 4px; line-height: 1.1;">UPI & Razorpay</div>
+                  <div style="font-size: 0.9rem; color: #047857; line-height: 1.5; overflow-wrap: break-word;">GPay, PhonePe, Paytm, NEFT & Credit Cards</div>
                 </div>
               </div>
             </div>

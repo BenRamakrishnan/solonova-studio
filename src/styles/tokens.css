@@ -89,7 +89,7 @@
   /* Layout Max Widths */
   --container-max: 1340px;
   --container-narrow: 1020px;
-  --container-padding: clamp(1.5rem, 6vw, 3.5rem);
+  --container-padding: clamp(1rem, 4vw, 3rem);
 
   /* Unified Accessible Focus Ring */
   --focus-ring: 0 0 0 2px var(--bg-primary), 0 0 0 4px var(--accent-gold);
