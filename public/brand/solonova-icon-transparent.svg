@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" fill="none">
+  <defs>
+    <filter id="goldGlowTrans" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#C5A059" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  <!-- Fluid Architectural 'S' Glyphic Mark -->
+  <path d="M324 162C324 162 290 134 254 134C190 134 154 170 154 212C154 276 254 262 254 312C254 348 218 362 190 362C140 362 104 326 104 326" 
+        stroke="#09090B" 
+        stroke-width="36" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+
+  <!-- Solonova Signature Gold Atelier Dot -->
+  <circle cx="352" cy="340" r="42" fill="#C5A059" filter="url(#goldGlowTrans)"/>
+</svg>
