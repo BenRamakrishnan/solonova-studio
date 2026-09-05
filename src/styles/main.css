@@ -157,6 +157,16 @@
 .gap-8 { gap: var(--space-8); }
 .text-center { text-align: center; }
 
+/* Prevent sticky navbar from covering section content on scroll or jump */
+section[id],
+#calculator,
+#work,
+#process,
+#comparison,
+#contact {
+  scroll-margin-top: clamp(80px, 12vh, 120px);
+}
+
 /* Architectural Atelier Navbar System (White Frosted Glass & Pitch Black Accents) */
 .floating-nav-wrapper {
   position: sticky;

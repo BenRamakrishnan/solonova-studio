@@ -33,7 +33,7 @@ export function renderContactSection() {
                     </svg>
                     <div style="display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
                       <span style="overflow-wrap: break-word; line-height: 1.3;"><strong>WhatsApp Founder Direct</strong></span>
-                      <span style="font-family: var(--font-mono); font-size: 0.88rem; color: #065F46;">+91 8861699354 (Instant Reply)</span>
+                      <span style="font-size: 0.88rem; color: #065F46;">Instant Founder Reply (24/7)</span>
                     </div>
                   </a>
 
@@ -44,7 +44,7 @@ export function renderContactSection() {
                     </svg>
                     <div style="display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
                       <span style="overflow-wrap: break-word; line-height: 1.3;"><strong>Direct Phone Line</strong></span>
-                      <span style="font-family: var(--font-mono); font-size: 0.88rem; color: #52525B;">+91 8861699354</span>
+                      <span style="font-size: 0.88rem; color: #52525B;">Priority Voice Line</span>
                     </div>
                   </a>
 
@@ -204,10 +204,10 @@ export function renderContactSection() {
             feedback.setAttribute('tabindex', '-1');
             feedback.innerHTML = `
               <div style="margin-bottom: 0.75rem;">
-                ✔ <strong>Inquiry received, ${name}!</strong> We've prepared your sprint brief for founder review (+91 8861699354).
+                ✔ <strong>Inquiry received, ${name}!</strong> We've prepared your sprint brief for founder review.
               </div>
               <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-sm" style="background: #059669; color: #FFFFFF; border: none; display: inline-flex; align-items: center; gap: 6px; font-weight: 700; padding: 0.5rem 1rem; border-radius: 8px;">
-                <span>Connect on WhatsApp (+91 8861699354) ↗</span>
+                <span>Confirm on WhatsApp ↗</span>
               </a>
             `;
             feedback.focus();

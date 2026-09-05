@@ -80,12 +80,12 @@ export function renderScopeCalculator() {
                     <span style="letter-spacing: 0.06em;">ESTIMATED SPRINT FEE</span>
                   </div>
 
-                  <div style="margin-bottom: var(--space-5);">
-                    <div class="calc-price-display" style="display: flex; align-items: baseline; gap: 0.65rem; font-weight: 800; line-height: 1;">
-                      <span class="calc-currency-symbol" style="font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif); font-size: clamp(1.6rem, 3.2vw, 2.4rem); font-weight: 600; color: #E4E4E7; opacity: 0.85; line-height: 1; user-select: none;">₹</span>
-                      <span id="calc-total-price" class="price-counter-anim" style="font-family: var(--font-display); font-size: clamp(2.3rem, 5vw, 4rem); font-weight: 800; line-height: 1; background: linear-gradient(135deg, #FFFFFF 50%, var(--accent-gold) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 0.04em; display: inline-block;">28,500</span>
+                  <div style="margin-bottom: clamp(1.25rem, 3vw, 1.85rem);">
+                    <div class="calc-price-display" style="display: flex; align-items: baseline; gap: 0.65rem; font-weight: 800; line-height: 1.15; padding-block: 4px; overflow: visible;">
+                      <span class="calc-currency-symbol" style="font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif); font-size: clamp(1.5rem, 3.2vw, 2.3rem); font-weight: 600; color: #E4E4E7; opacity: 0.85; line-height: 1; user-select: none;">₹</span>
+                      <span id="calc-total-price" class="price-counter-anim" style="font-family: var(--font-display); font-size: clamp(1.95rem, 4.8vw, 3.8rem); font-weight: 800; line-height: 1.15; background: linear-gradient(135deg, #FFFFFF 50%, var(--accent-gold) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 0.03em; display: inline-block;">28,500</span>
                     </div>
-                    <div style="font-size: 0.92rem; color: #A1A1AA; margin-top: 8px; line-height: 1.5; overflow-wrap: break-word;">
+                    <div style="font-size: 0.92rem; color: #A1A1AA; margin-top: 14px; margin-bottom: 4px; line-height: 1.6; overflow-wrap: break-word;">
                       Flat sprint fee. 50% deposit via UPI/Bank, 50% upon verified launch.
                     </div>
                   </div>

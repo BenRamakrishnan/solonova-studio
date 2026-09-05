@@ -122,22 +122,31 @@ server.listen(4174, async () => {
       console.log(`  Updated Price: "${updatedPrice.priceText}", Gap: ${updatedPrice.gap.toFixed(1)}px (NO OVERLAP: ${updatedPrice.isNoOverlap})`);
     }
 
-    // 3. Verify WhatsApp destination links have +91 8861699354
+    // 3. Verify WhatsApp destination links have 918861699354 in href but NO raw digits in visible text
     const waLinks = await page.evaluate(() => {
       const links = Array.from(document.querySelectorAll('a[href*="wa.me"]'));
       return links.map(a => ({
         text: a.textContent.trim(),
         href: a.href,
-        hasPhone: a.href.includes('918861699354')
+        hasPhoneInHref: a.href.includes('918861699354'),
+        noPhoneInText: !a.textContent.includes('8861699354')
       }));
     });
 
-    console.log(`\n--- WHATSAPP LINKS CHECK (+91 8861699354) ---`);
+    console.log(`\n--- WHATSAPP LINKS & PRIVACY CHECK ---`);
     for (const l of waLinks) {
-      console.log(`  [${l.hasPhone ? 'OK' : 'FAIL'}] ${l.text.replace(/\s+/g, ' ')} -> ${l.href.slice(0, 50)}...`);
+      console.log(`  [${l.hasPhoneInHref && l.noPhoneInText ? 'OK' : 'FAIL'}] Label: "${l.text.replace(/\s+/g, ' ')}" | Href: ${l.href.slice(0, 50)}...`);
     }
 
-    console.log('\nALL MOBILE AND CALCULATOR VERIFICATIONS COMPLETE!');
+    // 4. Verify scroll-margin-top on #calculator
+    const scrollMargin = await page.evaluate(() => {
+      const el = document.getElementById('calculator');
+      return window.getComputedStyle(el).scrollMarginTop;
+    });
+    console.log(`\n--- SCROLL-MARGIN-TOP CHECK ---`);
+    console.log(`  #calculator scrollMarginTop: ${scrollMargin}`);
+
+    console.log('\nALL MOBILE, PRIVACY, AND CALCULATOR VERIFICATIONS COMPLETE!');
   } catch (err) {
     console.error('Test error:', err);
     process.exitCode = 1;

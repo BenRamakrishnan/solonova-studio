@@ -51,7 +51,7 @@ export function renderNavbar() {
           </a>
           <a href="https://wa.me/918861699354?text=Hi%20Solonova%20Studio,%20I'd%20like%20to%20discuss%20booking%20a%20website%20sprint" target="_blank" rel="noopener noreferrer" class="nav-track-item" style="color: #059669; font-weight: 700;">
             <span class="track-idx" style="color: #059669;">✦</span>
-            <span class="track-label">WhatsApp (+91 8861699354)</span>
+            <span class="track-label">WhatsApp Concierge</span>
           </a>
         </div>
 
