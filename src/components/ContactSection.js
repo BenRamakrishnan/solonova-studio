@@ -27,11 +27,25 @@ export function renderContactSection() {
 
                 <div class="flex flex-col gap-3">
                   <!-- Direct WhatsApp Button -->
-                  <a href="https://wa.me/?text=Hi%20Solonova%20Studio,%20I'd%20like%20to%20discuss%20a%20website%20sprint" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg" style="justify-content: flex-start; background: #F0FDF4; border-color: #A7F3D0; color: #047857; white-space: normal; padding: clamp(0.75rem, 2vw, 1.1rem) clamp(1rem, 2vw, 1.5rem);">
+                  <a href="https://wa.me/918861699354?text=Hi%20Solonova%20Studio,%20I'd%20like%20to%20discuss%20booking%20a%20website%20sprint" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg" style="justify-content: flex-start; background: #F0FDF4; border-color: #A7F3D0; color: #047857; white-space: normal; padding: clamp(0.75rem, 2vw, 1.1rem) clamp(1rem, 2vw, 1.5rem);">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.2" style="flex-shrink: 0;">
                       <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
                     </svg>
-                    <span style="overflow-wrap: break-word; line-height: 1.4;"><strong>Chat on WhatsApp</strong> (Instant Founder Reply)</span>
+                    <div style="display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
+                      <span style="overflow-wrap: break-word; line-height: 1.3;"><strong>WhatsApp Founder Direct</strong></span>
+                      <span style="font-family: var(--font-mono); font-size: 0.88rem; color: #065F46;">+91 8861699354 (Instant Reply)</span>
+                    </div>
+                  </a>
+
+                  <!-- Direct Call / Mobile Line -->
+                  <a href="tel:+918861699354" class="btn btn-secondary btn-lg" style="justify-content: flex-start; white-space: normal; padding: clamp(0.75rem, 2vw, 1.1rem) clamp(1rem, 2vw, 1.5rem);">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#09090B" stroke-width="2" style="flex-shrink: 0;">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    <div style="display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
+                      <span style="overflow-wrap: break-word; line-height: 1.3;"><strong>Direct Phone Line</strong></span>
+                      <span style="font-family: var(--font-mono); font-size: 0.88rem; color: #52525B;">+91 8861699354</span>
+                    </div>
                   </a>
 
                   <!-- Email Direct -->
@@ -176,16 +190,26 @@ export function renderContactSection() {
         `;
       }
 
-      // Simulate network request with defensive try/catch
+      // Simulate network request and prepare WhatsApp dispatch
       setTimeout(() => {
         try {
+          const waBrief = encodeURIComponent(`Hi Solonova Studio, I'd like to book a sprint!\n\nName/Brand: ${name}\nEmail: ${email}\nTarget Timeline: ${timeline}\nBudget Range: ${budget}\n\nProject Brief:\n${message || 'Standard high-performance web build.'}`);
+          const waUrl = `https://wa.me/918861699354?text=${waBrief}`;
+
           if (feedback) {
             feedback.style.display = 'block';
             feedback.style.background = '#ECFDF5';
             feedback.style.border = '1px solid #A7F3D0';
             feedback.style.color = '#065F46';
             feedback.setAttribute('tabindex', '-1');
-            feedback.innerHTML = `✔ <strong>Inquiry received, ${name}!</strong> We've queued your project spec and will reply with wireframe insights within 2 hours.`;
+            feedback.innerHTML = `
+              <div style="margin-bottom: 0.75rem;">
+                ✔ <strong>Inquiry received, ${name}!</strong> We've prepared your sprint brief for founder review (+91 8861699354).
+              </div>
+              <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-sm" style="background: #059669; color: #FFFFFF; border: none; display: inline-flex; align-items: center; gap: 6px; font-weight: 700; padding: 0.5rem 1rem; border-radius: 8px;">
+                <span>Connect on WhatsApp (+91 8861699354) ↗</span>
+              </a>
+            `;
             feedback.focus();
           }
           form.reset();

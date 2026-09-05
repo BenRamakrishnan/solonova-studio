@@ -11,7 +11,7 @@ export function renderNavbar() {
       <div class="atelier-navbar-inner">
         <!-- 1. Left: Architectural Brand & Live Studio Status -->
         <div class="nav-brand-group">
-          <a href="/" class="brand-logo" aria-label="Solonova Studio Home">
+          <a href="#app" class="brand-logo" aria-label="Solonova Studio Home">
             <div class="brand-logo-mark">
               <svg width="26" height="26" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <rect width="36" height="36" rx="8" fill="#09090B"/>
@@ -48,6 +48,10 @@ export function renderNavbar() {
           <a href="#calculator" class="nav-track-item">
             <span class="track-idx">04</span>
             <span class="track-label">Pricing</span>
+          </a>
+          <a href="https://wa.me/918861699354?text=Hi%20Solonova%20Studio,%20I'd%20like%20to%20discuss%20booking%20a%20website%20sprint" target="_blank" rel="noopener noreferrer" class="nav-track-item" style="color: #059669; font-weight: 700;">
+            <span class="track-idx" style="color: #059669;">✦</span>
+            <span class="track-label">WhatsApp (+91 8861699354)</span>
           </a>
         </div>
 

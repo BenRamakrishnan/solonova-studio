@@ -81,8 +81,9 @@ export function renderScopeCalculator() {
                   </div>
 
                   <div style="margin-bottom: var(--space-5);">
-                    <div style="font-family: var(--font-display); font-size: clamp(2.3rem, 5vw, 4rem); font-weight: 800; line-height: 1; background: linear-gradient(135deg, #FFFFFF 50%, var(--accent-gold) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-                      <span id="calc-total-price" class="price-counter-anim">₹28,500</span>
+                    <div class="calc-price-display" style="display: flex; align-items: baseline; gap: 0.65rem; font-weight: 800; line-height: 1;">
+                      <span class="calc-currency-symbol" style="font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif); font-size: clamp(1.6rem, 3.2vw, 2.4rem); font-weight: 600; color: #E4E4E7; opacity: 0.85; line-height: 1; user-select: none;">₹</span>
+                      <span id="calc-total-price" class="price-counter-anim" style="font-family: var(--font-display); font-size: clamp(2.3rem, 5vw, 4rem); font-weight: 800; line-height: 1; background: linear-gradient(135deg, #FFFFFF 50%, var(--accent-gold) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 0.04em; display: inline-block;">28,500</span>
                     </div>
                     <div style="font-size: 0.92rem; color: #A1A1AA; margin-top: 8px; line-height: 1.5; overflow-wrap: break-word;">
                       Flat sprint fee. 50% deposit via UPI/Bank, 50% upon verified launch.
@@ -184,7 +185,7 @@ export function renderScopeCalculator() {
     }
 
     if (totalPriceEl) {
-      totalPriceEl.textContent = `₹${total.toLocaleString('en-IN')}`;
+      totalPriceEl.textContent = `${total.toLocaleString('en-IN')}`;
     }
     totalDaysEl.textContent = `${days} Business Days`;
 
@@ -197,7 +198,7 @@ export function renderScopeCalculator() {
 
     if (whatsappBtn) {
       const waText = encodeURIComponent(`Hi Solonova Studio, I configured this project scope:\n- Architecture: ${spec.type}\n- Scope: ${spec.pages} Sections\n- Estimated Budget: ₹${spec.total.toLocaleString('en-IN')}\n- Target Timeline: ${spec.days} Days\n\nLet's schedule a pitch call to review wireframes.`);
-      whatsappBtn.href = `https://wa.me/?text=${waText}`;
+      whatsappBtn.href = `https://wa.me/918861699354?text=${waText}`;
     }
 
     return spec;

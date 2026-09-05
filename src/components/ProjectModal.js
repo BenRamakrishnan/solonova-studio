@@ -156,6 +156,10 @@ export function renderProjectModal() {
     if (pitchBtn) {
       pitchBtn.addEventListener('click', () => {
         closeModal();
+        const messageField = document.getElementById('contact-message');
+        if (messageField) {
+          messageField.value = `Hi Solonova Studio, I'd like to book a sprint kickoff for a build inspired by "${project.title}" (${project.tag} · ${project.deliveryTime} sprint).`;
+        }
       });
     }
   }
