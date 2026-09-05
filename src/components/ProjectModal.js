@@ -21,7 +21,7 @@ export function renderProjectModal() {
       <!-- Header Banner with Full Visual Preview -->
       <div style="position: relative; background: #09090B; border-bottom: 1px solid #E4E4E7; overflow: hidden;">
         <div style="height: clamp(140px, 25vh, 260px); width: 100%; position: relative; overflow: hidden;">
-          <img src="${project.image}" alt="${project.title} live interface preview" style="width: 100%; height: 100%; object-fit: cover; object-position: top center; filter: brightness(0.9);" />
+          <img src="${project.image}" alt="${project.title} live interface preview" style="width: 100%; height: 100%; object-fit: cover; object-position: top center; filter: brightness(0.9);" onerror="if(!this.dataset.retry){this.dataset.retry='1';this.src='./showcase/'+this.src.split('/').pop();}" />
           <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(9, 9, 11, 0.4) 0%, rgba(9, 9, 11, 0.75) 100%);"></div>
         </div>
 

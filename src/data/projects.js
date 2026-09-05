@@ -1,3 +1,8 @@
+// Dynamically resolve showcase image assets respecting Vite's base path for GitHub Pages and local dev
+const rawBase = import.meta.env?.BASE_URL || './';
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+const getShowcaseImage = (filename) => `${base}showcase/${filename}`;
+
 export const projects = [
   {
     id: 'lumina-ai',
@@ -21,7 +26,7 @@ export const projects = [
       'Sub-50ms interaction response times',
       'Full semantic SEO & dynamic social preview cards'
     ],
-    image: '/showcase/lumina.jpg',
+    image: getShowcaseImage('lumina.jpg'),
     accentColor: '#06B6D4',
     badgeColor: '#0891B2'
   },
@@ -47,7 +52,7 @@ export const projects = [
       'Instant UPI QR and NetBanking checkout integration',
       'Fluid typographic scaling across all screen sizes'
     ],
-    image: '/showcase/velour.jpg',
+    image: getShowcaseImage('velour.jpg'),
     accentColor: '#C5A059',
     badgeColor: '#B38E46'
   },
@@ -73,7 +78,7 @@ export const projects = [
       'One-click instant payment verification',
       'Strict security isolation and sanitization'
     ],
-    image: '/showcase/apex.jpg',
+    image: getShowcaseImage('apex.jpg'),
     accentColor: '#10B981',
     badgeColor: '#059669'
   },
@@ -99,7 +104,7 @@ export const projects = [
       'Zero-CLS responsive image art direction',
       'Direct WhatsApp inquiry drawer'
     ],
-    image: '/showcase/strata.jpg',
+    image: getShowcaseImage('strata.jpg'),
     accentColor: '#D97706',
     badgeColor: '#B45309'
   },
@@ -125,7 +130,7 @@ export const projects = [
       'Social share card generator',
       'Sub-300ms global CDN response'
     ],
-    image: '/showcase/kroma.jpg',
+    image: getShowcaseImage('kroma.jpg'),
     accentColor: '#8B5CF6',
     badgeColor: '#7C3AED'
   },
@@ -151,7 +156,7 @@ export const projects = [
       'Strict WCAG 2.1 AAA accessibility compliance',
       'Instant WhatsApp & SMS confirmation integration'
     ],
-    image: '/showcase/carepulse.jpg',
+    image: getShowcaseImage('carepulse.jpg'),
     accentColor: '#059669',
     badgeColor: '#047857'
   }

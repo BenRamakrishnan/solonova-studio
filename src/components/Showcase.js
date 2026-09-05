@@ -50,7 +50,7 @@ export function renderShowcase(activeCategory = 'all') {
               <div class="double-bezel-inner" style="display: flex; flex-direction: column; overflow: hidden;">
                 <!-- Real Bespoke Showcase Image Header -->
                 <div class="project-card-image-box">
-                  <img src="${p.image}" alt="${p.title} interface preview" class="project-card-image" loading="lazy" />
+                  <img src="${p.image}" alt="${p.title} interface preview" class="project-card-image" loading="lazy" onerror="if(!this.dataset.retry){this.dataset.retry='1';this.src='./showcase/'+this.src.split('/').pop();}" />
                   <div class="project-card-image-overlay">
                     <div class="flex items-center justify-between">
                       <span class="status-pill" style="font-size: 0.78rem; background: rgba(255, 255, 255, 0.92); border-color: rgba(255, 255, 255, 0.8); backdrop-filter: blur(8px);">
