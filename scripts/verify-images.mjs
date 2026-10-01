@@ -1,53 +1,15 @@
-import puppeteer from 'puppeteer-core';
-import path from 'path';
-import fs from 'fs';
-import http from 'http';
+import { launchBrowser } from './helpers/browser.js';
+import { createPreviewServer } from './helpers/preview-server.js';
 
-const CHROME_PATH = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
+const port = Number(process.env.PREVIEW_PORT || 4175);
+const server = createPreviewServer();
 
-// Simple static server simulating GitHub Pages subpath: /solonova-studio/
-const distDir = path.resolve('dist');
-
-const server = http.createServer((req, res) => {
-  let reqPath = req.url.split('?')[0];
-  if (reqPath.startsWith('/solonova-studio/')) {
-    reqPath = reqPath.replace('/solonova-studio/', '/');
-  } else if (reqPath === '/solonova-studio') {
-    res.writeHead(301, { Location: '/solonova-studio/' });
-    res.end();
-    return;
-  }
-  
-  let filePath = path.join(distDir, reqPath === '/' ? 'index.html' : reqPath);
-  if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
-    const ext = path.extname(filePath);
-    const contentTypes = {
-      '.html': 'text/html',
-      '.js': 'application/javascript',
-      '.css': 'text/css',
-      '.jpg': 'image/jpeg',
-      '.jpeg': 'image/jpeg',
-      '.png': 'image/png',
-      '.svg': 'image/svg+xml'
-    };
-    res.writeHead(200, { 'Content-Type': contentTypes[ext] || 'application/octet-stream' });
-    fs.createReadStream(filePath).pipe(res);
-  } else {
-    res.writeHead(404);
-    res.end('Not Found: ' + req.url);
-  }
-});
-
-server.listen(4173, async () => {
-  console.log('Simulating GitHub Pages subpath server at http://localhost:4173/solonova-studio/');
+server.listen(port, '127.0.0.1', async () => {
+  console.log(`Simulating GitHub Pages at http://127.0.0.1:${port}/solonova-studio/`);
   
   let browser;
   try {
-    browser = await puppeteer.launch({
-      executablePath: CHROME_PATH,
-      headless: true,
-      args: ['--no-sandbox', '--disable-setuid-sandbox']
-    });
+    browser = await launchBrowser();
 
     const page = await browser.newPage();
     
@@ -59,7 +21,7 @@ server.listen(4173, async () => {
       }
     });
 
-    await page.goto('http://localhost:4173/solonova-studio/', { waitUntil: 'networkidle0' });
+    await page.goto(`http://127.0.0.1:${port}/solonova-studio/`, { waitUntil: 'networkidle0' });
 
     // Scroll to showcase section to ensure lazy-loaded images are triggered
     await page.evaluate(() => {

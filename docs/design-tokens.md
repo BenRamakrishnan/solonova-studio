@@ -1,42 +1,35 @@
-# Solonova Luxury Editorial Design Tokens
+# SOLONOVA design tokens
 
-Adheres strictly to `high-end-visual-design`, `minimalist-ui`, and `impeccable` design principles.
+Current values from src/styles/tokens.css, verified 2026-10-01. Preserve the original editorial identity and section structure when refining the website.
 
-## 1. Palette: Editorial Luxury (White / Alabaster / Warm Bone)
+## Color
 
-- **Canvas Background (Alabaster Pearl)**: `--bg-primary: #FAFAF8;`
-- **Secondary Canvas (Warm Bone)**: `--bg-secondary: #F3F1EC;`
-- **Card Surface (Pure White)**: `--bg-surface: #FFFFFF;`
-- **Card Surface Hover**: `--bg-surface-hover: #F8F7F4;`
-- **Elevated Floating Surface**: `--bg-elevated: #FFFFFF;`
-- **Glass Backdrop**: `--bg-glass: rgba(250, 250, 248, 0.85);`
+| Purpose | Value |
+| --- | --- |
+| Canvas / elevated surface | #FFFFFF |
+| Secondary surface | #FAFAFB |
+| Badge surface | #F4F4F6 |
+| Ink / dark section | #09090B |
+| Body text | #52525B |
+| Muted light-surface text | #64646D |
+| Decorative gold | #C5A059 |
+| Gold text / focus | #856324 |
+| Amber text | #A65F08 |
+| Green text | #047857 |
+| Muted dark-surface text | #A1A1AA |
 
-### Typography & Contrast Colors
-- **Headline / High Contrast Onyx**: `--text-primary: #111111;`
-- **Body / Charcoal**: `--text-secondary: #4A4A48;`
-- **Muted / Warm Gray**: `--text-tertiary: #888682;`
-- **Invert Text**: `--text-invert: #FFFFFF;`
+Keep decorative gold for ornaments and lines. Use the darker text token for small gold text on white. Dark sections need their own light text colors.
 
-### Luxury Accents & Hairlines
-- **Primary Luxury Accent (Obsidian Onyx)**: `--accent-primary: #121212;`
-- **Champagne Gold / Bronze Muted Accent**: `--accent-gold: #B38E5D;`
-- **Gold Glow**: `--gold-glow: rgba(179, 142, 93, 0.15);`
-- **Border Hairline**: `--border-subtle: rgba(0, 0, 0, 0.07);`
-- **Border Medium**: `--border-medium: rgba(0, 0, 0, 0.14);`
-- **Double-Bezel Outer Shell**: `background: rgba(0, 0, 0, 0.02); border: 1px solid rgba(0, 0, 0, 0.05);`
+## Type, shape, and motion
 
-## 2. Typography
+- Display: Playfair Display, including the existing italic heading treatment.
+- Body and controls: Plus Jakarta Sans.
+- Short technical labels: Space Grotesk.
+- Original fonts are self-hosted with font-display: swap.
+- Outer/inner card radii: 34px / 28px; small-screen inner radius 14px.
+- Fluid card padding: 20–32px. Maximum container 1280px; narrow container 1100px.
+- Minimum action height: 44px. Focus appears immediately with a visible dark-gold outline.
+- Timing: 150ms feedback, 220ms panels, 280ms reveals; reveals move 8px and do not hide useful content while loading.
+- Hover lifts only for interactive cards with a fine pointer. Reduced-motion preferences and the visitor pause control stop decorative animation.
 
-- **Headlines & Editorial Display**: `'Playfair Display', Georgia, serif;`
-  - High-contrast, editorial, luxury European atelier aesthetic.
-- **Body & Controls**: `'Plus Jakarta Sans', -apple-system, sans-serif;`
-  - Crisp, modern geometric humanist grotesque with superior readability.
-- **Monospace Microcopy & Badges**: `'Space Grotesk', monospace;`
-  - Refined, technical, letter-spaced.
-
-## 3. Shadows & Radii
-
-- **Shadow Feather**: `0 1px 3px rgba(0, 0, 0, 0.03), 0 10px 30px -4px rgba(0, 0, 0, 0.04);`
-- **Shadow Elevated**: `0 20px 50px -10px rgba(0, 0, 0, 0.08);`
-- **Outer Shell Radius**: `24px (1.5rem)`
-- **Inner Core Radius**: `calc(1.5rem - 6px)` (Concentric nested curves)
+Full decisions and contrast ratios are in .tastemaker/style-lock.md.

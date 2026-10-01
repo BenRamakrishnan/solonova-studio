@@ -6,6 +6,11 @@ node_modules/
 # Production build
 dist/
 
+# Generated local audit artifacts; summary and source tests remain tracked.
+docs/verification/*.report.json
+docs/verification/*.report.html
+docs/verification/*.png
+
 # Logs
 npm-debug.log*
 yarn-debug.log*

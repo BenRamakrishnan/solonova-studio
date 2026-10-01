@@ -1,8 +1,7 @@
-import puppeteer from 'puppeteer-core';
+import { withBrowser } from './helpers/browser.js';
 import path from 'path';
 import fs from 'fs';
 
-const CHROME_PATH = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
 
 const brandDir = path.resolve('public/brand');
 if (!fs.existsSync(brandDir)) {
@@ -71,11 +70,7 @@ console.log('SVG files generated successfully.');
 
 // Now render pixel-perfect PNGs using Chrome headless
 async function renderPNGs() {
-  const browser = await puppeteer.launch({
-    executablePath: CHROME_PATH,
-    headless: true,
-    args: ['--no-sandbox']
-  });
+  await withBrowser(async browser => {
 
   const page = await browser.newPage();
 
@@ -140,8 +135,8 @@ ${html}
   await renderHtmlToPng(svgWhiteOnTransparent, path.join(brandDir, 'solonova-mark-white-transparent-1024.png'), 1024, true);
   await renderHtmlToPng(svgWhiteOnTransparent, path.resolve('solonova-mark-white-transparent-1024.png'), 1024, true);
 
-  await browser.close();
+  });
   console.log('\nAll brand asset exports completed successfully!');
 }
 
-renderPNGs().catch(console.error);
+renderPNGs().catch(error => { console.error(error); process.exitCode = 1; });

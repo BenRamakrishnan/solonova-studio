@@ -54,8 +54,8 @@ export function renderFooter() {
             <ul style="display: flex; flex-direction: column; gap: var(--space-3); font-size: 0.94rem; color: #A1A1AA; font-family: var(--font-mono);">
               <li>✦ Editorial Luxury Direction</li>
               <li>✦ Fluid Bento Grids & Micro-Interactions</li>
-              <li>✦ 100/100 Core Web Vitals & Sub-Second LCP</li>
-              <li>✦ WCAG 2.1 AA Visual Architecture</li>
+              <li>✦ Fast Loading & Stable Layouts</li>
+              <li>✦ Accessible, Keyboard-Friendly Interfaces</li>
               <li>✦ Direct WhatsApp & UPI Sprint Enablement</li>
               <li>✦ Zero WordPress/Template Bloat</li>
             </ul>
@@ -63,14 +63,14 @@ export function renderFooter() {
         </div>
 
         <!-- Bottom Copyright -->
-        <div class="flex flex-wrap justify-between items-center gap-4" style="border-top: 1px solid #27272A; padding-top: var(--space-6); font-size: 0.88rem; color: #71717A; font-family: var(--font-mono);">
+        <div class="flex flex-wrap justify-between items-center gap-4" style="border-top: 1px solid #27272A; padding-top: var(--space-6); font-size: 0.88rem; color: #A1A1AA; font-family: var(--font-mono);">
           <div style="overflow-wrap: break-word;">
             © ${new Date().getFullYear()} Solonova Studio. All Rights Reserved. UPI, Razorpay & IMPS Enabled.
           </div>
           <div class="footer-bottom-links" style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.25rem;">
-            <a href="#comparison" class="nav-link" style="color: #71717A;">Sprint Guarantee</a>
-            <a href="#calculator" class="nav-link" style="color: #71717A;">Scope & Pricing</a>
-            <a href="#contact" class="nav-link" style="color: #71717A;">Book Sprint</a>
+            <a href="#comparison" class="nav-link" style="color: #A1A1AA;">Our Approach</a>
+            <a href="#calculator" class="nav-link" style="color: #A1A1AA;">Scope & Pricing</a>
+            <a href="#contact" class="nav-link" style="color: #A1A1AA;">Book Sprint</a>
           </div>
         </div>
       </div>

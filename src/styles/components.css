@@ -11,7 +11,7 @@
   font-size: 1.05rem;
   font-weight: 600;
   border-radius: var(--radius-full);
-  transition: all var(--duration-fast) var(--ease-spring);
+  transition: color var(--duration-fast) var(--ease-spring), background-color var(--duration-fast) var(--ease-spring), border-color var(--duration-fast) var(--ease-spring), transform var(--duration-fast) var(--ease-spring);
   text-decoration: none;
   white-space: nowrap;
   user-select: none;
@@ -24,7 +24,7 @@
 .btn:focus-visible,
 .filter-btn:focus-visible,
 .preview-tab-btn:focus-visible {
-  outline: 2px solid var(--accent-gold);
+  outline: 2px solid var(--accent-gold-text);
   outline-offset: 3px;
 }
 
@@ -38,11 +38,13 @@
   letter-spacing: -0.01em;
 }
 
+@media (hover: hover) and (pointer: fine) {
 .btn-primary:hover {
   background: var(--accent-black-hover);
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
   color: #FFFFFF;
+}
 }
 
 .btn-primary:active {
@@ -62,8 +64,10 @@
   transition: transform var(--duration-fast) var(--ease-spring);
 }
 
+@media (hover: hover) and (pointer: fine) {
 .btn:hover .btn-icon-circle {
   transform: translateX(3px) translateY(-1px);
+}
 }
 
 /* Secondary Button: Crisp Pure White Pill with Black Text */
@@ -75,12 +79,14 @@
   font-weight: 600;
 }
 
+@media (hover: hover) and (pointer: fine) {
 .btn-secondary:hover {
   background: #FAFAFA;
   border-color: var(--border-medium);
   color: #000000;
   transform: translateY(-2px);
   box-shadow: var(--shadow-card);
+}
 }
 
 .btn-secondary:active {
@@ -95,12 +101,14 @@
   font-weight: 600;
 }
 
+@media (hover: hover) and (pointer: fine) {
 .btn-pitch:hover {
   background: #000000;
   border-color: #000000;
   color: #FFFFFF;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
 }
 
 .btn-sm {
@@ -119,7 +127,7 @@
   border: 1px solid rgba(0, 0, 0, 0.06);
   padding: 6px;
   border-radius: var(--radius-2xl);
-  transition: border-color var(--duration-normal) var(--ease-spring), box-shadow var(--duration-normal) var(--ease-spring), transform var(--duration-normal) var(--ease-spring);
+  transition: border-color var(--duration-normal) var(--ease-spring), transform var(--duration-normal) var(--ease-spring);
   box-shadow: var(--shadow-subtle);
 }
 
@@ -131,9 +139,11 @@
   height: 100%;
 }
 
-.double-bezel:hover {
+@media (hover: hover) and (pointer: fine) {
+.project-card:hover {
   border-color: rgba(0, 0, 0, 0.14);
   box-shadow: var(--shadow-card);
+}
 }
 
 /* Status Pills */
@@ -191,15 +201,17 @@
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--text-secondary);
-  transition: all var(--duration-fast) var(--ease-spring);
+  transition: color var(--duration-fast) var(--ease-spring), background-color var(--duration-fast) var(--ease-spring), border-color var(--duration-fast) var(--ease-spring), transform var(--duration-fast) var(--ease-spring);
   background: transparent;
   border: none;
   cursor: pointer;
   font-family: var(--font-body);
 }
 
+@media (hover: hover) and (pointer: fine) {
 .filter-btn:hover {
   color: var(--text-primary);
+}
 }
 
 .filter-btn.active {
@@ -250,7 +262,7 @@
   font-size: 1.05rem;
   font-family: var(--font-body);
   outline: none;
-  transition: border-color var(--duration-fast) var(--ease-spring), box-shadow var(--duration-fast) var(--ease-spring);
+  transition: border-color var(--duration-fast) var(--ease-spring);
 }
 
 .input-field:focus, .textarea-field:focus, .select-field:focus {
@@ -283,8 +295,10 @@
   transition: transform var(--duration-fast) var(--ease-spring);
 }
 
+@media (hover: hover) and (pointer: fine) {
 .custom-range::-webkit-slider-thumb:hover {
   transform: scale(1.18);
+}
 }
 
 /* Modals */
@@ -300,12 +314,14 @@
   justify-content: center;
   padding: var(--space-4);
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
   transition: opacity var(--duration-normal) var(--ease-spring);
 }
 
 .modal-backdrop.open {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
 }
 
@@ -314,6 +330,8 @@
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-2xl);
   max-width: 860px;
+  min-width: 0;
+  overscroll-behavior: contain;
   width: 100%;
   max-height: calc(100dvh - 2rem);
   overflow-y: auto;
@@ -328,46 +346,6 @@
 
 .modal-backdrop.open .modal-content {
   transform: scale(1) translateY(0);
-}
-
-/* Slide-over Drawer */
-.drawer-backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(6px);
-  z-index: var(--z-drawer-backdrop, 400);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity var(--duration-normal) var(--ease-spring);
-}
-
-.drawer-backdrop.open {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.drawer-panel {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  max-width: 600px;
-  background: #FFFFFF;
-  border-left: 1px solid var(--border-subtle);
-  box-shadow: -15px 0 50px rgba(0, 0, 0, 0.12);
-  z-index: var(--z-drawer-panel, 410);
-  transform: translateX(100%);
-  transition: transform var(--duration-slow) var(--ease-spring);
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  color: var(--text-primary);
-}
-
-.drawer-backdrop.open .drawer-panel {
-  transform: translateX(0);
 }
 
 @media (max-width: 640px) {
@@ -412,12 +390,14 @@
   height: 100%;
   object-fit: cover;
   object-position: top center;
-  transition: transform 0.6s var(--ease-luxury), filter 0.4s ease;
+  transition: transform 0.26s var(--ease-luxury);
   filter: saturate(1.05) contrast(1.02);
 }
 
-.double-bezel:hover .project-card-image {
+@media (hover: hover) and (pointer: fine) {
+.project-card:hover .project-card-image {
   transform: scale(1.045);
+}
 }
 
 .project-card-image-overlay {
@@ -433,11 +413,14 @@
 
 /* Accessible focus ring for keyboard interactive cards */
 .double-bezel[tabindex="0"]:focus-visible {
-  outline: 2px solid var(--accent-gold);
+  outline: 2px solid var(--accent-gold-text);
   outline-offset: 4px;
 }
 
 /* Responsive Comparison Presentation */
+@media (prefers-reduced-motion: reduce) {
+  .btn, .filter-btn, .modal-backdrop, .modal-content, .project-card-image { transition: none; }
+}
 .comparison-desktop-matrix {
   display: block;
   width: 100%;

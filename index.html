@@ -6,25 +6,34 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   
   <!-- Primary SEO Meta Tags -->
-  <title>SOLONOVA — Luxury Vibe-Coding Studio & Digital Atelier</title>
-  <meta name="title" content="SOLONOVA — Luxury Vibe-Coding Studio & Digital Atelier" />
-  <meta name="description" content="Bespoke, high-conversion digital experiences and web applications handcrafted at 10x agency velocity. A solo luxury studio redefining web craft." />
+  <title>SOLONOVA — Custom Website Design & Development Studio</title>
+  <meta name="title" content="SOLONOVA — Custom Website Design & Development Studio" />
+  <meta name="description" content="Custom websites, landing pages, e-commerce and web apps for Indian and global brands. Work directly with the founder. Explore projects and estimate your scope from ₹14,999." />
   <meta name="keywords" content="luxury web design, vibe coding, bespoke web apps, creative developer, high conversion website, Solonova" />
   <meta name="author" content="Solonova Studio" />
+  <meta name="theme-color" content="#FFFFFF" />
+  <meta name="build-revision" content="__BUILD_REVISION__" />
+  <link rel="canonical" href="__SITE_URL__" />
   
   <!-- Open Graph / Social -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://solonova.ai/" />
-  <meta property="og:title" content="SOLONOVA — Luxury Vibe-Coding Studio & Digital Atelier" />
-  <meta property="og:description" content="Bespoke, high-conversion web experiences handcrafted at 10x agency velocity." />
-  <meta property="og:image" content="./og-image.png" />
+  <meta property="og:url" content="__SITE_URL__" />
+  <meta property="og:title" content="SOLONOVA — Custom Website Design & Development Studio" />
+  <meta property="og:description" content="Custom websites and web apps with direct founder access, considered design, and transparent scope estimates." />
+  <meta property="og:image" content="__SOCIAL_IMAGE_URL__" />
+  <meta property="og:image:alt" content="SOLONOVA Studio — custom digital experiences" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="./og-image.png" />
+  <meta name="twitter:title" content="SOLONOVA — Custom Website Design & Development Studio" />
+  <meta name="twitter:description" content="Bespoke websites and web apps for ambitious brands. Explore work and configure your scope." />
+  <meta name="twitter:image" content="__SOCIAL_IMAGE_URL__" />
   
-  <!-- Google Fonts: Playfair Display (Editorial Serif) + Plus Jakarta Sans (Clean Grotesk) + Space Grotesk -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <!-- Original font families, served locally without an external stylesheet. -->
+  <link rel="preload" href="/fonts/playfair-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/playfair-italic-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/jakarta-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"ProfessionalService","name":"SOLONOVA Studio","url":"__SITE_URL__","description":"Custom website design and web application development for Indian and global brands.","email":"ben@solonova.ai","telephone":"+918861699354","priceRange":"From INR 14,999"}
+  </script>
 
   <!-- Stylesheet Hub -->
   <link rel="stylesheet" href="/src/styles/main.css" />
@@ -33,7 +42,7 @@
   <!-- Accessible Skip Navigation Link -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Living 3D WebGL Canvas Layer -->
+  <!-- Interactive perspective wireframe; decorative and keyboard independent. -->
   <canvas id="bg-canvas-3d" class="bg-canvas-3d" aria-hidden="true"></canvas>
 
   <!-- Main App Shell -->
@@ -71,6 +80,8 @@
 
   <!-- Interactive Project Deep-Dive Modal -->
   <div id="modal-root"></div>
+
+  <noscript><div style="padding: 2rem; max-width: 50rem; margin: auto;">SOLONOVA Studio creates custom websites, landing pages, shops, and web apps. Enable JavaScript to explore the portfolio and scope calculator, or contact <a href="mailto:ben@solonova.ai">ben@solonova.ai</a> to discuss your project.</div></noscript>
 
   <!-- Application Entry Point -->
   <script type="module" src="/src/main.js"></script>

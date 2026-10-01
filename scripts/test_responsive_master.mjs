@@ -1,9 +1,6 @@
-import puppeteer from 'puppeteer-core';
-import os from 'os';
-import path from 'path';
+import { launchBrowser } from './helpers/browser.js';
 
-const CHROME_PATH = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
-const URL = 'http://localhost:5173/';
+const URL = process.env.PREVIEW_URL || 'http://127.0.0.1:4173/';
 
 const VIEWPORTS = [
   // Small Mobile
@@ -67,12 +64,8 @@ const VIEWPORTS = [
 
 async function runAudit() {
   console.log('✦ Launching Headless Chrome Audit Engine...');
-  const browser = await puppeteer.launch({
-    executablePath: CHROME_PATH,
-    pipe: true,
-    args: ['--headless=new', '--no-sandbox', '--disable-gpu']
-  });
-
+  const browser = await launchBrowser();
+  try {
   const page = await browser.newPage();
   await page.goto(URL, { waitUntil: 'domcontentloaded', timeout: 10000 });
   console.log('✓ Connected to Solonova dev server at ' + URL);
@@ -272,13 +265,15 @@ async function runAudit() {
 
   console.log(`Project Modal Test: ${modalTest.ok ? '✓ PASSED (Opens, within viewport bounds, scrolls internally, closes)' : '✕ FAIL'}`);
 
-  await browser.close();
-
   console.log('\n========================================');
   console.log(`AUDIT SUMMARY: ${allPass && continuousPass && orientationPass && zoomPass && mobileNavTest.ok && modalTest.ok ? 'ALL CHECKS PASSED PERFECTLY (100%)' : 'SOME CHECKS FAILED'}`);
   console.log('========================================');
 
+  if (!(allPass && continuousPass && orientationPass && zoomPass && mobileNavTest.ok && modalTest.ok)) process.exitCode = 1;
   return { results, allPass, continuousPass, orientationPass, zoomPass, mobileNavTest, modalTest };
+  } finally {
+    await browser.close();
+  }
 }
 
 runAudit().catch(err => {

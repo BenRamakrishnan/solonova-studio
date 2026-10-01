@@ -1,40 +1,19 @@
-# Solonova Client Pitch Playbook
+# SOLONOVA pitch playbook
 
-This playbook equips the founder with the exact talking points, value propositions, and objection-handling strategies to win website deals on cold calls, warm intros, and live pitch meetings.
+Current website talking points, revised 2026-10-01.
 
----
+## Introduction
 
-## 1. The 30-Second Hook (Cold Call / Intro)
+"I run SOLONOVA, an independent website design and development studio. You work directly with the founder to define the design, scope, and launch plan. We build custom websites and web apps with focused delivery sprints."
 
-> *"Hi [Name], I noticed your current web presence is [losing conversions / looks like a 2020 template / slow on mobile]. I run Solonova — an agile solo vibe-coding studio. Unlike traditional agencies that charge $20k+ and take 3 months of useless kickoff meetings, I build hyper-custom, high-conversion web experiences and ship them in under 7 days. Can I send you a 60-second preview of what your new site could look like?"*
+## Walkthrough
 
----
+1. Show the existing editorial homepage and interactive mesh.
+2. Open a relevant concept study. Explain that these are self-initiated demos illustrating visual directions and proposed experiences, not verified client results.
+3. Discuss the process and the direct founder collaboration model.
+4. Select a build type, sections, and optional features in the INR estimator. Confirm that the displayed fee and business days are estimates; integrations and the kickoff date need agreement before booking.
+5. Prepare a project brief. The form creates a WhatsApp draft for the visitor to review and send.
 
-## 2. Core Value Pillars to Pitch
+Use measured scores from docs/improvement-report.md with their local lab context. Do not promise universal 99+ scores, conversion gains, or a delivery date before agreeing the project scope. There is no Pitch Mode drawer in the current implementation.
 
-1. **10x Velocity (Days, Not Months)**:
-   - "Agencies have 5 account managers, 3 project coordinators, and 2 junior devs playing telephone. At Solonova, you work directly with the builder. Vibe coding powered by cutting-edge AI workflows enables me to write, test, and ship complete custom code in days."
-
-2. **Bespoke Craftsmanship (No Generic Templates)**:
-   - "Every site is custom-engineered from the ground up for maximum visual impact, fluid kinetic interactions, and perfect 99+ Lighthouse performance scores."
-
-3. **Radical Transparency & Zero Overhead**:
-   - "You don't pay for agency office rent or middle management salaries. You pay strictly for high-converting digital assets that drive revenue."
-
-4. **100% Code Ownership & Instant Deploy**:
-   - "Clean code, no vendor lock-in, modern cloud hosting on Vercel or Cloudflare, and instant live preview links during the build."
-
----
-
-## 3. Live Screen-Share Pitch Sequence (Using Solonova Website)
-
-1. **Step 1: Open Solonova Homepage**:
-   - Show the brand aesthetic and 100/100 Lighthouse benchmark.
-2. **Step 2: Walk through the Showcase**:
-   - Click into a relevant project modal matching their industry (SaaS, E-commerce, Local Brand).
-3. **Step 3: Toggle the "Pitch Mode" Drawer**:
-   - Walk the prospect through the 4-day delivery timeline and the "Agency vs. Solonova" matrix.
-4. **Step 4: Use the Scope & Cost Estimator**:
-   - Interactively select their needed pages and features together on screen to show transparent pricing and timeline.
-5. **Step 5: Close Deal**:
-   - "Let's lock in your kickoff slot today and have your draft live by Friday."
+Code ownership, payment terms, and the existing warranty/guarantee are displayed on the website; confirm their application to each project when preparing the final proposal.

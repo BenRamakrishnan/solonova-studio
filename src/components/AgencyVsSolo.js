@@ -14,7 +14,7 @@ export function renderAgencyVsSolo() {
             <span style="color: #09090B;">WHY SOLONOVA PREVAILS</span>
           </div>
           <h2 style="color: #09090B;">Traditional Agency vs. <span class="text-italic" style="font-style: italic; text-decoration: underline; text-decoration-color: var(--accent-gold); text-underline-offset: 6px;">Solo Digital Atelier</span></h2>
-          <p>Why fund agency office leases, account coordinators, and bloated weekly meetings when you can collaborate directly with a high-velocity master craftsman?</p>
+          <p>Choose the working relationship that fits your project. Here is how a direct founder-led studio approaches the essentials.</p>
         </div>
 
         <!-- Comparison Matrix: Responsive Desktop Table & Mobile Stacked Bars -->
@@ -26,7 +26,7 @@ export function renderAgencyVsSolo() {
               <table style="width: 100%; border-collapse: collapse; table-layout: fixed; text-align: left;" aria-label="Traditional Agency vs Solonova Studio Comparison Matrix">
                 <thead>
                   <tr style="border-bottom: 2px solid #E4E4E7;">
-                    <th scope="col" style="padding: var(--space-4) var(--space-3); font-family: var(--font-mono); font-size: 0.85rem; color: #71717A; text-transform: uppercase; letter-spacing: 0.08em; width: 24%;">Dimension</th>
+                    <th scope="col" style="padding: var(--space-4) var(--space-3); font-family: var(--font-mono); font-size: 0.85rem; color: #64646D; text-transform: uppercase; letter-spacing: 0.08em; width: 24%;">Dimension</th>
                     <th scope="col" style="padding: var(--space-4) var(--space-4); font-family: var(--font-display); font-size: 1.35rem; color: #DC2626; width: 38%;">Traditional Agency</th>
                     <th scope="col" style="padding: var(--space-4) var(--space-4); font-family: var(--font-display); font-size: 1.35rem; color: #09090B; width: 38%; background: rgba(197, 160, 89, 0.04); border-left: 2px solid var(--accent-gold);">Solonova Studio</th>
                   </tr>
@@ -90,10 +90,10 @@ export function renderAgencyVsSolo() {
         <div class="double-bezel" style="margin-top: var(--space-10); background: #09090B; border: 1px solid rgba(197, 160, 89, 0.3); box-shadow: 0 10px 30px rgba(0,0,0,0.35);">
           <div class="double-bezel-inner guarantee-card-inner" style="padding: clamp(1.5rem, 3.5vw, 2.5rem); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-5); background: #09090B; border-color: #27272A;">
             <div style="max-width: 760px;">
-              <h4 style="color: #FFFFFF; margin-bottom: var(--space-2); font-size: clamp(1.2rem, 2.5vw, 1.45rem); font-weight: 700;">
+              <h3 style="color: #FFFFFF; margin-bottom: var(--space-2); font-size: clamp(1.2rem, 2.5vw, 1.45rem); font-weight: 700;">
                 <span style="color: var(--accent-gold);">✦</span> The Solonova 100% Sprint Delivery Guarantee
-              </h4>
-              <p style="font-size: clamp(0.95rem, 1.5vw, 1.05rem); margin-bottom: 0; color: #A1A1AA; line-height: 1.65;">If your staging review link is not shipped within the agreed sprint window, or fails to meet the agreed spec, you receive a full refund. Zero financial risk.</p>
+              </h3>
+              <p style="font-size: clamp(0.95rem, 1.5vw, 1.05rem); margin-bottom: 0; color: #A1A1AA; line-height: 1.65;">If your staging review link is not shipped within the agreed sprint window, or fails to meet the agreed spec, you receive a full refund. Confirm the scope and delivery terms before kickoff.</p>
             </div>
             <a href="#contact" class="btn btn-secondary btn-lg guarantee-cta-btn" style="background: #FFFFFF; color: #09090B; border-color: #FFFFFF;">
               <span>Claim Sprint Slot</span>

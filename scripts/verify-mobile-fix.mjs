@@ -1,49 +1,20 @@
-import puppeteer from 'puppeteer-core';
-import path from 'path';
-import fs from 'fs';
-import http from 'http';
+import { launchBrowser } from './helpers/browser.js';
+import { createPreviewServer } from './helpers/preview-server.js';
+import assert from 'node:assert/strict';
 
-const CHROME_PATH = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
-const distDir = path.resolve('dist');
+const port = Number(process.env.PREVIEW_PORT || 4176);
+const server = createPreviewServer();
 
-const server = http.createServer((req, res) => {
-  let reqPath = req.url.split('?')[0];
-  if (reqPath.startsWith('/solonova-studio/')) {
-    reqPath = reqPath.replace('/solonova-studio/', '/');
-  }
-  let filePath = path.join(distDir, reqPath === '/' ? 'index.html' : reqPath);
-  if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
-    const ext = path.extname(filePath);
-    const contentTypes = {
-      '.html': 'text/html',
-      '.js': 'application/javascript',
-      '.css': 'text/css',
-      '.jpg': 'image/jpeg',
-      '.svg': 'image/svg+xml',
-      '.png': 'image/png'
-    };
-    res.writeHead(200, { 'Content-Type': contentTypes[ext] || 'application/octet-stream' });
-    fs.createReadStream(filePath).pipe(res);
-  } else {
-    res.writeHead(404);
-    res.end();
-  }
-});
-
-server.listen(4174, async () => {
+server.listen(port, '127.0.0.1', async () => {
   let browser;
   try {
-    browser = await puppeteer.launch({
-      executablePath: CHROME_PATH,
-      headless: true,
-      args: ['--no-sandbox']
-    });
+    browser = await launchBrowser();
 
     const page = await browser.newPage();
 
     for (const vp of [{ w: 320, h: 568 }, { w: 375, h: 812 }, { w: 390, h: 844 }]) {
       await page.setViewport({ width: vp.w, height: vp.h });
-      await page.goto('http://localhost:4174/solonova-studio/', { waitUntil: 'networkidle0' });
+      await page.goto(`http://127.0.0.1:${port}/solonova-studio/`, { waitUntil: 'networkidle0' });
 
       // 1. Verify Navbar Alignment on Mobile
       const navMetrics = await page.evaluate(() => {
@@ -73,6 +44,7 @@ server.listen(4174, async () => {
       console.log(`  Brand anchored left: ${navMetrics.isBrandLeftAligned}`);
       console.log(`  Actions anchored right: ${navMetrics.isActionsRightAligned}`);
       console.log(`  No overlap between items: ${navMetrics.isNoOverlap}`);
+      assert.ok(navMetrics.isNoOverlap && navMetrics.isBrandLeftAligned && navMetrics.isActionsRightAligned, 'mobile navigation fits');
 
       // 2. Verify Calculator Price & Rupee Layout
       const calcMetrics = await page.evaluate(() => {
@@ -98,12 +70,13 @@ server.listen(4174, async () => {
       console.log(`  Symbol: "${calcMetrics.symbolText}" ends at ${calcMetrics.symbolRight.toFixed(1)}px`);
       console.log(`  Price: "${calcMetrics.priceText}" starts at ${calcMetrics.priceLeft.toFixed(1)}px`);
       console.log(`  Gap between currency and digits: ${calcMetrics.gap.toFixed(1)}px (NO OVERLAP: ${calcMetrics.isNoOverlap})`);
+      assert.ok(calcMetrics.isNoOverlap, 'currency does not overlap the estimate');
 
-      // Change inputs to generate ₹31,500
+      // Seven sections add four section fees to the base, producing ₹34,500.
       await page.evaluate(() => {
         const range = document.getElementById('calc-pages');
         if (range) {
-          range.value = '7'; // 28500 + 4*1500? wait, 28500 + (7-3)*1500 = 34500
+          range.value = '7';
           range.dispatchEvent(new Event('input'));
         }
       });
@@ -120,6 +93,8 @@ server.listen(4174, async () => {
         };
       });
       console.log(`  Updated Price: "${updatedPrice.priceText}", Gap: ${updatedPrice.gap.toFixed(1)}px (NO OVERLAP: ${updatedPrice.isNoOverlap})`);
+      assert.equal(updatedPrice.priceText, '34,500');
+      assert.ok(updatedPrice.isNoOverlap, 'updated currency does not overlap the estimate');
     }
 
     // 3. Verify WhatsApp destination links have 918861699354 in href but NO raw digits in visible text
@@ -135,6 +110,7 @@ server.listen(4174, async () => {
 
     console.log(`\n--- WHATSAPP LINKS & PRIVACY CHECK ---`);
     for (const l of waLinks) {
+      assert.ok(l.hasPhoneInHref && l.noPhoneInText, 'WhatsApp destination and display label are correct');
       console.log(`  [${l.hasPhoneInHref && l.noPhoneInText ? 'OK' : 'FAIL'}] Label: "${l.text.replace(/\s+/g, ' ')}" | Href: ${l.href.slice(0, 50)}...`);
     }
 
@@ -145,6 +121,7 @@ server.listen(4174, async () => {
     });
     console.log(`\n--- SCROLL-MARGIN-TOP CHECK ---`);
     console.log(`  #calculator scrollMarginTop: ${scrollMargin}`);
+    assert.ok(parseFloat(scrollMargin) >= 80, 'calculator accounts for the sticky navigation');
 
     console.log('\nALL MOBILE, PRIVACY, AND CALCULATOR VERIFICATIONS COMPLETE!');
   } catch (err) {

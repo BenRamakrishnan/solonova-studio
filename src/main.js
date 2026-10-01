@@ -11,40 +11,25 @@ import { renderScopeCalculator } from './components/ScopeCalculator.js';
 import { renderProjectModal } from './components/ProjectModal.js';
 import { renderContactSection } from './components/ContactSection.js';
 import { renderFooter } from './components/Footer.js';
+import { mountComponent } from './utils/mount.js';
 
 function initApp() {
-  console.log('⚡ Solonova Vibe Core Initializing...');
-
-  // Safe component runner preventing cascade failures
-  const safeMount = (name, fn) => {
-    try {
-      fn();
-    } catch (err) {
-      console.error(`Error mounting component [${name}]:`, err);
-    }
-  };
-
-  // Initialize Living 3D WebGL Background Engine
-  safeMount('Background3D', initBackground3D);
-
-  // Mount all UI components into semantic slots
-  safeMount('Navbar', renderNavbar);
-  safeMount('Hero', renderHero);
-  safeMount('Metrics', renderMetrics);
-  safeMount('Showcase', renderShowcase);
-  safeMount('VibeProcess', renderVibeProcess);
-  safeMount('AgencyVsSolo', renderAgencyVsSolo);
-  safeMount('ScopeCalculator', renderScopeCalculator);
-  safeMount('ContactSection', renderContactSection);
-  safeMount('Footer', renderFooter);
-
-  // Mount Project Deep-Dive Modal
-  safeMount('ProjectModal', renderProjectModal);
-
-  // Initialize Scroll Reveal without hiding modal/drawer content
-  safeMount('ScrollReveal', setupScrollReveal);
-
-  console.log('✔ Solonova Studio ready!');
+  const components = [
+    ['navigation', renderNavbar, 'navbar-root'],
+    ['hero', renderHero, 'hero-root'],
+    ['service targets', renderMetrics, 'metrics-root'],
+    ['concept dialog', renderProjectModal, 'modal-root'],
+    ['portfolio', renderShowcase, 'showcase-root'],
+    ['process', renderVibeProcess, 'process-root'],
+    ['comparison', renderAgencyVsSolo, 'comparison-root'],
+    ['scope estimator', renderScopeCalculator, 'calculator-root'],
+    ['inquiry form', renderContactSection, 'contact-root'],
+    ['footer', renderFooter, 'footer-root']
+  ];
+  for (const [name, render, rootId] of components) mountComponent(name, render, rootId);
+  mountComponent('scroll reveals', setupScrollReveal, 'app', { optional: true });
+  // Paint useful content before starting the optional decorative wireframe.
+  requestAnimationFrame(() => mountComponent('wireframe', initBackground3D, 'app', { optional: true }));
 }
 
 function setupScrollReveal() {

@@ -1,0 +1,48 @@
+{
+  "testedURL": "http://127.0.0.1:4175/solonova-studio/",
+  "buildJavaScript": "index-DZYDVI6G.js",
+  "runs": [
+    {
+      "name": "desktop",
+      "fetchTime": "2026-10-01T08:48:34.469Z",
+      "lighthouseVersion": "13.5.0",
+      "formFactor": "desktop",
+      "throttlingMethod": "simulate",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "first-contentful-paint": 392.6953,
+        "largest-contentful-paint": 592.6953,
+        "total-blocking-time": 0,
+        "cumulative-layout-shift": 0.0009459243361528427,
+        "speed-index": 439.4841986558914
+      },
+      "warnings": []
+    },
+    {
+      "name": "mobile",
+      "fetchTime": "2026-10-01T08:47:46.979Z",
+      "lighthouseVersion": "13.5.0",
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "scores": {
+        "performance": 95,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "first-contentful-paint": 1743.631,
+        "largest-contentful-paint": 2718.6310000000003,
+        "total-blocking-time": 19.5,
+        "cumulative-layout-shift": 0.0004929628854698783,
+        "speed-index": 1743.631
+      },
+      "warnings": []
+    }
+  ]
+}

@@ -1,3 +1,5 @@
+import { inquiryUrl } from '../utils/contact.js';
+
 export function renderHero() {
   const container = document.getElementById('hero-root');
   if (!container) return;
@@ -22,7 +24,7 @@ export function renderHero() {
               <span class="radar-ping-core" style="background-color: var(--status-live);"></span>
             </span>
             <span class="hero-status-pill-text" style="font-family: var(--font-mono); font-size: clamp(0.74rem, 1.4vw, 0.85rem); font-weight: 700; color: #09090B; letter-spacing: 0.08em; overflow-wrap: break-word;">
-              SOLO VIBE ATELIER // INDIA & GLOBAL // <span style="color: var(--accent-amber);">10X SHIP VELOCITY</span>
+              FOUNDER-LED ATELIER // <span style="color: var(--accent-amber);">INDIA & GLOBAL</span>
             </span>
           </div>
 
@@ -34,13 +36,13 @@ export function renderHero() {
 
           <!-- Expanded Lead Subheading -->
           <p class="lead-text text-center" style="margin-bottom: var(--space-8); max-width: 860px; color: #52525B;">
-            We bypass traditional agency bureaucracy, inflated retainers, and recycled templates. Solonova Studio pairs bespoke editorial design with AI-assisted vibe coding to ship high-converting web applications in <strong style="color: #09090B; border-bottom: 1.5px solid var(--accent-gold);">48 hours to 7 business days</strong>.
+            Bespoke websites and web apps for ambitious brands. Collaborate directly with the founder, with focused build sprints from <strong style="color: #09090B; border-bottom: 1.5px solid var(--accent-gold);">48 hours to 7 business days</strong>.
           </p>
 
           <!-- Hero Action CTAs -->
           <div class="flex flex-wrap items-center justify-center gap-4 hero-cta-group" style="margin-bottom: var(--space-10);">
             <a href="#work" class="btn btn-primary btn-lg hero-cta-btn" style="box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18), 0 0 0 1px rgba(197, 160, 89, 0.3);">
-              <span>Explore Curated Works</span>
+              <span>Explore the Work</span>
               <span class="btn-icon-circle" style="background: var(--accent-gold);">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.6" aria-hidden="true">
                   <path d="M7 17l9.2-9.2M17 17V8H8"/>
@@ -61,16 +63,20 @@ export function renderHero() {
                 <path d="M12 18h.01"></path>
                 <path d="M8 18h.01"></path>
               </svg>
-              <span>Scope & Pricing (₹ INR)</span>
+              <span>Scope & Pricing</span>
             </a>
 
             <!-- WhatsApp Chat Direct Button -->
-            <a href="https://wa.me/918861699354?text=Hi%20Solonova%20Studio,%20I'd%20like%20to%20discuss%20booking%20a%20website%20sprint" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg hero-cta-btn" style="border-color: #BBF7D0; background: #F0FDF4; color: #047857;">
+            <a href="${inquiryUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg hero-cta-btn" style="border-color: #BBF7D0; background: #F0FDF4; color: #047857;">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.2" aria-hidden="true">
                 <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
               </svg>
               <span>Chat on WhatsApp</span>
             </a>
+          </div>
+          <div class="motion-controls">
+            <span class="pointer-hint">Move your cursor to explore the mesh</span>
+            <button id="motion-toggle" type="button" aria-pressed="false">Pause motion</button>
           </div>
         </div>
 
@@ -82,7 +88,7 @@ export function renderHero() {
               <div class="flex items-center gap-3">
                 <span class="status-dot-gold"></span>
                 <span style="font-family: var(--font-mono); font-size: 0.9rem; font-weight: 800; color: #09090B; letter-spacing: 0.12em; text-transform: uppercase;">
-                  SOLONOVA STUDIO BENCHMARKS
+                  BUILT WITH CARE
                 </span>
               </div>
 
@@ -98,21 +104,21 @@ export function renderHero() {
             <div id="tab-content-perf" class="hero-tab-content" role="tabpanel" aria-labelledby="tab-perf">
               <div class="grid-3" style="gap: var(--space-5);">
                 <div class="hero-benchmark-bar" style="padding: clamp(0.9rem, 2.5vw, 1.25rem); border-left: 3px solid var(--accent-gold); background: #FAFAFB; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
-                  <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #71717A; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Lighthouse Score</div>
-                  <div style="font-family: var(--font-display); font-size: clamp(1.75rem, 3.5vw, 2.2rem); font-weight: 800; color: #09090B; margin-block: 4px; line-height: 1.1;">100 / 100</div>
-                  <div style="font-size: 0.9rem; color: #52525B; line-height: 1.5; overflow-wrap: break-word;">Zero layout shift, instant 4G/5G mobile edge load</div>
+                  <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #64646D; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Performance Target</div>
+                  <div style="font-family: var(--font-display); font-size: clamp(1.75rem, 3.5vw, 2.2rem); font-weight: 800; color: #09090B; margin-block: 4px; line-height: 1.1;">95+ / 100</div>
+                  <div style="font-size: 0.9rem; color: #52525B; line-height: 1.5; overflow-wrap: break-word;">Desktop and mobile loading checked before launch</div>
                 </div>
 
                 <div class="hero-benchmark-bar" style="padding: clamp(0.9rem, 2.5vw, 1.25rem); border-left: 3px solid #09090B; background: #FAFAFB; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
-                  <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #71717A; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Average LCP</div>
-                  <div style="font-family: var(--font-display); font-size: clamp(1.75rem, 3.5vw, 2.2rem); font-weight: 800; color: #09090B; margin-block: 4px; line-height: 1.1;">0.38 Seconds</div>
-                  <div style="font-size: 0.9rem; color: #52525B; line-height: 1.5; overflow-wrap: break-word;">Sub-second edge CDN rendering globally</div>
+                  <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #64646D; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Loading Target</div>
+                  <div style="font-family: var(--font-display); font-size: clamp(1.75rem, 3.5vw, 2.2rem); font-weight: 800; color: #09090B; margin-block: 4px; line-height: 1.1;">Under 2.5s</div>
+                  <div style="font-size: 0.9rem; color: #52525B; line-height: 1.5; overflow-wrap: break-word;">Largest Contentful Paint, tested under mobile throttling</div>
                 </div>
 
                 <div class="hero-benchmark-bar" style="padding: clamp(0.9rem, 2.5vw, 1.25rem); border-left: 3px solid #059669; background: #F0FDF4; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
-                  <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #059669; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Code Discipline</div>
+                  <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #047857; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Code Discipline</div>
                   <div style="font-family: var(--font-display); font-size: clamp(1.75rem, 3.5vw, 2.2rem); font-weight: 800; color: #065F46; margin-block: 4px; line-height: 1.1;">100% Modular</div>
-                  <div style="font-size: 0.9rem; color: #047857; line-height: 1.5; overflow-wrap: break-word;">Pure clean JS & CSS. Zero WP plugin bloat</div>
+                  <div style="font-size: 0.9rem; color: #047857; line-height: 1.5; overflow-wrap: break-word;">Lean components, clear structure, full code ownership</div>
                 </div>
               </div>
             </div>
@@ -121,21 +127,21 @@ export function renderHero() {
             <div id="tab-content-speed" class="hero-tab-content" role="tabpanel" aria-labelledby="tab-speed" style="display: none;">
               <div class="grid-3" style="gap: var(--space-5);">
                 <div class="hero-benchmark-bar" style="padding: clamp(0.9rem, 2.5vw, 1.25rem); border-left: 3px solid var(--accent-gold); background: #FAFAFB; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
-                  <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #71717A; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Rapid Launchpad</div>
+                  <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #64646D; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Rapid Launchpad</div>
                   <div style="font-family: var(--font-display); font-size: clamp(1.75rem, 3.5vw, 2.2rem); font-weight: 800; color: #09090B; margin-block: 4px; line-height: 1.1;">48 Hours</div>
-                  <div style="font-size: 0.9rem; color: #52525B; line-height: 1.5; overflow-wrap: break-word;">From concept kickoff to production live link</div>
+                  <div style="font-size: 0.9rem; color: #52525B; line-height: 1.5; overflow-wrap: break-word;">Focused landing-page sprint after scope approval</div>
                 </div>
 
                 <div class="hero-benchmark-bar" style="padding: clamp(0.9rem, 2.5vw, 1.25rem); border-left: 3px solid #09090B; background: #FAFAFB; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
-                  <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #71717A; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Full Brand Atelier</div>
+                  <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #64646D; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Full Brand Atelier</div>
                   <div style="font-family: var(--font-display); font-size: clamp(1.75rem, 3.5vw, 2.2rem); font-weight: 800; color: #09090B; margin-block: 4px; line-height: 1.1;">5 to 7 Days</div>
                   <div style="font-size: 0.9rem; color: #52525B; line-height: 1.5; overflow-wrap: break-word;">Multi-page custom experience with case studies</div>
                 </div>
 
                 <div class="hero-benchmark-bar" style="padding: clamp(0.9rem, 2.5vw, 1.25rem); border-left: 3px solid #059669; background: #F0FDF4; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
-                  <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #059669; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Sprint Guarantee</div>
-                  <div style="font-family: var(--font-display); font-size: clamp(1.75rem, 3.5vw, 2.2rem); font-weight: 800; color: #065F46; margin-block: 4px; line-height: 1.1;">100% Refundable</div>
-                  <div style="font-size: 0.9rem; color: #047857; line-height: 1.5; overflow-wrap: break-word;">Deposit back if deadline missed. Zero risk.</div>
+                  <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #047857; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Clear Milestones</div>
+                  <div style="font-family: var(--font-display); font-size: clamp(1.75rem, 3.5vw, 2.2rem); font-weight: 800; color: #065F46; margin-block: 4px; line-height: 1.1;">Scope First</div>
+                  <div style="font-size: 0.9rem; color: #047857; line-height: 1.5; overflow-wrap: break-word;">Agree the deliverables and schedule before kickoff</div>
                 </div>
               </div>
             </div>
@@ -144,19 +150,19 @@ export function renderHero() {
             <div id="tab-content-pricing" class="hero-tab-content" role="tabpanel" aria-labelledby="tab-pricing" style="display: none;">
               <div class="grid-3" style="gap: var(--space-5);">
                 <div class="hero-benchmark-bar" style="padding: clamp(0.9rem, 2.5vw, 1.25rem); border-left: 3px solid var(--accent-gold); background: #FAFAFB; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
-                  <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #71717A; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Entry Sprint</div>
+                  <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #64646D; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Entry Sprint</div>
                   <div style="font-family: var(--font-display); font-size: clamp(1.75rem, 3.5vw, 2.2rem); font-weight: 800; color: #09090B; margin-block: 4px; line-height: 1.1;">₹14,999</div>
                   <div style="font-size: 0.9rem; color: #52525B; line-height: 1.5; overflow-wrap: break-word;">Complete 48h landing page with WhatsApp capture</div>
                 </div>
 
                 <div class="hero-benchmark-bar" style="padding: clamp(0.9rem, 2.5vw, 1.25rem); border-left: 3px solid #09090B; background: #FAFAFB; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
-                  <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #71717A; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Payment Terms</div>
+                  <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #64646D; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Payment Terms</div>
                   <div style="font-family: var(--font-display); font-size: clamp(1.75rem, 3.5vw, 2.2rem); font-weight: 800; color: #09090B; margin-block: 4px; line-height: 1.1;">50 / 50 Split</div>
                   <div style="font-size: 0.9rem; color: #52525B; line-height: 1.5; overflow-wrap: break-word;">50% kickoff deposit, 50% post-launch approval</div>
                 </div>
 
                 <div class="hero-benchmark-bar" style="padding: clamp(0.9rem, 2.5vw, 1.25rem); border-left: 3px solid #059669; background: #F0FDF4; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
-                  <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #059669; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Payment Rails</div>
+                  <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #047857; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Payment Rails</div>
                   <div style="font-family: var(--font-display); font-size: clamp(1.75rem, 3.5vw, 2.2rem); font-weight: 800; color: #065F46; margin-block: 4px; line-height: 1.1;">UPI & Razorpay</div>
                   <div style="font-size: 0.9rem; color: #047857; line-height: 1.5; overflow-wrap: break-word;">GPay, PhonePe, Paytm, NEFT & Credit Cards</div>
                 </div>

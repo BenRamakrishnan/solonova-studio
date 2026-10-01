@@ -12,17 +12,17 @@ export function renderVibeProcess() {
     },
     {
       num: '02',
-      title: 'Agentic Vibe Coding',
+      title: 'Design & Development',
       timeline: 'Day 2 - 3',
-      description: 'Leveraging modular front-end architecture and agentic AI tools, we build production-ready components, responsive layouts, and state at 10x velocity.',
+      description: 'Your design becomes a working website, with reusable components, responsive layouts, and the interactions your project needs.',
       deliverable: 'Live Interactive Staging URL'
     },
     {
       num: '03',
-      title: 'Impeccable Polish & TDD',
+      title: 'Polish & Device Testing',
       timeline: 'Day 4',
-      description: 'Auditing every breakpoint against strict design standards: tailored typography, fluid spring transitions, zero CLS shifts, and 100/100 Lighthouse speed.',
-      deliverable: '100/100 Lighthouse & Cross-Device Audit'
+      description: 'Review typography, interactions, keyboard access, and mobile layouts. Measure loading performance and resolve issues before launch.',
+      deliverable: 'Performance & Cross-Device Report'
     },
     {
       num: '04',
@@ -43,7 +43,7 @@ export function renderVibeProcess() {
             <span style="color: #09090B;">THE DELIVERY METHODOLOGY</span>
           </div>
           <h2 style="color: #09090B;">From Thought to Shipped in <span class="text-italic" style="font-style: italic; text-decoration: underline; text-decoration-color: var(--accent-gold); text-underline-offset: 6px;">Days, Not Months</span></h2>
-          <p>Traditional agencies treat web design like construction in concrete. Solonova treats it like music: high-frequency improvisation anchored by disciplined engineering.</p>
+          <p>A clear path from your first brief to launch. This five-day example adapts to the scope and integrations agreed for your project.</p>
         </div>
 
         <!-- Steps Grid -->
@@ -51,7 +51,7 @@ export function renderVibeProcess() {
           ${steps.map(s => `
             <div class="double-bezel">
               <div class="double-bezel-inner" style="padding: clamp(1.25rem, 3vw, 2.25rem); display: flex; flex-direction: column; justify-content: space-between; position: relative;">
-                <div style="font-family: var(--font-display); font-size: clamp(2.4rem, 4vw, 3.4rem); font-weight: 800; color: rgba(197, 160, 89, 0.15); position: absolute; top: clamp(0.75rem, 2vw, 1.25rem); right: clamp(0.75rem, 2vw, 1.25rem); line-height: 1; user-select: none; pointer-events: none;">
+                <div style="font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 600; color: var(--accent-gold-text); position: absolute; top: clamp(0.75rem, 2vw, 1.25rem); right: clamp(0.75rem, 2vw, 1.25rem); line-height: 1; user-select: none; pointer-events: none;" aria-hidden="true">
                   ${s.num}
                 </div>
 

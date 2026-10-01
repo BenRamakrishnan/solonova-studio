@@ -2,6 +2,8 @@
  * SOLONOVA STUDIO — Bespoke Architectural Atelier Navigation Bar
  * Theme: Editorial Monochromatic Luxury (White & Deep Black)
  */
+import { inquiryUrl } from '../utils/contact.js';
+
 export function renderNavbar() {
   const container = document.getElementById('navbar-root');
   if (!container) return;
@@ -23,11 +25,11 @@ export function renderNavbar() {
           </a>
 
           <!-- Live Atelier Telemetry Pill -->
-          <div class="atelier-telemetry-badge" title="Real-time studio capacity">
+          <div class="atelier-telemetry-badge" title="Direct access to the designer and developer">
             <span class="telemetry-beacon"></span>
             <span class="telemetry-label">ATELIER</span>
             <span class="telemetry-divider">/</span>
-            <span class="telemetry-slots">2 SLOTS OPEN</span>
+            <span class="telemetry-slots">FOUNDER-LED</span>
           </div>
         </div>
 
@@ -49,8 +51,8 @@ export function renderNavbar() {
             <span class="track-idx">04</span>
             <span class="track-label">Pricing</span>
           </a>
-          <a href="https://wa.me/918861699354?text=Hi%20Solonova%20Studio,%20I'd%20like%20to%20discuss%20booking%20a%20website%20sprint" target="_blank" rel="noopener noreferrer" class="nav-track-item" style="color: #059669; font-weight: 700;">
-            <span class="track-idx" style="color: #059669;">✦</span>
+          <a href="${inquiryUrl}" target="_blank" rel="noopener noreferrer" class="nav-track-item" style="color: #047857; font-weight: 700;">
+            <span class="track-idx" style="color: #047857;">✦</span>
             <span class="track-label">WhatsApp Concierge</span>
           </a>
         </div>
@@ -87,10 +89,6 @@ export function renderNavbar() {
       navMenu.classList.remove('mobile-open');
       if (toggleBtn) {
         toggleBtn.setAttribute('aria-expanded', 'false');
-        const spans = toggleBtn.querySelectorAll('span');
-        spans[0].style.transform = 'none';
-        spans[1].style.opacity = '1';
-        spans[2].style.transform = 'none';
       }
     }
   }
@@ -100,15 +98,13 @@ export function renderNavbar() {
       navMenu.classList.add('mobile-open');
       if (toggleBtn) {
         toggleBtn.setAttribute('aria-expanded', 'true');
-        const spans = toggleBtn.querySelectorAll('span');
-        spans[0].style.transform = 'translateY(8px) rotate(45deg)';
-        spans[1].style.opacity = '0';
-        spans[2].style.transform = 'translateY(-8px) rotate(-45deg)';
+        navMenu.querySelector('a')?.focus({ preventScroll: true });
       }
     }
   }
 
   if (toggleBtn && navMenu) {
+    window.matchMedia('(min-width: 1161px)').addEventListener('change', closeMobileNav);
     toggleBtn.addEventListener('click', (e) => {
       e.stopPropagation();
       if (navMenu.classList.contains('mobile-open')) {
@@ -131,8 +127,9 @@ export function renderNavbar() {
 
     // Dismiss on Escape
     window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
+      if (e.key === 'Escape' && navMenu.classList.contains('mobile-open')) {
         closeMobileNav();
+        toggleBtn.focus();
       }
     });
   }

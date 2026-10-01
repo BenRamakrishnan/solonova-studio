@@ -1,0 +1,44 @@
+[
+  {
+    "document": 305,
+    "menuCollapsed": true,
+    "overflow": [],
+    "width": 320
+  },
+  {
+    "document": 360,
+    "menuCollapsed": true,
+    "overflow": [],
+    "width": 375
+  },
+  {
+    "document": 397,
+    "menuCollapsed": true,
+    "overflow": [],
+    "width": 412
+  },
+  {
+    "document": 753,
+    "menuCollapsed": true,
+    "overflow": [],
+    "width": 768
+  },
+  {
+    "document": 1009,
+    "menuCollapsed": true,
+    "overflow": [],
+    "width": 1024
+  },
+  {
+    "document": 1425,
+    "menuCollapsed": false,
+    "overflow": [],
+    "width": 1440
+  },
+  {
+    "document": 1905,
+    "menuCollapsed": false,
+    "overflow": [],
+    "width": 1920
+  }
+]

@@ -1,0 +1,19 @@
+# SOLONOVA Studio
+
+> An independent website design and development studio for Indian and global brands, with direct founder collaboration.
+
+SOLONOVA provides custom websites, landing pages, e-commerce experiences, and web applications. The website includes a concept portfolio, delivery process, comparison of service approaches, and an interactive INR scope estimator. Estimates and delivery dates are confirmed with the founder before booking.
+
+## Website sections
+
+- [Concept portfolio](__SITE_URL__#work): Six self-initiated design studies with previews, concept briefs, design goals, and suggested build stacks. These are demo projects, not verified client results.
+- [Delivery process](__SITE_URL__#process): An example workflow from discovery to launch.
+- [Pricing and scope](__SITE_URL__#calculator): Build types from INR 14,999, section counts, optional features, and estimated business days.
+- [Contact](__SITE_URL__#contact): Email, phone, and a form that prepares a WhatsApp draft for the visitor to review and send.
+
+## Public contact
+
+- [Email the studio](mailto:ben@solonova.ai)
+- [Studio homepage](__SITE_URL__)
+
+Performance targets describe the delivery goal; they are not a guarantee of identical scores for every device, network, or project. Portfolio concepts illustrate design directions without claiming client conversion, revenue, or user metrics.

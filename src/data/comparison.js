@@ -1,37 +1,37 @@
 export const comparisonData = [
   {
     factor: 'Delivery Timeline',
-    traditional: '6 to 12 Weeks (Endless committee meetings and delayed review cycles)',
-    solonova: '48 Hours to 7 Business Days (Shipped at 10x velocity through focused vibe coding)',
+    traditional: 'Delivery varies by team size, scope, and review process',
+    solonova: 'Focused sprints from 48 hours; schedule confirmed for your scope',
     winner: 'solonova'
   },
   {
     factor: 'Direct Communication',
-    traditional: 'Account managers & junior coordinators playing telephone on WhatsApp groups',
+    traditional: 'Often coordinated through account and project managers',
     solonova: 'Direct 1-on-1 access to the founder and lead engineer',
     winner: 'solonova'
   },
   {
     factor: 'Pricing & Transparency',
-    traditional: '₹1.5 Lakhs - ₹5 Lakhs+ (Inflated agency retainers, hidden hosting markups)',
+    traditional: 'Custom quotes; ongoing services depend on the provider',
     solonova: 'Transparent milestone pricing from ₹14,999. 50% deposit, 50% on verified launch.',
     winner: 'solonova'
   },
   {
     factor: 'Design Quality & Aesthetics',
-    traditional: 'Recycled WordPress/Elementor templates passed between junior interns',
-    solonova: 'Bespoke Double-Bezel luxury craft, high-contrast serif typography & spring physics',
+    traditional: 'Template-based or bespoke, depending on the package',
+    solonova: 'Tailored layouts, editorial typography, and considered interactions',
     winner: 'solonova'
   },
   {
     factor: 'Performance & Speed',
-    traditional: 'Heavy plugin bloat, 35-50 Lighthouse score, 3s+ mobile load times on 4G/5G',
-    solonova: 'Sub-second LCP, zero CLS shifts, 100/100 Lighthouse benchmark guaranteed',
+    traditional: 'Depends on the platform, plugins, assets, and hosting',
+    solonova: 'Lean assets and components, with a 95+ Lighthouse target and mobile QA',
     winner: 'solonova'
   },
   {
     factor: 'Payment & Code Ownership',
-    traditional: 'Proprietary CMS lock-in, recurring maintenance fees, withheld credentials',
+    traditional: 'Code ownership and maintenance terms vary by provider',
     solonova: 'Instant UPI/Razorpay payment rails & 100% full GitHub repository ownership',
     winner: 'solonova'
   }

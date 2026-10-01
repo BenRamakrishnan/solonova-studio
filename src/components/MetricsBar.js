@@ -3,9 +3,9 @@ export function renderMetrics() {
   if (!container) return;
 
   const stats = [
-    { value: '10x', label: 'Faster Than Agencies', sub: 'Days, not months of bureaucracy', color: 'var(--accent-amber)' },
-    { value: '100', label: 'Lighthouse Performance', sub: 'Zero CLS, sub-second LCP speed', color: 'var(--status-live)' },
-    { value: '48h', label: 'Rapid Prototype Window', sub: 'Working software in 2 days', color: 'var(--accent-gold)' },
+    { value: '1:1', label: 'Founder Collaboration', sub: 'Direct design and development access', color: 'var(--accent-amber)' },
+    { value: '95+', label: 'Performance Target', sub: 'Desktop and mobile checked before launch', color: '#047857' },
+    { value: '48h', label: 'Rapid Prototype Window', sub: 'Working software in 2 days', color: 'var(--accent-gold-text)' },
     { value: '100%', label: 'Full Source Ownership', sub: 'Clean git repository, no lock-in', color: '#09090B' }
   ];
 
@@ -15,8 +15,8 @@ export function renderMetrics() {
     'Bespoke Portfolio Ateliers',
     'High-Conversion Landing Pages',
     'FinTech Terminals',
-    '100/100 Lighthouse Performance',
-    'Sub-Second LCP Speed'
+    'Performance-Tested Delivery',
+    'Responsive From the Start'
   ];
 
   container.innerHTML = `

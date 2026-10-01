@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-01",
+  "testedURL": "http://127.0.0.1:4175/solonova-studio/",
+  "checks": [
+    "Navigation focus and Escape",
+    "Modal forward/reverse Tab and focus handoffs",
+    "SaaS priority estimate ₹61,000 / 6 days",
+    "Scope features, budget, timeline and manual notes retained",
+    "Safe draft and stale-draft hiding",
+    "Portfolio arrow-key filtering",
+    "Decorative motion pause/resume",
+    "No browser console warnings/errors"
+  ],
+  "viewports": [
+    {
+      "componentErrors": 0,
+      "documentWidth": 305,
+      "overflow": false,
+      "width": 320
+    },
+    {
+      "componentErrors": 0,
+      "documentWidth": 360,
+      "overflow": false,
+      "width": 375
+    },
+    {
+      "componentErrors": 0,
+      "documentWidth": 397,
+      "overflow": false,
+      "width": 412
+    },
+    {
+      "componentErrors": 0,
+      "documentWidth": 753,
+      "overflow": false,
+      "width": 768
+    },
+    {
+      "componentErrors": 0,
+      "documentWidth": 1009,
+      "overflow": false,
+      "width": 1024
+    },
+    {
+      "componentErrors": 0,
+      "documentWidth": 1425,
+      "overflow": false,
+      "width": 1440
+    },
+    {
+      "componentErrors": 0,
+      "documentWidth": 1905,
+      "overflow": false,
+      "width": 1920
+    }
+  ]
+}

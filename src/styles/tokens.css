@@ -18,10 +18,11 @@
   --accent-charcoal: #27272A;
   --accent-gold: #C5A059;              /* Bespoke Atelier Champagne Gold */
   --accent-gold-hover: #B38E46;
+  --accent-gold-text: #856324;
   --accent-gold-soft: rgba(197, 160, 89, 0.08);
   --accent-gold-border: rgba(197, 160, 89, 0.28);
   --accent-bronze: #8C7355;
-  --accent-amber: #D97706;
+  --accent-amber: #A65F08;
   --accent-cyan: #06B6D4;
   --accent-violet: #8B5CF6;
 
@@ -41,7 +42,7 @@
   /* Typography Colors — High-Impact Deep Black & Refined Neutral Charcoal */
   --text-primary: #09090B;
   --text-secondary: #52525B;
-  --text-tertiary: #71717A;
+  --text-tertiary: #64646D;
   --text-invert: #FFFFFF;
 
   /* Typography Fonts */
@@ -83,15 +84,15 @@
   --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-luxury: cubic-bezier(0.25, 1, 0.5, 1);
   --duration-fast: 150ms;
-  --duration-normal: 280ms;
-  --duration-slow: 500ms;
+  --duration-normal: 220ms;
+  --duration-slow: 280ms;
 
   /* Layout Max Widths & Grid Alignment System */
   --container-max: 1280px;
   --container-narrow: 1100px;
   --container-padding: clamp(0.85rem, 3.5vw, 2.5rem);
   --section-padding-y: clamp(3rem, 6vw, 7.5rem);
-  --card-padding: clamp(0.95rem, 3vw, 2.25rem);
+  --card-padding: clamp(1.25rem, 3vw, 2rem);
 
   /* Device Safe Area Insets */
   --safe-top: env(safe-area-inset-top, 0px);
@@ -100,7 +101,7 @@
   --safe-right: env(safe-area-inset-right, 0px);
 
   /* Unified Accessible Focus Ring */
-  --focus-ring: 0 0 0 2px var(--bg-primary), 0 0 0 4px var(--accent-gold);
+  --focus-ring: 0 0 0 2px var(--bg-primary), 0 0 0 4px var(--accent-gold-text);
 
   /* Predictable Layering Z-Index System */
   --z-canvas: 0;

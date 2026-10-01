@@ -17,7 +17,7 @@
   background: radial-gradient(circle, rgba(238, 235, 227, 0.8) 0%, rgba(250, 250, 248, 0) 70%);
   top: -100px;
   right: -80px;
-  animation: floatWarmSilk 20s ease-in-out infinite alternate;
+  animation: floatWarmSilk 20s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
 }
 
 @keyframes floatWarmSilk {
@@ -43,8 +43,10 @@
   flex-shrink: 0;
 }
 
+@media (hover: hover) and (pointer: fine) {
 .marquee-content:hover {
   animation-play-state: paused;
+}
 }
 
 @keyframes scrollMarquee {
@@ -86,16 +88,20 @@
 
 /* Card Spring Hover Elevation */
 .double-bezel {
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+  transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
 }
 
-.double-bezel:hover {
+@media (hover: hover) and (pointer: fine) {
+.project-card:hover {
   transform: translateY(-4px);
   border-color: rgba(0, 0, 0, 0.12);
 }
+}
 
-.double-bezel:hover .double-bezel-inner {
+@media (hover: hover) and (pointer: fine) {
+.project-card:hover .double-bezel-inner {
   box-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.08);
+}
 }
 
 /* Interactive Device Preview Tabs in Hero */
@@ -106,13 +112,15 @@
   font-size: 0.76rem;
   font-weight: 600;
   color: var(--text-tertiary);
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: color 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   background: transparent;
   border: 1px solid transparent;
 }
 
+@media (hover: hover) and (pointer: fine) {
 .preview-tab-btn:hover {
   color: var(--text-primary);
+}
 }
 
 .preview-tab-btn.active {
@@ -158,7 +166,9 @@
     animation: none !important;
   }
 
-  .double-bezel:hover {
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover {
     transform: none !important;
   }
+}
 }
