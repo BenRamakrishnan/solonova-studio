@@ -15,20 +15,20 @@ export function renderFooter() {
                 <circle cx="28" cy="27" r="3.5" fill="#C5A059"/>
               </svg>
               <div class="brand-title-text">
-                <span class="brand-title-main" style="font-size: 1.45rem; color: #FFFFFF;">SOLONOVA</span>
+                <span class="brand-title-main brand-name" style="font-size: 1.45rem; color: #FFFFFF;">SOLONOVA</span>
                 <span class="brand-studio-badge" style="font-size: 0.72rem; background: #27272A; color: #FAFAFA; border: 1px solid #3F3F46;">STUDIO</span>
               </div>
             </div>
 
             <p style="font-size: 1.02rem; color: #A1A1AA; line-height: 1.7; margin-bottom: var(--space-5); overflow-wrap: break-word;">
-              The solo digital atelier redefining web craft through high-velocity vibe coding. Bespoke web apps, MVPs, and flagship brand experiences engineered for ambitious Indian and global founders.
+              Custom websites, online stores, and web apps for founders in India and worldwide. Work directly with the designer and developer, from your first brief to launch.
             </p>
 
             <div class="status-pill" style="font-size: clamp(0.74rem, 1.4vw, 0.84rem); padding: 0.45rem 1rem; background: #18181B; border-color: #27272A; color: #FFFFFF; overflow-wrap: break-word;">
               <span class="radar-ping">
                 <span class="radar-ping-core"></span>
               </span>
-              <span>BENGALURU · MUMBAI · NCR // ACTIVE QUEUE</span>
+              <span>INDIA & GLOBAL · FOUNDER-LED</span>
             </div>
           </div>
 
@@ -38,8 +38,8 @@ export function renderFooter() {
               <span style="color: var(--accent-gold);">✦</span> NAVIGATION
             </div>
             <ul style="display: flex; flex-direction: column; gap: var(--space-3); font-size: 1.02rem; color: #D4D4D8;">
-              <li><a href="#work" class="nav-link" style="transition: color 0.2s; color: #D4D4D8;">Curated Work</a></li>
-              <li><a href="#process" class="nav-link" style="transition: color 0.2s; color: #D4D4D8;">Methodology</a></li>
+              <li><a href="#work" class="nav-link" style="transition: color 0.2s; color: #D4D4D8;">Design Studies</a></li>
+              <li><a href="#process" class="nav-link" style="transition: color 0.2s; color: #D4D4D8;">How We Work</a></li>
               <li><a href="#comparison" class="nav-link" style="transition: color 0.2s; color: #D4D4D8;">Agency vs. Solonova</a></li>
               <li><a href="#calculator" class="nav-link" style="transition: color 0.2s; color: #D4D4D8;">Pricing & Scope (₹ INR)</a></li>
               <li><a href="#contact" class="nav-link" style="transition: color 0.2s; color: #D4D4D8;">Start a Project</a></li>
@@ -49,15 +49,15 @@ export function renderFooter() {
           <!-- Right: Atelier Craft & Architectural Standards -->
           <div>
             <div style="font-family: var(--font-mono); font-size: 0.9rem; color: #FFFFFF; text-transform: uppercase; margin-bottom: var(--space-4); font-weight: 800; letter-spacing: 0.12em;">
-              <span style="color: var(--accent-gold);">✦</span> ATELIER DISCIPLINES
+              <span style="color: var(--accent-gold);">✦</span> WHAT YOU CAN EXPECT
             </div>
             <ul style="display: flex; flex-direction: column; gap: var(--space-3); font-size: 0.94rem; color: #A1A1AA; font-family: var(--font-mono);">
-              <li>✦ Editorial Luxury Direction</li>
-              <li>✦ Fluid Bento Grids & Micro-Interactions</li>
+              <li>✦ Custom Design for Your Brand</li>
+              <li>✦ Responsive Layouts & Interactions</li>
               <li>✦ Fast Loading & Stable Layouts</li>
               <li>✦ Accessible, Keyboard-Friendly Interfaces</li>
-              <li>✦ Direct WhatsApp & UPI Sprint Enablement</li>
-              <li>✦ Zero WordPress/Template Bloat</li>
+              <li>✦ Direct Support & UPI Payments</li>
+              <li>✦ Full Source Code Ownership</li>
             </ul>
           </div>
         </div>
@@ -65,7 +65,7 @@ export function renderFooter() {
         <!-- Bottom Copyright -->
         <div class="flex flex-wrap justify-between items-center gap-4" style="border-top: 1px solid #27272A; padding-top: var(--space-6); font-size: 0.88rem; color: #A1A1AA; font-family: var(--font-mono);">
           <div style="overflow-wrap: break-word;">
-            © ${new Date().getFullYear()} Solonova Studio. All Rights Reserved. UPI, Razorpay & IMPS Enabled.
+            © ${new Date().getFullYear()} Solonova Studio. All rights reserved.
           </div>
           <div class="footer-bottom-links" style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.25rem;">
             <a href="#comparison" class="nav-link" style="color: #A1A1AA;">Our Approach</a>

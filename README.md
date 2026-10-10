@@ -42,3 +42,5 @@ Optional browser diagnostic scripts use installed Chrome; override `CHROME_PATH`
 Regenerate responsive images with `python scripts/optimize-previews.py` after installing Pillow. Original project images are retained. `scripts/generate-brand-assets.mjs` recreates the existing SVG/PNG brand exports; it is not part of normal builds.
 
 The inquiry form prepares a WhatsApp draft. It does not submit to a backend; the visitor reviews and sends the message in WhatsApp.
+
+The October 2026 refinement preserves the original visual identity while simplifying the hero, portfolio, and buying flow. See [the design review](docs/design-review-2026-10-06.md) and [the refinement report](docs/refinement-report-2026-10-10.md) for findings and verification.

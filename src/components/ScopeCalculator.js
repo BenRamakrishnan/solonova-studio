@@ -12,10 +12,10 @@ export function renderScopeCalculator() {
         <div class="section-header text-center">
           <div class="eyebrow">
             <span class="status-dot status-dot-gold"></span>
-            <span style="color: #09090B;">TRANSPARENT PRICING // ZERO AGENCY MARKUPS</span>
+            <span style="color: #09090B;">CLEAR SCOPE · TRANSPARENT PRICING</span>
           </div>
-          <h2 style="color: #09090B;">Configure Your Build & <span class="text-italic" style="font-style: italic; text-decoration: underline; text-decoration-color: #D4D4D8; text-underline-offset: 6px;">Instant INR Estimate</span></h2>
-          <p>Transparent estimation tailored for Indian startups and businesses. Select your architecture and capabilities below to calculate real-time delivery turnaround and investment in ₹ (INR).</p>
+          <h2 style="color: #09090B;">Plan Your Website & <span class="text-italic" style="font-style: italic;">Get an Estimate</span></h2>
+          <p>Choose your website type, size, and features to see an estimated price in ₹ and delivery time.</p>
         </div>
 
         <!-- Calculator Double-Bezel Card -->
@@ -26,45 +26,47 @@ export function renderScopeCalculator() {
               <div>
                 <!-- 1. Project Base Type -->
                 <div class="input-group">
-                  <label class="input-label" for="calc-type">1. Select Project Architecture</label>
-                  <select id="calc-type" class="select-field" style="font-size: clamp(0.92rem, 1.5vw, 1.05rem); padding: 0.95rem 1.15rem; width: 100%; max-width: 100%; text-overflow: ellipsis;">
-                    <option value="14999" data-days="2" data-name="High-Converting 48h Launchpad">High-Converting 48h Launchpad (₹14,999 · 48h Sprint)</option>
-                    <option value="28500" data-days="5" data-name="Bespoke Multi-Page Brand Experience" selected>Bespoke Multi-Page Brand Experience (₹28,500 · 5 Days)</option>
-                    <option value="54000" data-days="7" data-name="SaaS MVP / Interactive Web App">SaaS MVP / Interactive Web App (₹54,000 · 7 Days)</option>
-                    <option value="38000" data-days="6" data-name="Luxury D2C E-Commerce Digital Boutique">Luxury D2C Digital Boutique (₹38,000 · 6 Days)</option>
+                  <label class="input-label" for="calc-type">1. Website Type</label>
+                  <select id="calc-type" class="select-field" aria-describedby="calc-base-summary calc-base-help" style="font-size: clamp(1rem, 1.5vw, 1.05rem); padding: 0.95rem 1.15rem; width: 100%; max-width: 100%; text-overflow: ellipsis;">
+                    <option value="14999" data-days="2" data-name="Launch landing page">Launch landing page</option>
+                    <option value="28500" data-days="5" data-name="Multi-page brand site" selected>Multi-page brand site</option>
+                    <option value="54000" data-days="7" data-name="SaaS MVP / web app">SaaS MVP / web app</option>
+                    <option value="38000" data-days="6" data-name="D2C online store">D2C online store</option>
                   </select>
+                  <p id="calc-base-summary" style="font-size: 0.94rem; color: #09090B; font-weight: 600; margin: var(--space-3) 0 4px;">Base: ₹28,500 · 5 business days.</p>
+                  <p id="calc-base-help" style="font-size: 0.88rem; color: #52525B; line-height: 1.5; margin: 0;">Base price includes up to 3 sections. Each additional section is ₹1,500.</p>
                 </div>
 
                 <!-- 2. Section/Page Count Slider -->
                 <div class="input-group" style="margin-top: var(--space-6);">
                   <div class="flex justify-between items-center" style="margin-bottom: var(--space-3);">
-                    <label class="input-label" for="calc-pages" style="margin-bottom: 0;">2. Scope / Sections Count</label>
+                    <label class="input-label" for="calc-pages" style="margin-bottom: 0;">2. Number of Sections</label>
                     <span id="page-count-val" style="font-family: var(--font-mono); font-weight: 800; color: #09090B; font-size: 1.05rem;">5 Sections</span>
                   </div>
                   <input type="range" id="calc-pages" class="custom-range" min="1" max="10" value="5" step="1" aria-label="Scope or sections count" aria-valuemin="1" aria-valuemax="10" aria-valuenow="5" />
                   <div class="flex justify-between" style="font-size: 0.85rem; color: #64646D; margin-top: 6px; font-family: var(--font-mono);">
-                    <span>1 Section (Focused)</span>
-                    <span>10 Sections (Expansive)</span>
+                    <span>1 section</span>
+                    <span>10 sections</span>
                   </div>
                 </div>
 
                 <!-- 3. Add-on Features -->
-                <div class="input-group" style="margin-top: var(--space-6);">
-                  <label class="input-label">3. Specialized Capabilities</label>
+                <fieldset class="input-group" style="margin-top: var(--space-6); padding: 0; border: 0; min-width: 0;">
+                  <legend class="input-label" style="padding: 0;">3. Additional Features</legend>
                   <div class="flex flex-col gap-4" style="margin-top: var(--space-3);">
                     <label class="flex items-start gap-3" style="cursor: pointer; font-size: 0.98rem; color: #09090B;">
-                      <input type="checkbox" class="calc-addon" value="4500" data-feature="Kinetic Motion & Spring Physics" style="accent-color: #09090B; width: 18px; height: 18px; flex-shrink: 0; margin-top: 3px;" />
-                      <span style="line-height: 1.45; overflow-wrap: break-word;">Kinetic Motion & Awwwards Physics (+ ₹4,500)</span>
+                      <input type="checkbox" class="calc-addon" value="4500" data-feature="Custom animations & interactions" style="accent-color: #09090B; width: 18px; height: 18px; flex-shrink: 0; margin-top: 3px;" />
+                      <span style="line-height: 1.45; overflow-wrap: break-word;">Custom animations & interactions (+ ₹4,500)</span>
                     </label>
 
                     <label class="flex items-start gap-3" style="cursor: pointer; font-size: 0.98rem; color: #09090B;">
-                      <input type="checkbox" class="calc-addon" value="3500" data-feature="Custom Interactive Calculator / Lead Tool" style="accent-color: #09090B; width: 18px; height: 18px; flex-shrink: 0; margin-top: 3px;" />
-                      <span style="line-height: 1.45; overflow-wrap: break-word;">Custom Interactive Calculator / Scoring Tool (+ ₹3,500)</span>
+                      <input type="checkbox" class="calc-addon" value="3500" data-feature="Custom calculator or scoring tool" style="accent-color: #09090B; width: 18px; height: 18px; flex-shrink: 0; margin-top: 3px;" />
+                      <span style="line-height: 1.45; overflow-wrap: break-word;">Custom calculator or scoring tool (+ ₹3,500)</span>
                     </label>
 
                     <label class="flex items-start gap-3" style="cursor: pointer; font-size: 0.98rem; color: #09090B;">
-                      <input type="checkbox" class="calc-addon" value="5000" data-feature="UPI & Razorpay Checkout Rails" style="accent-color: #09090B; width: 18px; height: 18px; flex-shrink: 0; margin-top: 3px;" />
-                      <span style="line-height: 1.45; overflow-wrap: break-word;">Razorpay & UPI 1-Click Payment Gateway (+ ₹5,000)</span>
+                      <input type="checkbox" class="calc-addon" value="5000" data-feature="Razorpay & UPI checkout" style="accent-color: #09090B; width: 18px; height: 18px; flex-shrink: 0; margin-top: 3px;" />
+                      <span style="line-height: 1.45; overflow-wrap: break-word;">Razorpay & UPI checkout (+ ₹5,000)</span>
                     </label>
 
                     <label class="flex items-start gap-3" style="cursor: pointer; font-size: 0.98rem; color: #09090B;">
@@ -72,7 +74,7 @@ export function renderScopeCalculator() {
                       <span style="color: #09090B; font-weight: 700; line-height: 1.45; overflow-wrap: break-word;"><span style="color: var(--accent-amber);">✦</span> Priority Delivery · Up to 2 Days Faster (+ ₹4,000)<span id="priority-note" hidden style="display: block; font-size: 0.85rem; font-weight: 400; color: #52525B;">This scope already has the fastest delivery estimate.</span></span>
                     </label>
                   </div>
-                </div>
+                </fieldset>
               </div>
 
               <!-- Right: Output Column — High-Contrast Pitch Black Panel with Gold Glow -->
@@ -86,7 +88,7 @@ export function renderScopeCalculator() {
                   <div style="margin-bottom: clamp(1.25rem, 3vw, 1.85rem);">
                     <div class="calc-price-display" style="display: flex; align-items: baseline; gap: 0.65rem; font-weight: 800; line-height: 1.15; padding-block: 4px; overflow: visible;">
                       <span class="calc-currency-symbol" style="font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif); font-size: clamp(1.5rem, 3.2vw, 2.3rem); font-weight: 600; color: #E4E4E7; opacity: 0.85; line-height: 1; user-select: none;">₹</span>
-                      <span id="calc-total-price" class="price-counter-anim" style="font-family: var(--font-display); font-size: clamp(1.95rem, 4.8vw, 3.8rem); font-weight: 800; line-height: 1.15; color: #FFFFFF; letter-spacing: 0.03em; display: inline-block;">28,500</span>
+                      <span id="calc-total-price" class="price-counter-anim" style="font-family: var(--font-display); font-size: clamp(1.95rem, 4.8vw, 3.8rem); font-weight: 800; line-height: 1.15; color: #FFFFFF; letter-spacing: 0.03em; font-variant-numeric: tabular-nums; display: inline-block;">31,500</span>
                     </div>
                     <div style="font-size: 0.92rem; color: #A1A1AA; margin-top: 14px; margin-bottom: 4px; line-height: 1.6; overflow-wrap: break-word;">
                       Flat sprint fee. 50% deposit via UPI/Bank, 50% upon verified launch.
@@ -97,7 +99,7 @@ export function renderScopeCalculator() {
                   <div style="padding: clamp(0.85rem, 2vw, var(--space-5)); background: #18181B; border-radius: var(--radius-md); margin-bottom: var(--space-5); border: 1px solid #27272A;">
                     <div class="flex justify-between items-center" style="margin-bottom: 8px; gap: 8px;">
                       <span style="font-size: 0.92rem; color: #A1A1AA;">Estimated Delivery:</span>
-                      <strong id="calc-total-days" style="color: #FFFFFF; font-family: var(--font-mono); font-size: clamp(0.95rem, 1.5vw, 1.05rem);">5 Business Days</strong>
+                      <strong id="calc-total-days" style="color: #FFFFFF; font-family: var(--font-mono); font-size: clamp(0.95rem, 1.5vw, 1.05rem);">6 Business Days</strong>
                     </div>
                     <div class="flex justify-between items-center" style="gap: 8px;">
                       <span style="font-size: 0.92rem; color: #A1A1AA;">Performance Target:</span>
@@ -106,7 +108,7 @@ export function renderScopeCalculator() {
                   </div>
 
                   <p id="scope-announcement" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
-                  <p style="font-size: 0.85rem; color: #A1A1AA; margin-bottom: var(--space-5);">Estimate includes 3 sections. Extra sections: ₹1,500 each. Scope, integrations, and kickoff date are confirmed before booking.</p>
+                  <p style="font-size: 0.85rem; color: #A1A1AA; margin-bottom: var(--space-5);">Estimate reflects your selected sections and features. Final scope, integrations, and kickoff date are confirmed before booking.</p>
                   <!-- Inclusions list -->
                   <ul style="font-size: 0.92rem; color: #D4D4D8; display: flex; flex-direction: column; gap: var(--space-3); margin-bottom: var(--space-6);">
                     <li class="flex items-start gap-3">
@@ -126,8 +128,8 @@ export function renderScopeCalculator() {
 
                 <!-- Lock-in Buttons -->
                 <div class="flex flex-col gap-3">
-                  <button id="calc-lock-in-btn" class="btn btn-secondary btn-lg" style="width: 100%; background: #FFFFFF; color: #09090B; border-color: #FFFFFF; justify-content: center; padding: clamp(0.85rem, 2vw, 1.15rem) clamp(1rem, 2vw, 1.75rem); white-space: normal;">
-                    <span>Review Scope & Start a Project</span>
+                  <button id="calc-lock-in-btn" class="btn btn-secondary btn-lg" aria-label="Use Estimate in your project brief" style="width: 100%; background: #FFFFFF; color: #09090B; border-color: #FFFFFF; justify-content: center; padding: clamp(0.85rem, 2vw, 1.15rem) 0.75rem; white-space: nowrap;">
+                    <span>Use Estimate</span>
                     <span class="btn-icon-circle" style="background: rgba(0, 0, 0, 0.08); flex-shrink: 0;">
                       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#09090B" stroke-width="2.6">
                         <path d="M7 17l9.2-9.2M17 17V8H8"/>
@@ -135,11 +137,11 @@ export function renderScopeCalculator() {
                     </span>
                   </button>
 
-                  <a id="calc-whatsapp-btn" href="https://wa.me/918861699354" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg" style="width: 100%; border-color: #065F46; background: #064E3B; color: #34D399; justify-content: center; padding: clamp(0.85rem, 2vw, 1.15rem) clamp(1rem, 2vw, 1.75rem); white-space: normal;">
+                  <a id="calc-whatsapp-btn" href="https://wa.me/918861699354" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg" aria-label="WhatsApp Chat about this estimate" style="width: 100%; border-color: #065F46; background: #064E3B; color: #34D399; justify-content: center; padding: clamp(0.85rem, 2vw, 1.15rem) 0.75rem; white-space: nowrap;">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2.2" style="flex-shrink: 0;">
                       <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
                     </svg>
-                    <span>Chat on WhatsApp with This Scope</span>
+                    <span>WhatsApp Chat</span>
                   </a>
                 </div>
               </div>
@@ -165,6 +167,7 @@ export function renderScopeCalculator() {
       addons: addons.filter(cb => cb.checked).map(cb => ({ name: cb.dataset.feature, price: Number(cb.value), priority: Boolean(cb.dataset.priority) }))
     };
     const spec = estimateScope(input);
+    document.getElementById('calc-base-summary').textContent = `Base: ₹${priceFormat.format(input.basePrice)} · ${input.baseDays} business days.`;
     priorityOption.disabled = spec.standardDays <= 2;
     document.getElementById('priority-note').hidden = !priorityOption.disabled;
     priorityOption.closest('label').classList.toggle('option-disabled', priorityOption.disabled);

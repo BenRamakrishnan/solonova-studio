@@ -22,10 +22,9 @@ export function renderMetrics() {
   container.innerHTML = `
     <div style="border-block: 1px solid #E4E4E7; background: #FAFAFB; padding-block: var(--space-12);">
       <div class="container" style="margin-bottom: var(--space-10);">
-        <div class="grid-4 text-center">
+        <div class="studio-metrics-grid">
           ${stats.map(s => `
-            <div class="double-bezel">
-              <div class="double-bezel-inner" style="padding: clamp(1.25rem, 3vw, 2.25rem) clamp(0.75rem, 2vw, 1.5rem);">
+            <div class="studio-metric">
                 <div style="font-family: var(--font-display); font-size: clamp(2.2rem, 3.8vw, 3.8rem); font-weight: 800; color: ${s.color}; line-height: 1.05; margin-bottom: var(--space-3);">
                   ${s.value}
                 </div>
@@ -35,7 +34,6 @@ export function renderMetrics() {
                 <div style="font-size: clamp(0.85rem, 1.2vw, 0.95rem); color: #52525B; font-family: var(--font-body); line-height: 1.5; overflow-wrap: break-word;">
                   ${s.sub}
                 </div>
-              </div>
             </div>
           `).join('')}
         </div>

@@ -1,0 +1,715 @@
+{
+  "date": "2026-10-10",
+  "url": "http://127.0.0.1:4173/",
+  "navigation": [
+    {
+      "client": 305,
+      "controls": [
+        {
+          "fitsShell": true,
+          "height": 22.512500762939453,
+          "text": "Solonova Studio Home",
+          "visible": true,
+          "width": 108.3000030517578
+        },
+        {
+          "fitsShell": false,
+          "height": 0,
+          "text": "01 Works",
+          "visible": false,
+          "width": 0
+        },
+        {
+          "fitsShell": false,
+          "height": 0,
+          "text": "02 Method",
+          "visible": false,
+          "width": 0
+        },
+        {
+          "fitsShell": false,
+          "height": 0,
+          "text": "03 Vs Agency",
+          "visible": false,
+          "width": 0
+        },
+        {
+          "fitsShell": false,
+          "height": 0,
+          "text": "04 Pricing",
+          "visible": false,
+          "width": 0
+        },
+        {
+          "fitsShell": false,
+          "height": 0,
+          "text": "✦ WhatsApp",
+          "visible": false,
+          "width": 0
+        },
+        {
+          "fitsShell": true,
+          "height": 44.00000762939453,
+          "text": "Book Sprint",
+          "visible": true,
+          "width": 89.98750305175781
+        },
+        {
+          "fitsShell": true,
+          "height": 44,
+          "text": "Toggle navigation menu",
+          "visible": true,
+          "width": 44
+        }
+      ],
+      "documentOverflow": false,
+      "width": 320
+    },
+    {
+      "client": 360,
+      "controls": [
+        {
+          "fitsShell": true,
+          "height": 24.575000762939453,
+          "text": "Solonova Studio Home",
+          "visible": true,
+          "width": 121.75
+        },
+        {
+          "fitsShell": false,
+          "height": 0,
+          "text": "01 Works",
+          "visible": false,
+          "width": 0
+        },
+        {
+          "fitsShell": false,
+          "height": 0,
+          "text": "02 Method",
+          "visible": false,
+          "width": 0
+        },
+        {
+          "fitsShell": false,
+          "height": 0,
+          "text": "03 Vs Agency",
+          "visible": false,
+          "width": 0
+        },
+        {
+          "fitsShell": false,
+          "height": 0,
+          "text": "04 Pricing",
+          "visible": false,
+          "width": 0
+        },
+        {
+          "fitsShell": false,
+          "height": 0,
+          "text": "✦ WhatsApp",
+          "visible": false,
+          "width": 0
+        },
+        {
+          "fitsShell": true,
+          "height": 44,
+          "text": "Book Sprint",
+          "visible": true,
+          "width": 108.1750030517578
+        },
+        {
+          "fitsShell": true,
+          "height": 44,
+          "text": "Toggle navigation menu",
+          "visible": true,
+          "width": 44
+        }
+      ],
+      "documentOverflow": false,
+      "width": 375
+    },
+    {
+      "client": 753,
+      "controls": [
+        {
+          "fitsShell": true,
+          "height": 32.75,
+          "text": "Solonova Studio Home",
+          "visible": true,
+          "width": 165.6125030517578
+        },
+        {
+          "fitsShell": false,
+          "height": 0,
+          "text": "01 Works",
+          "visible": false,
+          "width": 0
+        },
+        {
+          "fitsShell": false,
+          "height": 0,
+          "text": "02 Method",
+          "visible": false,
+          "width": 0
+        },
+        {
+          "fitsShell": false,
+          "height": 0,
+          "text": "03 Vs Agency",
+          "visible": false,
+          "width": 0
+        },
+        {
+          "fitsShell": false,
+          "height": 0,
+          "text": "04 Pricing",
+          "visible": false,
+          "width": 0
+        },
+        {
+          "fitsShell": false,
+          "height": 0,
+          "text": "✦ WhatsApp",
+          "visible": false,
+          "width": 0
+        },
+        {
+          "fitsShell": true,
+          "height": 44.849998474121094,
+          "text": "Book Sprint",
+          "visible": true,
+          "width": 150.8125
+        },
+        {
+          "fitsShell": true,
+          "height": 44,
+          "text": "Toggle navigation menu",
+          "visible": true,
+          "width": 44
+        }
+      ],
+      "documentOverflow": false,
+      "width": 768
+    },
+    {
+      "client": 1009,
+      "controls": [
+        {
+          "fitsShell": true,
+          "height": 32.75,
+          "text": "Solonova Studio Home",
+          "visible": true,
+          "width": 165.6125030517578
+        },
+        {
+          "fitsShell": false,
+          "height": 0,
+          "text": "01 Works",
+          "visible": false,
+          "width": 0
+        },
+        {
+          "fitsShell": false,
+          "height": 0,
+          "text": "02 Method",
+          "visible": false,
+          "width": 0
+        },
+        {
+          "fitsShell": false,
+          "height": 0,
+          "text": "03 Vs Agency",
+          "visible": false,
+          "width": 0
+        },
+        {
+          "fitsShell": false,
+          "height": 0,
+          "text": "04 Pricing",
+          "visible": false,
+          "width": 0
+        },
+        {
+          "fitsShell": false,
+          "height": 0,
+          "text": "✦ WhatsApp",
+          "visible": false,
+          "width": 0
+        },
+        {
+          "fitsShell": true,
+          "height": 44.849998474121094,
+          "text": "Book Sprint",
+          "visible": true,
+          "width": 150.8125
+        },
+        {
+          "fitsShell": true,
+          "height": 44,
+          "text": "Toggle navigation menu",
+          "visible": true,
+          "width": 44
+        }
+      ],
+      "documentOverflow": false,
+      "width": 1024
+    },
+    {
+      "client": 1145,
+      "controls": [
+        {
+          "fitsShell": true,
+          "height": 32.75,
+          "text": "Solonova Studio Home",
+          "visible": true,
+          "width": 165.6125030517578
+        },
+        {
+          "fitsShell": false,
+          "height": 0,
+          "text": "01 Works",
+          "visible": false,
+          "width": 0
+        },
+        {
+          "fitsShell": false,
+          "height": 0,
+          "text": "02 Method",
+          "visible": false,
+          "width": 0
+        },
+        {
+          "fitsShell": false,
+          "height": 0,
+          "text": "03 Vs Agency",
+          "visible": false,
+          "width": 0
+        },
+        {
+          "fitsShell": false,
+          "height": 0,
+          "text": "04 Pricing",
+          "visible": false,
+          "width": 0
+        },
+        {
+          "fitsShell": false,
+          "height": 0,
+          "text": "✦ WhatsApp",
+          "visible": false,
+          "width": 0
+        },
+        {
+          "fitsShell": true,
+          "height": 44.85000228881836,
+          "text": "Book Sprint",
+          "visible": true,
+          "width": 150.8125
+        },
+        {
+          "fitsShell": true,
+          "height": 44,
+          "text": "Toggle navigation menu",
+          "visible": true,
+          "width": 44
+        }
+      ],
+      "documentOverflow": false,
+      "width": 1160
+    },
+    {
+      "client": 1146,
+      "controls": [
+        {
+          "fitsShell": true,
+          "height": 32.75,
+          "text": "Solonova Studio Home",
+          "visible": true,
+          "width": 165.6125030517578
+        },
+        {
+          "fitsShell": true,
+          "height": 37.95000076293945,
+          "text": "01 Works",
+          "visible": true,
+          "width": 97.6500015258789
+        },
+        {
+          "fitsShell": true,
+          "height": 37.95000076293945,
+          "text": "02 Method",
+          "visible": true,
+          "width": 110.1500015258789
+        },
+        {
+          "fitsShell": true,
+          "height": 37.95000076293945,
+          "text": "03 Vs Agency",
+          "visible": true,
+          "width": 128.25
+        },
+        {
+          "fitsShell": true,
+          "height": 37.95000076293945,
+          "text": "04 Pricing",
+          "visible": true,
+          "width": 103.9375
+        },
+        {
+          "fitsShell": true,
+          "height": 37.95000076293945,
+          "text": "✦ WhatsApp",
+          "visible": true,
+          "width": 124.95000457763672
+        },
+        {
+          "fitsShell": true,
+          "height": 44.85000228881836,
+          "text": "Book Sprint",
+          "visible": true,
+          "width": 150.8125
+        },
+        {
+          "fitsShell": false,
+          "height": 0,
+          "text": "Toggle navigation menu",
+          "visible": false,
+          "width": 0
+        }
+      ],
+      "documentOverflow": false,
+      "width": 1162
+    },
+    {
+      "client": 1265,
+      "controls": [
+        {
+          "fitsShell": true,
+          "height": 32.75,
+          "text": "Solonova Studio Home",
+          "visible": true,
+          "width": 165.6125030517578
+        },
+        {
+          "fitsShell": true,
+          "height": 37.95000076293945,
+          "text": "01 Works",
+          "visible": true,
+          "width": 97.6500015258789
+        },
+        {
+          "fitsShell": true,
+          "height": 37.95000076293945,
+          "text": "02 Method",
+          "visible": true,
+          "width": 110.1500015258789
+        },
+        {
+          "fitsShell": true,
+          "height": 37.95000076293945,
+          "text": "03 Vs Agency",
+          "visible": true,
+          "width": 128.25
+        },
+        {
+          "fitsShell": true,
+          "height": 37.95000076293945,
+          "text": "04 Pricing",
+          "visible": true,
+          "width": 103.9375
+        },
+        {
+          "fitsShell": true,
+          "height": 37.95000076293945,
+          "text": "✦ WhatsApp",
+          "visible": true,
+          "width": 124.95000457763672
+        },
+        {
+          "fitsShell": true,
+          "height": 44.85000228881836,
+          "text": "Book Sprint",
+          "visible": true,
+          "width": 150.8125
+        },
+        {
+          "fitsShell": false,
+          "height": 0,
+          "text": "Toggle navigation menu",
+          "visible": false,
+          "width": 0
+        }
+      ],
+      "documentOverflow": false,
+      "width": 1280
+    },
+    {
+      "client": 1365,
+      "controls": [
+        {
+          "fitsShell": true,
+          "height": 32.75,
+          "text": "Solonova Studio Home",
+          "visible": true,
+          "width": 165.6125030517578
+        },
+        {
+          "fitsShell": true,
+          "height": 37.95000076293945,
+          "text": "01 Works",
+          "visible": true,
+          "width": 97.6500015258789
+        },
+        {
+          "fitsShell": true,
+          "height": 37.95000076293945,
+          "text": "02 Method",
+          "visible": true,
+          "width": 110.1500015258789
+        },
+        {
+          "fitsShell": true,
+          "height": 37.95000076293945,
+          "text": "03 Vs Agency",
+          "visible": true,
+          "width": 128.25
+        },
+        {
+          "fitsShell": true,
+          "height": 37.95000076293945,
+          "text": "04 Pricing",
+          "visible": true,
+          "width": 103.9375
+        },
+        {
+          "fitsShell": true,
+          "height": 37.95000076293945,
+          "text": "✦ WhatsApp",
+          "visible": true,
+          "width": 124.95000457763672
+        },
+        {
+          "fitsShell": true,
+          "height": 44.85000228881836,
+          "text": "Book Sprint",
+          "visible": true,
+          "width": 150.8125
+        },
+        {
+          "fitsShell": false,
+          "height": 0,
+          "text": "Toggle navigation menu",
+          "visible": false,
+          "width": 0
+        }
+      ],
+      "documentOverflow": false,
+      "width": 1380
+    },
+    {
+      "client": 1366,
+      "controls": [
+        {
+          "fitsShell": true,
+          "height": 32.75,
+          "text": "Solonova Studio Home",
+          "visible": true,
+          "width": 165.6125030517578
+        },
+        {
+          "fitsShell": true,
+          "height": 37.95000076293945,
+          "text": "01 Works",
+          "visible": true,
+          "width": 97.6500015258789
+        },
+        {
+          "fitsShell": true,
+          "height": 37.95000076293945,
+          "text": "02 Method",
+          "visible": true,
+          "width": 110.1500015258789
+        },
+        {
+          "fitsShell": true,
+          "height": 37.95000076293945,
+          "text": "03 Vs Agency",
+          "visible": true,
+          "width": 128.25
+        },
+        {
+          "fitsShell": true,
+          "height": 37.95000076293945,
+          "text": "04 Pricing",
+          "visible": true,
+          "width": 103.9375
+        },
+        {
+          "fitsShell": true,
+          "height": 37.95000076293945,
+          "text": "✦ WhatsApp",
+          "visible": true,
+          "width": 124.95000457763672
+        },
+        {
+          "fitsShell": true,
+          "height": 44.85000228881836,
+          "text": "Book Sprint",
+          "visible": true,
+          "width": 150.8125
+        },
+        {
+          "fitsShell": false,
+          "height": 0,
+          "text": "Toggle navigation menu",
+          "visible": false,
+          "width": 0
+        }
+      ],
+      "documentOverflow": false,
+      "width": 1382
+    },
+    {
+      "client": 1425,
+      "controls": [
+        {
+          "fitsShell": true,
+          "height": 32.75,
+          "text": "Solonova Studio Home",
+          "visible": true,
+          "width": 165.6125030517578
+        },
+        {
+          "fitsShell": true,
+          "height": 37.95000076293945,
+          "text": "01 Works",
+          "visible": true,
+          "width": 97.6500015258789
+        },
+        {
+          "fitsShell": true,
+          "height": 37.95000076293945,
+          "text": "02 Method",
+          "visible": true,
+          "width": 110.1500015258789
+        },
+        {
+          "fitsShell": true,
+          "height": 37.95000076293945,
+          "text": "03 Vs Agency",
+          "visible": true,
+          "width": 128.25
+        },
+        {
+          "fitsShell": true,
+          "height": 37.95000076293945,
+          "text": "04 Pricing",
+          "visible": true,
+          "width": 103.9375
+        },
+        {
+          "fitsShell": true,
+          "height": 37.95000076293945,
+          "text": "✦ WhatsApp",
+          "visible": true,
+          "width": 124.95000457763672
+        },
+        {
+          "fitsShell": true,
+          "height": 44.85000228881836,
+          "text": "Book Sprint",
+          "visible": true,
+          "width": 150.8125
+        },
+        {
+          "fitsShell": false,
+          "height": 0,
+          "text": "Toggle navigation menu",
+          "visible": false,
+          "width": 0
+        }
+      ],
+      "documentOverflow": false,
+      "width": 1440
+    },
+    {
+      "client": 1905,
+      "controls": [
+        {
+          "fitsShell": true,
+          "height": 32.75,
+          "text": "Solonova Studio Home",
+          "visible": true,
+          "width": 165.6125030517578
+        },
+        {
+          "fitsShell": true,
+          "height": 37.95000076293945,
+          "text": "01 Works",
+          "visible": true,
+          "width": 97.6500015258789
+        },
+        {
+          "fitsShell": true,
+          "height": 37.95000076293945,
+          "text": "02 Method",
+          "visible": true,
+          "width": 110.1500015258789
+        },
+        {
+          "fitsShell": true,
+          "height": 37.95000076293945,
+          "text": "03 Vs Agency",
+          "visible": true,
+          "width": 128.25
+        },
+        {
+          "fitsShell": true,
+          "height": 37.95000076293945,
+          "text": "04 Pricing",
+          "visible": true,
+          "width": 103.9375
+        },
+        {
+          "fitsShell": true,
+          "height": 37.95000076293945,
+          "text": "✦ WhatsApp",
+          "visible": true,
+          "width": 124.95000457763672
+        },
+        {
+          "fitsShell": true,
+          "height": 44.85000228881836,
+          "text": "Book Sprint",
+          "visible": true,
+          "width": 150.8125
+        },
+        {
+          "fitsShell": false,
+          "height": 0,
+          "text": "Toggle navigation menu",
+          "visible": false,
+          "width": 0
+        }
+      ],
+      "documentOverflow": false,
+      "width": 1920
+    }
+  ],
+  "checks": [
+    "Portfolio category arrow-key selection and Home restoration",
+    "Native dialog Shift+Tab/Tab loop, Escape dismissal and trigger focus restoration",
+    "Uncropped study preview at 375px",
+    "SaaS priority: INR 61000, six business days",
+    "16px calculator select",
+    "Manual brief preservation and required-field focus",
+    "Draft escaping and invalidation after timeline edits; no external message sent",
+    "Three shortened action labels fit one line at 320px",
+    "Motion pause/resume and benchmark tab-panel keyboard focus",
+    "No captured console warnings or errors"
+  ],
+  "limits": [
+    "Native iOS, screen reader and real-device performance not tested",
+    "Reduced motion and offscreen RAF lifecycle verified with Node tests"
+  ]
+}

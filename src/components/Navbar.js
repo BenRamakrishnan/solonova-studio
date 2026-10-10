@@ -51,9 +51,9 @@ export function renderNavbar() {
             <span class="track-idx">04</span>
             <span class="track-label">Pricing</span>
           </a>
-          <a href="${inquiryUrl}" target="_blank" rel="noopener noreferrer" class="nav-track-item" style="color: #047857; font-weight: 700;">
-            <span class="track-idx" style="color: #047857;">✦</span>
-            <span class="track-label">WhatsApp Concierge</span>
+          <a href="${inquiryUrl}" target="_blank" rel="noopener noreferrer" class="nav-track-item nav-whatsapp">
+            <span class="track-idx">✦</span>
+            <span class="track-label">WhatsApp</span>
           </a>
         </div>
 

@@ -5,31 +5,31 @@ export function renderVibeProcess() {
   const steps = [
     {
       num: '01',
-      title: 'Discovery & Creative Spec',
+      title: 'Brief & Direction',
       timeline: 'Day 1',
-      description: 'A focused 30-minute kickoff to define your exact brand identity, conversion metrics, and architecture requirements — with zero corporate bloat.',
-      deliverable: 'Product Blueprint & Style Moodboard'
+      description: 'A focused 30-minute kickoff to agree on your goals, visual direction, features, and scope.',
+      deliverable: 'Project brief & moodboard'
     },
     {
       num: '02',
       title: 'Design & Development',
-      timeline: 'Day 2 - 3',
-      description: 'Your design becomes a working website, with reusable components, responsive layouts, and the interactions your project needs.',
-      deliverable: 'Live Interactive Staging URL'
+      timeline: 'Day 2–3',
+      description: 'Your design becomes a working website with responsive layouts and the features agreed in your brief.',
+      deliverable: 'Working website preview'
     },
     {
       num: '03',
       title: 'Polish & Device Testing',
       timeline: 'Day 4',
-      description: 'Review typography, interactions, keyboard access, and mobile layouts. Measure loading performance and resolve issues before launch.',
-      deliverable: 'Performance & Cross-Device Report'
+      description: 'Check typography, interactions, keyboard access, and phone layouts. Measure loading speed and resolve issues.',
+      deliverable: 'Performance & device report'
     },
     {
       num: '04',
-      title: 'Global Edge Launch',
+      title: 'Launch & Handover',
       timeline: 'Day 5',
-      description: 'Zero-downtime deployment to global Edge CDNs (Vercel / Cloudflare). You receive 100% source code ownership and clean Git version history.',
-      deliverable: 'Production Domain Live + Clean Git Repo'
+      description: 'Launch on your domain with hosting set up for your project. You receive the full source code and Git history.',
+      deliverable: 'Live website & source code'
     }
   ];
 
@@ -40,9 +40,9 @@ export function renderVibeProcess() {
         <div class="section-header text-center">
           <div class="eyebrow">
             <span class="status-dot status-dot-gold"></span>
-            <span style="color: #09090B;">THE DELIVERY METHODOLOGY</span>
+            <span style="color: #09090B;">HOW WE WORK</span>
           </div>
-          <h2 style="color: #09090B;">From Thought to Shipped in <span class="text-italic" style="font-style: italic; text-decoration: underline; text-decoration-color: var(--accent-gold); text-underline-offset: 6px;">Days, Not Months</span></h2>
+          <h2 style="color: #09090B;">From First Brief to <span class="text-italic" style="font-style: italic;">Launch Day</span></h2>
           <p>A clear path from your first brief to launch. This five-day example adapts to the scope and integrations agreed for your project.</p>
         </div>
 

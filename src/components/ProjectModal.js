@@ -24,95 +24,59 @@ export function renderProjectModal() {
     if (!modal || !inner || modal.open) return;
 
     inner.innerHTML = `
-      <!-- Header Banner with Full Visual Preview -->
-      <div class="case-study-header">
-        <div style="position: absolute; inset: 0; overflow: hidden;">
-          <img src="${escapeHtml(previewImage(project.image, 960))}" srcset="${escapeHtml(previewSources(project.image))}" sizes="(max-width: 860px) 92vw, 860px" width="1236" height="768" decoding="async" alt="${escapeHtml(project.title)} concept interface preview" style="width: 100%; height: 100%; object-fit: cover; object-position: top center; filter: brightness(0.9);" />
-          <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(9, 9, 11, 0.4) 0%, rgba(9, 9, 11, 0.75) 100%);"></div>
+      <header class="study-header">
+        <div class="study-heading">
+          <p class="study-disclosure">Self-initiated concept</p>
+          <h2 id="modal-title">${escapeHtml(project.displayTitle || project.title)}</h2>
+          <p class="study-context">${escapeHtml(project.context)}</p>
         </div>
+        <button id="close-modal-btn" class="btn btn-secondary btn-sm study-close" aria-label="Close concept study">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M6 6l12 12M6 18L18 6"/>
+          </svg>
+        </button>
+      </header>
 
-        <div class="case-study-heading">
-          <div class="case-study-toolbar">
-            <div class="case-study-meta">
-              <span class="status-pill" style="background: rgba(255, 255, 255, 0.95); border-color: rgba(255, 255, 255, 0.9); backdrop-filter: blur(8px);">
-                <span style="width: 7px; height: 7px; border-radius: 50%; background-color: ${project.accentColor || '#09090B'}; display: inline-block;"></span>
-                ${escapeHtml(project.tag)}
-              </span>
-              <span class="status-pill" style="color: #09090B; border-color: rgba(255, 255, 255, 0.9); background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px);">
-                Concept study
-              </span>
-            </div>
-            <button id="close-modal-btn" class="btn btn-secondary btn-sm" aria-label="Close concept study" style="border-radius: 50%; width: 44px; height: 44px; flex-shrink: 0; padding: 0; display: inline-flex; align-items: center; justify-content: center; font-size: 1.1rem; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(8px);">
-              ✕
-            </button>
-          </div>
-
-            <div>
-              <div style="font-family: var(--font-mono); font-size: 0.82rem; color: #E4E4E7; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 6px; font-weight: 700;">
-                ${escapeHtml(project.context)}
-              </div>
-              <h2 id="modal-title" style="font-size: clamp(1.8rem, 3.2vw, 2.4rem); line-height: 1.15; color: #FFFFFF; font-weight: 800; text-shadow: 0 2px 12px rgba(0,0,0,0.5);">
-                ${escapeHtml(project.title)}
-              </h2>
-            </div>
-        </div>
-      </div>
+      <figure class="study-preview">
+        <img src="${escapeHtml(previewImage(project.image, 960))}" srcset="${escapeHtml(previewSources(project.image))}" sizes="(max-width: 860px) 92vw, 860px" width="960" height="536" decoding="async" alt="${escapeHtml(project.title)} concept interface preview" class="study-preview-image" />
+        <figcaption>
+          <a class="study-preview-link" href="${escapeHtml(project.image)}" target="_blank" rel="noopener" aria-label="View full-size preview of ${escapeHtml(project.displayTitle || project.title)} (opens in a new tab)">
+            <span>View full-size preview <span class="study-new-tab">(new tab)</span></span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M7 17L17 7M7 7h10v10"/>
+            </svg>
+          </a>
+        </figcaption>
+      </figure>
 
       <!-- Content Details -->
-      <div style="padding: clamp(1.25rem, 3.5vw, 2.5rem); display: flex; flex-direction: column; gap: clamp(1.25rem, 3vw, 2rem); background: #FFFFFF;">
-        <!-- Summary & Challenge -->
+      <div class="study-details">
         <div>
-          <h3 style="font-size: 0.92rem; color: #09090B; margin-bottom: var(--space-3); text-transform: uppercase; font-family: var(--font-mono); letter-spacing: 0.12em; font-weight: 800;">
-            ✦ CONCEPT BRIEF
-          </h3>
-          <p style="font-size: 1.08rem; line-height: 1.8; color: #52525B;">
-            ${escapeHtml(project.fullDescription)}
-          </p>
+          <h3 class="study-section-title">Concept brief</h3>
+          <p class="study-description">${escapeHtml(project.fullDescription)}</p>
         </div>
 
-        <!-- Concept highlights -->
-        <div class="grid-3" style="gap: var(--space-5);">
+        <dl class="study-facts">
           ${project.highlights.map(m => `
-            <div class="double-bezel">
-              <div class="double-bezel-inner" style="padding: var(--space-5); text-align: center; background: #FAFAFB;">
-                <div style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: #09090B; line-height: 1; margin-bottom: 6px;">
-                  ${escapeHtml(m.value)}
-                </div>
-                <div style="font-size: 0.85rem; font-family: var(--font-mono); color: #64646D; font-weight: 600;">
-                  ${escapeHtml(m.label)}
-                </div>
-              </div>
+            <div>
+              <dt>${escapeHtml(m.label)}</dt>
+              <dd>${escapeHtml(m.value)}</dd>
             </div>
           `).join('')}
-        </div>
+        </dl>
 
-        <!-- Key Features List -->
         <div>
-          <h3 style="font-size: 0.92rem; font-family: var(--font-mono); color: #09090B; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: var(--space-4); font-weight: 800;">
-            ✦ DESIGN GOALS
-          </h3>
-          <div class="grid-2" style="gap: var(--space-4);">
+          <h3 class="study-section-title">Design goals</h3>
+          <ul class="study-goals">
             ${project.designGoals.map(f => `
-              <div class="flex items-center gap-3" style="font-size: 1.02rem; color: #09090B;">
-                <span style="color: #059669; font-weight: bold; font-size: 1.1rem;">✔</span>
-                <span>${escapeHtml(f)}</span>
-              </div>
+              <li>${escapeHtml(f)}</li>
             `).join('')}
-          </div>
+          </ul>
         </div>
 
-        <!-- Tech Stack Badges -->
         <div>
-          <h3 style="font-size: 0.92rem; font-family: var(--font-mono); color: #09090B; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: var(--space-3); font-weight: 800;">
-            ✦ SUGGESTED BUILD STACK
-          </h3>
-          <div class="flex flex-wrap gap-2">
-            ${project.proposedStack.map(t => `
-              <span class="status-pill" style="font-size: 0.88rem; background: #F4F4F6; border-color: #D4D4D8; color: #09090B;">
-                ${escapeHtml(t)}
-              </span>
-            `).join('')}
-          </div>
+          <h3 class="study-section-title">Suggested build stack</h3>
+          <p class="study-stack">${project.proposedStack.map(escapeHtml).join(' · ')}</p>
         </div>
 
         <!-- Modal Bottom Actions -->

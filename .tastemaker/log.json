@@ -8,5 +8,15 @@
     "footer": "Existing dark three-column footer",
     "knobs": "quieter mesh; direct pointer response; contrast-safe text; mobile reflow; clearer handoffs",
     "brief": "Preserve the website while improving craft, interactions, and measured quality"
+  },
+  {
+    "date": "2026-10-10",
+    "page": "landing refinement",
+    "macrostructure": "Existing editorial landing and portfolio gallery",
+    "nav": "Existing floating navigation with responsive fit correction",
+    "hero": "Centered serif statement with two main actions and quiet contact link",
+    "footer": "Existing dark three-column footer with matching serif wordmark",
+    "knobs": "image-led concept cards; uncropped study previews; quiet reading backgrounds; plain buyer-facing labels; hero visibility-aware mesh",
+    "brief": "Apply the design audit while preserving the original identity"
   }
 ]

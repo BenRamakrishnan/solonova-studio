@@ -10,22 +10,12 @@ export function renderHero() {
         <!-- Hero Typographic Readability Sanctuary -->
         <div class="hero-readability-sanctuary flex flex-col items-center text-center">
           <!-- Architectural Masthead: SOLONOVA STUDIO with Gold Rule Accents -->
-          <div class="flex items-center justify-center gap-3" style="margin-bottom: var(--space-4); max-width: 100%;">
+          <div class="flex items-center justify-center gap-3" style="margin-bottom: var(--space-6); max-width: 100%;">
             <span style="height: 1px; width: clamp(16px, 4vw, 45px); background: var(--accent-gold); opacity: 0.75; flex-shrink: 0;" aria-hidden="true"></span>
             <span style="font-family: var(--font-mono); font-size: clamp(0.76rem, 2vw, 0.98rem); font-weight: 800; letter-spacing: clamp(0.12em, 0.5vw, 0.32em); text-transform: uppercase; color: #09090B;">
               SOLONOVA STUDIO
             </span>
             <span style="height: 1px; width: clamp(16px, 4vw, 45px); background: var(--accent-gold); opacity: 0.75; flex-shrink: 0;" aria-hidden="true"></span>
-          </div>
-
-          <!-- Eyebrow Status Pill with Luminous Live Beacon -->
-          <div class="status-pill hero-status-pill" style="margin-bottom: var(--space-6); padding: 0.5rem 1.25rem; border-color: var(--accent-gold-border); background: #FFFFFF; max-width: 100%;">
-            <span class="radar-ping">
-              <span class="radar-ping-core" style="background-color: var(--status-live);"></span>
-            </span>
-            <span class="hero-status-pill-text" style="font-family: var(--font-mono); font-size: clamp(0.74rem, 1.4vw, 0.85rem); font-weight: 700; color: #09090B; letter-spacing: 0.08em; overflow-wrap: break-word;">
-              FOUNDER-LED ATELIER // <span style="color: var(--accent-amber);">INDIA & GLOBAL</span>
-            </span>
           </div>
 
           <!-- Grand Hero Headline -->
@@ -36,11 +26,11 @@ export function renderHero() {
 
           <!-- Expanded Lead Subheading -->
           <p class="lead-text text-center" style="margin-bottom: var(--space-8); max-width: 860px; color: #52525B;">
-            Bespoke websites and web apps for ambitious brands. Collaborate directly with the founder, with focused build sprints from <strong style="color: #09090B; border-bottom: 1.5px solid var(--accent-gold);">48 hours to 7 business days</strong>.
+            Custom websites and web apps, built directly with the founder. Focused sprints from <strong style="color: #09090B; border-bottom: 1.5px solid var(--accent-gold);">48 hours to 7 business days</strong>, depending on scope.
           </p>
 
           <!-- Hero Action CTAs -->
-          <div class="flex flex-wrap items-center justify-center gap-4 hero-cta-group" style="margin-bottom: var(--space-10);">
+          <div class="flex flex-wrap items-center justify-center gap-4 hero-cta-group" style="margin-bottom: var(--space-4);">
             <a href="#work" class="btn btn-primary btn-lg hero-cta-btn" style="box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18), 0 0 0 1px rgba(197, 160, 89, 0.3);">
               <span>Explore the Work</span>
               <span class="btn-icon-circle" style="background: var(--accent-gold);">
@@ -66,14 +56,8 @@ export function renderHero() {
               <span>Scope & Pricing</span>
             </a>
 
-            <!-- WhatsApp Chat Direct Button -->
-            <a href="${inquiryUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg hero-cta-btn" style="border-color: #BBF7D0; background: #F0FDF4; color: #047857;">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.2" aria-hidden="true">
-                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-              </svg>
-              <span>Chat on WhatsApp</span>
-            </a>
           </div>
+          <a href="${inquiryUrl}" target="_blank" rel="noopener noreferrer" class="hero-contact-link">Talk directly on WhatsApp</a>
           <div class="motion-controls">
             <span class="pointer-hint">Move your cursor to explore the mesh</span>
             <button id="motion-toggle" type="button" aria-pressed="false">Pause motion</button>
@@ -101,7 +85,7 @@ export function renderHero() {
             </div>
 
             <!-- Tab 1: Performance -->
-            <div id="tab-content-perf" class="hero-tab-content" role="tabpanel" aria-labelledby="tab-perf">
+            <div id="tab-content-perf" class="hero-tab-content" role="tabpanel" tabindex="0" aria-labelledby="tab-perf">
               <div class="grid-3" style="gap: var(--space-5);">
                 <div class="hero-benchmark-bar" style="padding: clamp(0.9rem, 2.5vw, 1.25rem); border-left: 3px solid var(--accent-gold); background: #FAFAFB; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
                   <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #64646D; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Performance Target</div>
@@ -124,7 +108,7 @@ export function renderHero() {
             </div>
 
             <!-- Tab 2: Ship Speed -->
-            <div id="tab-content-speed" class="hero-tab-content" role="tabpanel" aria-labelledby="tab-speed" style="display: none;">
+            <div id="tab-content-speed" class="hero-tab-content" role="tabpanel" tabindex="0" aria-labelledby="tab-speed" style="display: none;">
               <div class="grid-3" style="gap: var(--space-5);">
                 <div class="hero-benchmark-bar" style="padding: clamp(0.9rem, 2.5vw, 1.25rem); border-left: 3px solid var(--accent-gold); background: #FAFAFB; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
                   <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #64646D; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Rapid Launchpad</div>
@@ -147,7 +131,7 @@ export function renderHero() {
             </div>
 
             <!-- Tab 3: Pricing & UPI -->
-            <div id="tab-content-pricing" class="hero-tab-content" role="tabpanel" aria-labelledby="tab-pricing" style="display: none;">
+            <div id="tab-content-pricing" class="hero-tab-content" role="tabpanel" tabindex="0" aria-labelledby="tab-pricing" style="display: none;">
               <div class="grid-3" style="gap: var(--space-5);">
                 <div class="hero-benchmark-bar" style="padding: clamp(0.9rem, 2.5vw, 1.25rem); border-left: 3px solid var(--accent-gold); background: #FAFAFB; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
                   <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #64646D; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;">Entry Sprint</div>

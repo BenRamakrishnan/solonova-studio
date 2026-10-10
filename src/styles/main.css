@@ -8,6 +8,7 @@
 @import './components.css';
 @import './animations.css';
 @import './refinements.css';
+@import './portfolio.css';
 
 /* Canvas-rendered perspective mesh; frame and pixel-ratio limits live in Background3D.js. */
 .bg-canvas-3d {
@@ -24,6 +25,38 @@
   position: relative;
   z-index: var(--z-app, 10);
   background: transparent;
+}
+
+/* Reading surfaces stay quiet while the interactive mesh belongs to the hero. */
+#showcase-root,
+#comparison-root,
+#contact-root {
+  background: var(--bg-primary);
+}
+
+.hero-contact-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-bottom: var(--space-4);
+  padding-inline: var(--space-3);
+  color: #047857;
+  font-size: 0.95rem;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.studio-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-6);
+  text-align: center;
+}
+
+.studio-metric { padding-block: var(--space-3); }
+
+@media (max-width: 768px) {
+  .studio-metrics-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 /* Layout Containers — Perfectly Centered with Notch Safe Areas */
@@ -198,7 +231,7 @@ section[id],
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  gap: var(--space-5);
+  gap: var(--space-4);
   padding: 0.45rem 1.15rem;
   background: rgba(255, 255, 255, 0.75);
   border: 1px solid rgba(0, 0, 0, 0.04);
@@ -217,12 +250,14 @@ section[id],
   align-items: center;
   gap: 0.75rem;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .brand-logo-mark {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .brand-name {
@@ -312,6 +347,10 @@ section[id],
   opacity: 0.75;
   letter-spacing: 0.02em;
 }
+
+.nav-whatsapp { font-weight: 700; }
+.nav-whatsapp,
+.nav-whatsapp .track-idx { color: #047857; }
 
 @media (hover: hover) and (pointer: fine) {
 .nav-track-item:hover {
@@ -424,7 +463,8 @@ section[id],
   transition: transform 0.2s, opacity 0.2s;
 }
 
-@media (max-width: 1140px) {
+/* Release the secondary badge before the full navigation runs out of room. */
+@media (max-width: 1380px) {
   .atelier-telemetry-badge {
     display: none;
   }
@@ -573,10 +613,6 @@ section[id],
     gap: 4px;
   }
   .mobile-nav-toggle {
-    min-width: 36px;
-    min-height: 36px;
-    width: 36px;
-    height: 36px;
     padding: 6px;
     border-radius: 8px;
   }
@@ -612,17 +648,13 @@ section[id],
   }
   .nav-book-btn {
     padding: 0.32rem 0.5rem;
-    font-size: 0.72rem;
+    font-size: 0.8rem;
     border-radius: 6px;
   }
   .nav-book-btn .nav-book-arrow {
     display: none;
   }
   .mobile-nav-toggle {
-    min-width: 32px;
-    min-height: 32px;
-    width: 32px;
-    height: 32px;
     padding: 4px;
     border-radius: 6px;
   }

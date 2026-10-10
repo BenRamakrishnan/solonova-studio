@@ -31,25 +31,13 @@ dialog.modal-backdrop {
   margin: 0; border: 0;
 }
 dialog.modal-backdrop::backdrop { background: transparent; }
-.case-study-header { position: relative; background: #09090B; overflow: hidden; }
-.case-study-heading {
-  position: relative; z-index: 2; padding: clamp(1rem, 3vw, 2.25rem);
-  min-height: clamp(250px, 30vh, 300px); display: flex;
-  flex-direction: column; justify-content: space-between; gap: 2rem;
-}
-.case-study-toolbar { display: flex; gap: 1rem; align-items: flex-start; justify-content: space-between; }
-.case-study-meta { display: flex; flex-wrap: wrap; gap: 0.5rem; min-width: 0; }
-.case-study-meta .status-pill { white-space: normal; font-size: 0.75rem; padding: 0.4rem 0.65rem; }
 #close-modal-btn { min-width: 44px; }
 .modal-content > * { min-width: 0; overflow-wrap: anywhere; }
-.project-card-image-overlay > .flex { flex-wrap: wrap; gap: 0.4rem; }
 .project-card .double-bezel-inner { padding: 0 !important; }
-.project-card-image-overlay .status-pill { padding: 0.35rem 0.6rem; }
-.project-card-image-overlay > div:last-child { align-self: flex-start; max-width: 100%; }
 .hero-tab-content { min-height: 158px; }
 .motion-controls {
   display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
-  gap: 0.5rem 1.5rem; color: var(--text-secondary); font-size: 0.8rem; margin-top: -1.5rem;
+  gap: 0.5rem 1.5rem; color: var(--text-secondary); font-size: 0.8rem; margin-top: 0;
 }
 #motion-toggle { min-height: 44px; padding: 0.5rem 0.75rem; text-decoration: underline; text-underline-offset: 4px; }
 #motion-toggle:disabled { cursor: default; text-decoration: none; }

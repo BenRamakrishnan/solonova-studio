@@ -7,10 +7,10 @@ export function renderShowcase(activeCategory = 'all', focusCategory = false) {
   if (!container) return;
 
   const categories = [
-    { id: 'all', label: 'All Curated Works' },
-    { id: 'saas', label: 'AI SaaS & Tech' },
-    { id: 'ecom', label: 'Luxury E-Commerce' },
-    { id: 'web', label: 'Custom Web Apps' },
+    { id: 'all', label: 'All Studies' },
+    { id: 'saas', label: 'SaaS & Tech' },
+    { id: 'ecom', label: 'E-Commerce' },
+    { id: 'web', label: 'Web Apps' },
     { id: 'landing', label: 'Landing Pages' }
   ];
 
@@ -45,52 +45,24 @@ export function renderShowcase(activeCategory = 'all', focusCategory = false) {
           </div>
         </div>
 
-        <!-- Project Cards Bento Grid with Double-Bezel -->
+        <!-- Unobstructed previews with concise study details -->
         <div class="grid-3" id="projects-grid" role="tabpanel" aria-labelledby="filter-${activeCategory}" tabindex="0">
           ${filteredProjects.map(p => `
             <article class="double-bezel project-card" data-project-id="${escapeHtml(p.id)}">
-              <div class="double-bezel-inner" style="display: flex; flex-direction: column; overflow: hidden;">
-                <!-- Real Bespoke Showcase Image Header -->
+              <div class="double-bezel-inner project-card-inner">
                 <div class="project-card-image-box">
-                  <img src="${escapeHtml(previewImage(p.image))}" srcset="${escapeHtml(previewSources(p.image))}" sizes="(max-width: 640px) 92vw, (max-width: 1080px) 46vw, 400px" width="1236" height="768" decoding="async" alt="${escapeHtml(p.title)} interface preview" class="project-card-image" loading="lazy" />
-                  <div class="project-card-image-overlay">
-                    <div class="flex items-center justify-between">
-                      <span class="status-pill" style="font-size: 0.78rem; background: rgba(255, 255, 255, 0.92); border-color: rgba(255, 255, 255, 0.8); backdrop-filter: blur(8px);">
-                        <span style="width: 6px; height: 6px; border-radius: 50%; background-color: ${p.accentColor || '#09090B'}; display: inline-block;"></span>
-                        ${escapeHtml(p.tag)}
-                      </span>
-                      <span class="status-pill" style="font-size: 0.78rem; color: #09090B; border-color: rgba(255, 255, 255, 0.8); background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(8px);">
-                        Concept
-                      </span>
-                    </div>
-
-                    <!-- Concept context -->
-                    <div style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-radius: var(--radius-md); padding: var(--space-2) var(--space-4); border: 1px solid rgba(255, 255, 255, 0.8); box-shadow: var(--shadow-subtle);">
-                      <div style="font-family: var(--font-mono); font-size: 0.74rem; color: #64646D; letter-spacing: 0.08em; font-weight: 700;">DESIGN STUDY</div>
-                      <div style="font-family: var(--font-body); font-weight: 700; font-size: 0.92rem; color: #09090B;">${escapeHtml(p.context)}</div>
-                    </div>
-                  </div>
+                  <img src="${escapeHtml(previewImage(p.image))}" srcset="${escapeHtml(previewSources(p.image))}" sizes="(max-width: 640px) 92vw, (max-width: 1080px) 46vw, 400px" width="640" height="357" decoding="async" alt="${escapeHtml(p.title)} interface preview" class="project-card-image" loading="lazy" />
                 </div>
 
-                <!-- Card Body -->
-                <div style="padding: var(--card-padding); display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="project-card-body">
                   <div>
-                    <h3 style="font-size: 1.45rem; font-weight: 700; margin-bottom: var(--space-3); line-height: 1.25; color: #09090B;">${escapeHtml(p.title)}</h3>
-                    <p style="font-size: 1.02rem; margin-bottom: var(--space-6); line-height: 1.65; color: #52525B;">${escapeHtml(p.summary)}</p>
-
-                    <!-- Concept highlights -->
-                    <div class="flex flex-wrap gap-2" style="margin-bottom: var(--space-8); min-width: 0; max-width: 100%;">
-                      ${p.highlights.map(m => `
-                        <span class="project-metric-badge" style="font-family: var(--font-mono); font-size: clamp(0.74rem, 1.2vw, 0.82rem); background: #F4F4F6; border: 1px solid #E4E4E7; padding: 0.3rem clamp(0.45rem, 1.2vw, 0.75rem); border-radius: var(--radius-sm); color: #09090B; max-width: 100%; overflow-wrap: break-word;">
-                          <span style="color: #64646D;">${escapeHtml(m.label)}:</span> <strong style="color: #09090B;">${escapeHtml(m.value)}</strong>
-                        </span>
-                      `).join('')}
-                    </div>
+                    <p class="project-card-meta"><span>${escapeHtml(p.tag)}</span><span>Concept study</span></p>
+                    <h3 class="project-card-title">${escapeHtml(p.displayTitle || p.title)}</h3>
+                    <p class="project-card-summary">${escapeHtml(p.summary)}</p>
                   </div>
 
-                  <!-- Action Link -->
-                  <div style="border-top: 1px solid #E4E4E7; padding-top: var(--space-5);">
-                    <button class="btn btn-secondary open-case-study-btn" aria-label="Explore Study: ${escapeHtml(p.title)}" data-project-id="${escapeHtml(p.id)}" style="width: 100%; justify-content: center; font-size: 0.98rem; padding: 0.85rem 1.5rem;">
+                  <div class="project-card-action">
+                    <button class="btn btn-secondary open-case-study-btn" aria-label="Explore Study: ${escapeHtml(p.title)}" data-project-id="${escapeHtml(p.id)}">
                       <span>Explore Study</span>
                       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
                         <path d="M7 17l9.2-9.2M17 17V8H8"/>

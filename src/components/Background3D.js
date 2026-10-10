@@ -9,7 +9,8 @@ export function initBackground3D() {
   const cursor = { x: -1000, y: -1000, targetX: -1000, targetY: -1000, active: false };
   const ripples = [];
   const motionToggle = document.getElementById('motion-toggle');
-  let userPaused = false;
+  const hero = document.getElementById('hero-root');
+  let userPaused = false, heroVisible = true;
   function resize() {
     if (!ctx) return;
     width = window.innerWidth;
@@ -21,7 +22,7 @@ export function initBackground3D() {
     columns = width < 768 ? 26 : 44;
     rows = width < 768 ? 22 : 30;
     points = Array.from({ length: (columns + 1) * (rows + 1) }, () => ({ x: 0, y: 0, visible: false }));
-    draw();
+    if (heroVisible) draw();
   }
   function draw() {
     if (!ctx) return;
@@ -93,7 +94,7 @@ export function initBackground3D() {
   }
   function animate(time) {
     frame = 0;
-    if (disposed || document.hidden || reduced.matches || userPaused) return;
+    if (disposed || !heroVisible || document.hidden || reduced.matches || userPaused) return;
     const interval = coarse.matches ? 1000 / 24 : 1000 / 40;
     if (time - lastTime >= interval) {
       const delta = Math.min((time - lastTime) / 1000, 0.06);
@@ -108,6 +109,7 @@ export function initBackground3D() {
     frame = requestAnimationFrame(animate);
   }
   function syncMotion() {
+    if (disposed) return;
     cancelAnimationFrame(frame);
     frame = 0;
     lastTime = performance.now();
@@ -116,11 +118,11 @@ export function initBackground3D() {
       motionToggle.textContent = reduced.matches ? 'Reduced motion on' : userPaused ? 'Resume motion' : 'Pause motion';
       motionToggle.setAttribute('aria-pressed', String(userPaused));
     }
-    if (ctx && !document.hidden && !reduced.matches && !userPaused && !disposed) frame = requestAnimationFrame(animate);
-    else draw();
+    if (ctx && heroVisible && !document.hidden && !reduced.matches && !userPaused) frame = requestAnimationFrame(animate);
+    else if (heroVisible) draw();
   }
   function pointerMove(event) {
-    if (reduced.matches || userPaused) return;
+    if (!heroVisible || reduced.matches || userPaused) return;
     if (!cursor.active) { cursor.x = event.clientX; cursor.y = event.clientY; }
     cursor.active = true;
     cursor.targetX = event.clientX;
@@ -128,7 +130,7 @@ export function initBackground3D() {
   }
   function pointerDown(event) {
     pointerMove(event);
-    if (reduced.matches || userPaused) return;
+    if (!heroVisible || reduced.matches || userPaused) return;
     if (ripples.length >= 3) ripples.shift();
     ripples.push({ x: event.clientX, y: event.clientY, time: elapsed });
   }
@@ -140,6 +142,21 @@ export function initBackground3D() {
     ripples.length = 0;
     syncMotion();
   }
+  // The mesh is only exposed in the hero; avoid rendering beneath opaque sections.
+  const visibilityObserver = ctx && hero && typeof window.IntersectionObserver === 'function'
+    ? new window.IntersectionObserver(entries => {
+      if (disposed) return;
+      const entry = entries.find(item => item.target === hero);
+      if (!entry || heroVisible === entry.isIntersecting) return;
+      heroVisible = entry.isIntersecting;
+      if (!heroVisible) {
+        cursor.active = false;
+        ripples.length = 0;
+      }
+      syncMotion();
+    })
+    : null;
+  visibilityObserver?.observe(hero);
   resize();
   syncMotion();
   window.addEventListener('resize', resize, { passive: true });
@@ -152,6 +169,7 @@ export function initBackground3D() {
   return () => {
     disposed = true;
     cancelAnimationFrame(frame);
+    visibilityObserver?.disconnect();
     window.removeEventListener('resize', resize);
     window.removeEventListener('pointermove', pointerMove);
     window.removeEventListener('pointerdown', pointerDown);

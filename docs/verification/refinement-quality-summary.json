@@ -1,0 +1,100 @@
+{
+  "testedURL": "http://127.0.0.1:4175/solonova-studio/",
+  "buildJavaScript": "index-BF_2XTGA.js",
+  "buildCSS": "index-DiLm89IA.css",
+  "note": "Initial pair precedes the final three short action labels. Final pair tests the final production build. All runs retained; local preview is uncompressed.",
+  "runs": [
+    {
+      "name": "desktop-refinement",
+      "final": false,
+      "fetchTime": "2026-10-10T04:33:51.805Z",
+      "lighthouseVersion": "13.5.0",
+      "formFactor": "desktop",
+      "throttlingMethod": "simulate",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100,
+        "agentic-browsing": 100
+      },
+      "metrics": {
+        "first-contentful-paint": 408.53740000000005,
+        "largest-contentful-paint": 628.5373999999999,
+        "total-blocking-time": 0,
+        "cumulative-layout-shift": 0.0003845158439590961,
+        "speed-index": 664.7222953325976
+      },
+      "warnings": []
+    },
+    {
+      "name": "mobile-refinement",
+      "final": false,
+      "fetchTime": "2026-10-10T04:34:27.714Z",
+      "lighthouseVersion": "13.5.0",
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "scores": {
+        "performance": 95,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100,
+        "agentic-browsing": 100
+      },
+      "metrics": {
+        "first-contentful-paint": 1689.0522,
+        "largest-contentful-paint": 2739.0522,
+        "total-blocking-time": 0,
+        "cumulative-layout-shift": 0.02988809141642414,
+        "speed-index": 1689.0522
+      },
+      "warnings": []
+    },
+    {
+      "name": "desktop-refinement-final",
+      "final": true,
+      "fetchTime": "2026-10-10T04:37:45.655Z",
+      "lighthouseVersion": "13.5.0",
+      "formFactor": "desktop",
+      "throttlingMethod": "simulate",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100,
+        "agentic-browsing": 100
+      },
+      "metrics": {
+        "first-contentful-paint": 391.4958,
+        "largest-contentful-paint": 611.4958,
+        "total-blocking-time": 0,
+        "cumulative-layout-shift": 0.0003845158439590961,
+        "speed-index": 524.647261261201
+      },
+      "warnings": []
+    },
+    {
+      "name": "mobile-refinement-final",
+      "final": true,
+      "fetchTime": "2026-10-10T04:37:01.298Z",
+      "lighthouseVersion": "13.5.0",
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "scores": {
+        "performance": 95,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100,
+        "agentic-browsing": 100
+      },
+      "metrics": {
+        "first-contentful-paint": 1742.4609999999998,
+        "largest-contentful-paint": 2792.4610000000002,
+        "total-blocking-time": 18,
+        "cumulative-layout-shift": 0,
+        "speed-index": 1742.4609999999998
+      },
+      "warnings": []
+    }
+  ]
+}
